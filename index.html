@@ -3,11 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Watch Movies (WM) - Tu plataforma de recomendación y descubrimiento de películas personalizadas.">
-  <title>WM - Watch Movies</title>
+  <meta name="description" content="Watch Movies (WM) - Tu plataforma premium de recomendación y descubrimiento de películas.">
+  <title>Watch Movies (WM)</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- ================================================================= -->
+  <!-- PANTALLA DE BIENVENIDA (WELCOME SCREEN / SPLASH SCREEN) -->
+  <!-- ================================================================= -->
+  <div id="welcome-screen" class="welcome-screen">
+    <div class="welcome-content">
+      <div class="welcome-logo">
+        <span class="logo-cine">CINE</span><span class="logo-stream">STREAM</span>
+      </div>
+      <h2 class="welcome-headline" id="welcome-title">Bienvenido a la experiencia de cine definitiva</h2>
+      <p class="welcome-tagline" id="welcome-desc">Explora, descubre y organiza tus películas preferidas en un universo galáctico premium.</p>
+      
+      <!-- Opciones rápidas de configuración -->
+      <div class="welcome-quick-settings">
+        <div class="welcome-lang-selector">
+          <button class="welcome-lang-btn active" id="welcome-lang-es" onclick="changeWelcomeLanguage('es')">Español</button>
+          <button class="welcome-lang-btn" id="welcome-lang-en" onclick="changeWelcomeLanguage('en')">English</button>
+        </div>
+      </div>
+
+      <button class="welcome-enter-btn" id="welcome-enter-btn" onclick="enterPlatform()">
+        <span>ENTRAR A LA PLATAFORMA</span>
+        <svg viewBox="0 0 24 24" width="24" height="24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
 
   <!-- ================================================================= -->
   <!-- BARRA LATERAL (DESKTOP SIDEBAR - Visible en pantallas > 1024px) -->
@@ -38,34 +64,39 @@
         <span>Likes</span>
         <div class="likes-badge">0</div>
       </button>
+      <button class="sidebar-menu-btn nav-btn" data-tab="mylist">
+        <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" stroke="currentColor" fill="none" stroke-width="2"/></svg>
+        <span>My List</span>
+        <div class="mylist-badge" style="display:none; position:absolute; top: 12px; right: 24px; background:var(--accent-purple); color:var(--text-primary); font-size:9px; font-weight:800; border-radius:50%; width:16px; height:16px; align-items:center; justify-content:center; box-shadow:0 0 6px var(--accent-purple-glow); border:1px solid var(--bg-color);">0</div>
+      </button>
     </nav>
     
-    <!-- Perfil de usuario usando el Logo como Avatar -->
+    <!-- Perfil de usuario en el Sidebar usando el Logo como Avatar -->
     <div class="sidebar-footer" onclick="switchTab('profile')">
-      <div class="brand-logo-circle">
-        <span class="logo-wm">WM</span>
-        <span class="logo-subtitle">User</span>
+      <div class="brand-logo-circle logo-profile-btn" style="width: 40px; height: 40px;">
+        <span class="logo-wm" style="font-size: 11px;">WM</span>
+        <span class="logo-subtitle" style="font-size: 4px;">User</span>
       </div>
       <div class="sidebar-profile-info">
         <span class="sidebar-profile-name">María Carrillo</span>
-        <span class="sidebar-profile-status">Premium</span>
+        <span class="sidebar-profile-status">Premium Member</span>
       </div>
     </div>
   </aside>
 
   <!-- ================================================================= -->
-  <!-- CABECERA GENERAL (HEADER - Visible en Móvil y Tablet) -->
+  <!-- CABECERA GENERAL MÓVIL (Visible en Móvil y Tablet) -->
   <!-- ================================================================= -->
   <header class="app-header">
     <div class="header-left">
-      <button class="menu-trigger" aria-label="Menú principal" onclick="alert('Funcionalidad de menú lateral para móviles')">☰</button>
-      <h1 class="app-title">MOVIEAPP</h1>
+      <button class="menu-trigger" aria-label="Menú principal" onclick="alert('Menú lateral móvil')">☰</button>
+      <h1 class="app-title">WM <span style="font-size: 14px; font-weight: 500; color: var(--accent-purple);">Movies</span></h1>
     </div>
     <div class="header-right">
       <!-- Botón de Búsqueda Rápida en Cabecera -->
       <button class="detail-circle-btn" style="width: 36px; height: 36px; font-size: 16px;" onclick="switchTab('explore')" aria-label="Buscar">🔍</button>
       <!-- Perfil de usuario en cabecera usando el Logo como Avatar -->
-      <div class="brand-logo-circle logo-profile-btn" style="width: 36px; height: 36px;">
+      <div class="brand-logo-circle logo-profile-btn" style="width: 36px; height: 36px;" onclick="switchTab('profile')">
         <span class="logo-wm" style="font-size: 10px;">WM</span>
         <span class="logo-subtitle" style="font-size: 4px;">User</span>
       </div>
@@ -77,30 +108,66 @@
   <!-- ================================================================= -->
   <main class="app-content-container">
 
+    <!-- Fila superior para buscador flotante (Visible solo en Escritorio) -->
+    <div class="content-top-bar">
+      <div class="search-wrapper header-search">
+        <span class="search-icon-inside">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Buscar películas, géneros..." aria-label="Buscar">
+        <span class="search-divider">|</span>
+        <button id="voice-search-btn" class="voice-search-btn" title="Búsqueda por voz">🎤</button>
+      </div>
+    </div>
+
     <!-- 1. VISTA INICIO (HOME) -->
     <section id="view-home" class="app-view active">
-      <!-- Banner Destacado Principal -->
+      <!-- Banner Destacado Principal (Estilo del Mockup) -->
       <div class="hero-banner">
         <div class="hero-content">
-          <span class="hero-tag">Destacada</span>
-          <h2 class="hero-title">The Midnight Echo</h2>
+          <h2 class="hero-title">THE MIDNIGHT ECHO</h2>
           <div class="hero-meta">
-            <span>2024</span>
+            <span class="star-rating">★ 8.4<span class="score-base">/10</span></span>
             <span>•</span>
-            <span>Thriller</span>
+            <span>Sci-Fi/Thriller</span>
             <span>•</span>
-            <span>★ 8.4</span>
+            <span>2h 15m</span>
           </div>
-          <button class="hero-play-btn">▶ Ver Tráiler</button>
+          <p class="hero-description">In a distant galaxy, a solo explorer uncovers a cryptic transmission that challenges existence...</p>
+          <div class="hero-action-buttons">
+            <button class="hero-play-btn" id="hero-play-main">▶ WATCH NOW</button>
+            <button class="hero-mylist-btn" id="hero-like-main">+ MY LIST</button>
+          </div>
         </div>
       </div>
 
-      <!-- Filtros de Categorías -->
-      <div class="filter-container" id="home-genre-filters">
-        <button class="genre-pill active" data-genre="All">All</button>
-        <button class="genre-pill" data-genre="Sci-Fi">Sci-Fi</button>
-        <button class="genre-pill" data-genre="Drama">Drama</button>
-        <button class="genre-pill" data-genre="Action">Action</button>
+      <!-- Sección Continue Watching -->
+      <div id="home-continue-section">
+        <h3 class="section-title-mockup">CONTINUE WATCHING</h3>
+        <div class="continue-watching-slider">
+          <div class="continue-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=80')">
+            <span class="continue-progress-bar" style="width: 75%;"></span>
+            <span class="continue-title">Interstellar</span>
+          </div>
+          <div class="continue-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80')">
+            <span class="continue-progress-bar" style="width: 40%;"></span>
+            <span class="continue-title">Inception</span>
+          </div>
+          <div class="continue-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=600&q=80')">
+            <span class="continue-progress-bar" style="width: 90%;"></span>
+            <span class="continue-title">Fight Club</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección Recomendaciones / Películas -->
+      <div class="grid-header-section">
+        <h3 class="section-title-mockup">RECOMMENDED FOR YOU</h3>
+        <!-- Filtros de Categorías -->
+        <div class="filter-container" id="home-genre-filters">
+          <button class="genre-pill active" data-genre="All">All</button>
+          <button class="genre-pill" data-genre="Sci-Fi">Sci-Fi</button>
+          <button class="genre-pill" data-genre="Drama">Drama</button>
+          <button class="genre-pill" data-genre="Action">Action</button>
+        </div>
       </div>
 
       <!-- Cuadrícula de películas -->
@@ -111,15 +178,68 @@
 
     <!-- 2. VISTA EXPLORAR (EXPLORE) -->
     <section id="view-explore" class="app-view">
-      <!-- Campo de búsqueda con icono y reconocimiento de voz -->
-      <div class="search-wrapper">
-        <span class="search-icon-inside">🔍</span>
-        <input type="text" id="search-input" class="search-input" placeholder="Buscar películas, actores, directores..." aria-label="Buscar">
-        <!-- Botón de Búsqueda por Voz -->
-        <button id="voice-search-btn" class="voice-search-btn" title="Búsqueda por voz">🎤</button>
+      <!-- Buscador integrado visible en Exploración (con entrada de texto libre) -->
+      <div class="explore-search-container">
+        <div class="search-wrapper explore-search">
+          <span class="search-icon-inside">🔍</span>
+          <input type="text" id="explore-search-input" class="search-input" placeholder="Buscar películas, géneros, directores..." aria-label="Buscar películas">
+          <span class="search-divider">|</span>
+          <button id="explore-voice-search-btn" class="voice-search-btn" title="Búsqueda por voz">🎤</button>
+        </div>
       </div>
 
-      <!-- Cuadrícula de Categorías de Exploración -->
+      <!-- Filtros Avanzados Visibles y Comprensibles -->
+      <div class="explore-filters-bar">
+        <!-- Filtro por Género -->
+        <div class="filter-select-wrapper">
+          <label for="explore-filter-genre" class="filter-label">Género</label>
+          <select id="explore-filter-genre" class="explore-select">
+            <option value="All">Todos</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Fantasy">Fantasía</option>
+            <option value="Action">Acción</option>
+            <option value="Adventure">Aventura</option>
+            <option value="Mystery">Misterio</option>
+          </select>
+        </div>
+
+        <!-- Filtro por Puntuación -->
+        <div class="filter-select-wrapper">
+          <label for="explore-filter-rating" class="filter-label">Puntuación</label>
+          <select id="explore-filter-rating" class="explore-select">
+            <option value="All">Cualquiera</option>
+            <option value="8.5">★ 8.5 o más</option>
+            <option value="8.0">★ 8.0 o más</option>
+            <option value="7.5">★ 7.5 o más</option>
+          </select>
+        </div>
+
+        <!-- Filtro por Tendencia -->
+        <div class="filter-select-wrapper">
+          <label for="explore-filter-trend" class="filter-label">Tendencia</label>
+          <select id="explore-filter-trend" class="explore-select">
+            <option value="All">Todos</option>
+            <option value="trending">Más Vistas (Tendencia)</option>
+            <option value="recent">Estrenos Recientes</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Filtros Activos (Mostrar cuáles están activos y permitir remover) -->
+      <div id="active-filters-container" class="active-filters-container" style="display:none;">
+        <div class="active-filters-header">
+          <span class="active-filters-label">Filtros activos:</span>
+          <button id="clear-all-filters-btn" class="clear-all-filters-btn" title="Limpiar todos los filtros">
+            ✕ Limpiar todo
+          </button>
+        </div>
+        <div id="active-filters-list" class="active-filters-list">
+          <!-- Filtros activos se renderizan dinámicamente aquí -->
+        </div>
+      </div>
+
+      <!-- Categorías de Exploración -->
       <h2 class="explore-section-title">Explorar Categorías</h2>
       <div class="explore-categories-grid">
         <div class="explore-category-card" data-category="genres">
@@ -153,11 +273,11 @@
       <div class="recent-searches-list">
         <div class="recent-search-item">
           <span>Interstellar (2014)</span>
-          <span>🗙</span>
+          <span class="remove-search-item">🗙</span>
         </div>
         <div class="recent-search-item">
           <span>Denis Villeneuve</span>
-          <span>🗙</span>
+          <span class="remove-search-item">🗙</span>
         </div>
       </div>
 
@@ -190,7 +310,25 @@
       <div class="empty-state" id="likes-empty-state">
         <span class="empty-state-icon">❤️</span>
         <h3 class="empty-state-title">Aún no tienes favoritos</h3>
-        <p class="empty-state-desc">Explora películas y pulsa el icono del corazón en cualquiera de ellas para guardarla aquí.</p>
+        <p class="empty-state-desc">Explora películas y pulsa el corazón de favoritos en cualquiera de ellas para guardarla aquí.</p>
+      </div>
+    </section>
+
+    <!-- 3.5. VISTA MI LISTA (MY LIST) -->
+    <section id="view-mylist" class="app-view">
+      <h2 class="explore-section-title" style="font-size: 26px; margin-bottom: 4px;">My List</h2>
+      <p class="mylist-subtitle" id="mylist-subtitle-text">Tienes 0 títulos guardados en tu lista de seguimiento.</p>
+
+      <!-- Cuadrícula de películas en mi lista -->
+      <div class="movies-grid" id="mylist-movies-grid">
+        <!-- Renderizado dinámicamente mediante JS -->
+      </div>
+
+      <!-- Estado vacío (sin watchlist) -->
+      <div class="empty-state" id="mylist-empty-state">
+        <span class="empty-state-icon">📁</span>
+        <h3 class="empty-state-title">Tu lista de seguimiento está vacía</h3>
+        <p class="empty-state-desc">Explora películas y pulsa "+ Mi Lista" en la pantalla de detalles de cualquiera de ellas para guardarla aquí.</p>
       </div>
     </section>
 
@@ -215,7 +353,6 @@
       </div>
 
       <!-- Acciones de Película (Botones de acción responsivos) -->
-      <!-- En Móvil se ocultará el texto 'span' y se harán circulares usando emoticonos -->
       <div class="detail-actions">
         <button class="detail-btn detail-btn-primary" id="detail-trailer-btn" aria-label="Ver Tráiler">
           ▶ <span>Ver Tráiler</span>
@@ -240,6 +377,12 @@
       <h3 class="detail-section-title">Sinopsis</h3>
       <p class="detail-desc-text" id="detail-description">Cargando sinopsis de la película...</p>
 
+      <!-- Director -->
+      <h3 class="detail-section-title" id="detail-director-heading">Director</h3>
+      <div id="detail-director-container">
+        <!-- Renderizado dinámicamente mediante JS -->
+      </div>
+
       <!-- Reparto / Cast -->
       <h3 class="detail-section-title">Reparto</h3>
       <div class="detail-cast-carousel" id="detail-cast-list">
@@ -251,9 +394,9 @@
     <section id="view-profile" class="app-view">
       <!-- Sección de perfil interactivo con Logo corporativo -->
       <div class="profile-hero">
-        <div class="brand-logo-circle large">
-          <span class="logo-wm">WM</span>
-          <span class="logo-subtitle">User</span>
+        <div class="brand-logo-circle large" style="width: 120px; height: 120px; border-width: 6px;">
+          <span class="logo-wm" style="font-size: 32px;">WM</span>
+          <span class="logo-subtitle" style="font-size: 10px;">User</span>
         </div>
         <h2 class="profile-username">María Carrillo</h2>
         <span class="profile-role">Miembro Premium de Watch Movies</span>
@@ -313,11 +456,106 @@
       <span>Likes</span>
       <div class="likes-badge">0</div>
     </button>
+    <button class="nav-btn" data-tab="mylist" aria-label="Mi Lista">
+      <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" stroke="currentColor" fill="none" stroke-width="2"/></svg>
+      <span>Mi Lista</span>
+      <div class="mylist-badge" style="display:none; position:absolute; top:-4px; right:18px; background:var(--accent-purple); color:var(--text-primary); font-size:9px; font-weight:800; border-radius:50%; width:16px; height:16px; align-items:center; justify-content:center; box-shadow:0 0 6px var(--accent-purple-glow); border:1px solid var(--bg-color);">0</div>
+    </button>
     <button class="nav-btn" data-tab="profile" aria-label="Perfil">
       <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       <span>Perfil</span>
     </button>
   </nav>
+
+  <!-- ================================================================= -->
+  <!-- ACCESIBILIDAD (FAB FLOTANTE, PANEL LATERAL Y MODAL DE SEÑAS) -->
+  <!-- ================================================================= -->
+  
+  <!-- Botón flotante FAB -->
+  <button id="accessibility-fab" class="accessibility-fab" aria-label="Menú de Accesibilidad" onclick="toggleAccessibilityPanel()">♿</button>
+
+  <!-- Panel lateral de opciones -->
+  <div id="accessibility-panel" class="accessibility-panel">
+    <div class="accessibility-panel-header">
+      <h3>Panel de Accesibilidad</h3>
+      <button class="panel-close-btn" onclick="toggleAccessibilityPanel()">×</button>
+    </div>
+    
+    <div class="accessibility-panel-body">
+      <!-- Selector de Idioma -->
+      <div class="setting-group">
+        <label class="setting-label">Idioma / Language</label>
+        <div class="lang-selector-buttons">
+          <button id="lang-btn-es" class="lang-btn active" onclick="changeLanguage('es')">Español (ES)</button>
+          <button id="lang-btn-en" class="lang-btn" onclick="changeLanguage('en')">English (EN)</button>
+        </div>
+      </div>
+
+      <!-- Narrador de Voz -->
+      <div class="setting-group">
+        <div class="setting-toggle-row">
+          <span class="setting-title">Narrador de Voz</span>
+          <label class="switch-toggle">
+            <input type="checkbox" id="toggle-narrator" onchange="toggleNarratorMode(this.checked)">
+            <span class="slider-toggle"></span>
+          </label>
+        </div>
+        <p class="setting-desc">Lee en voz alta las opciones e información al pasar el cursor o enfocar.</p>
+      </div>
+
+      <!-- Modo Braille -->
+      <div class="setting-group">
+        <div class="setting-toggle-row">
+          <span class="setting-title">Modo Braille</span>
+          <label class="switch-toggle">
+            <input type="checkbox" id="toggle-braille" onchange="toggleBrailleMode(this.checked)">
+            <span class="slider-toggle"></span>
+          </label>
+        </div>
+        <p class="setting-desc">Traduce los títulos principales y descripciones a caracteres Unicode Braille.</p>
+      </div>
+
+      <!-- Traductor de Lenguaje de Signos -->
+      <div class="setting-group">
+        <button class="accessibility-action-btn" onclick="openSignLangModal()">
+          🤟 Traductor Dactilológico
+        </button>
+        <p class="setting-desc">Visualiza y deletrea cualquier palabra en lenguaje de señas mediante gestos vectoriales de manos.</p>
+      </div>
+
+      <!-- Narración de Diagrama de Flujo -->
+      <div class="setting-group" style="margin-top: 16px; border-top: 1px solid var(--panel-border); padding-top: 16px;">
+        <button class="accessibility-action-btn primary-action" onclick="narrateUserFlow()">
+          🗣️ Narrar Flujo de Usuario
+        </button>
+        <p class="setting-desc">Escucha una explicación detallada por audio del diagrama de flujo de usuario y la arquitectura de la app.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal del Traductor de Lenguaje de Señas (Dactilología) -->
+  <div id="sign-lang-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content accessibility-modal-content">
+      <button class="modal-close" onclick="closeSignLangModal()">×</button>
+      <h3 class="modal-title">Traductor Dactilológico</h3>
+      <p class="modal-subtitle">Escribe cualquier palabra para ver su traducción a señas de manos:</p>
+      
+      <div class="translator-input-wrapper">
+        <input type="text" id="sign-lang-input" class="form-input" placeholder="Escribe aquí (ej. VOID)" oninput="updateSignLangOutput(this.value)">
+      </div>
+      
+      <div id="sign-lang-output" class="sign-lang-cards-container">
+        <!-- Deletreo dinámico -->
+      </div>
+      
+      <div class="sign-lang-alphabet-section">
+        <h4 class="alphabet-title">Abecedario Dactilológico de Referencia</h4>
+        <div id="sign-lang-alphabet-grid" class="sign-lang-alphabet-grid">
+          <!-- Referencias cargadas por JS -->
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
