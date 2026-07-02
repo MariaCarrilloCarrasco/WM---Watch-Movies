@@ -389,7 +389,8 @@ const AppState = {
   currentPage: 1,
   moviesPerPage: 4,
   loadingMovies: false,
-  hasMoreMovies: true
+  hasMoreMovies: true,
+  exploreRequestToken: 0
 };
 
 // =================================================================
@@ -449,7 +450,7 @@ class MovieModel {
 // Servicio centralizado de la API de películas
 const MovieAPIService = {
   // Recuperar listado de películas con soporte de filtros por género, búsqueda, puntuación, tendencia y paginación
-  async getMovies({ genre = 'All', search = '', page = 1, limit = null, rating = 'All', trend = 'All' } = {}) {
+  async getMovies({ genre = 'All', search = '', page = 1, limit = null, rating = 'All', trend = 'All', reliableMode = false } = {}) {
     // 1. Promesa de límite de tiempo (Timeout) a 3 segundos
     const timeoutPromise = new Promise((_, reject) => {
       setTimeout(() => reject(new TimeoutError("Tiempo de espera agotado: El servidor no respondió dentro del límite de 3 segundos.")), 3000);
@@ -458,18 +459,18 @@ const MovieAPIService = {
     // 2. Promesa de petición de datos
     const dataFetchPromise = new Promise((resolve, reject) => {
       // Simular latencia variable: 8% de probabilidad de delay lento (4000ms) para provocar Timeout
-      const isSlow = Math.random() < 0.08;
+      const isSlow = reliableMode ? false : Math.random() < 0.08;
       const delay = isSlow ? 4000 : 300;
 
       setTimeout(() => {
         // Simular error de red aleatorio (10% de probabilidad)
-        if (Math.random() < 0.1) {
+        if (!reliableMode && Math.random() < 0.1) {
           reject(new NetworkError("Error de red: No se pudo establecer conexión con el servidor externo."));
           return;
         }
 
         // Simular respuesta corrupta o inválida (5% de probabilidad)
-        const isCorrupt = Math.random() < 0.05;
+        const isCorrupt = reliableMode ? false : Math.random() < 0.05;
         let apiResponse = [...RAW_EXTERNAL_MOVIES_API_DATA];
 
         if (isCorrupt) {
@@ -1237,6 +1238,23 @@ async function renderExplore() {
   renderActiveFilters();
 }
 
+function hasActiveExploreFilters() {
+  return AppState.exploreFilters.genre !== 'All' ||
+         AppState.exploreFilters.rating !== 'All' ||
+         AppState.exploreFilters.trend !== 'All';
+}
+
+function renderExploreInitialLoadingState(resultsContainer) {
+  if (!resultsContainer) return;
+  const loadingText = AppState.language === 'es' ? 'Cargando resultados...' : 'Loading results...';
+  resultsContainer.innerHTML = `
+    <div class="explore-initial-loading" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 16px; text-align: center; width: 100%; gap: 12px;">
+      <div class="pagination-spinner"></div>
+      <p style="color: var(--text-secondary); font-size: 14px; font-weight: 600;">${loadingText}</p>
+    </div>
+  `;
+}
+
 async function renderSearchSuggestions() {
   const resultsContainer = document.getElementById('explore-search-results');
   const suggestedTitle = document.getElementById('suggested-title');
@@ -1254,54 +1272,27 @@ async function renderSearchSuggestions() {
     oldLoader.remove();
   }
 
+  renderExploreInitialLoadingState(resultsContainer);
+
+  // Invalidar respuestas en vuelo para evitar inconsistencias de UI
+  AppState.exploreRequestToken += 1;
+  const currentToken = AppState.exploreRequestToken;
+
   try {
     if (AppState.searchQuery.trim() === '') {
       suggestedTitle.textContent = AppState.language === 'es' ? "Sugerencias para ti" : "Suggestions for you";
     } else {
       suggestedTitle.textContent = AppState.language === 'es' ? "Resultados de búsqueda" : "Search results";
-      
-      // Verificar si hay resultados
-      try {
-        const { movies: testMovies } = await MovieAPIService.getMovies({
-          genre: AppState.exploreFilters.genre,
-          rating: AppState.exploreFilters.rating,
-          trend: AppState.exploreFilters.trend,
-          search: AppState.searchQuery,
-          page: 1,
-          limit: 1
-        });
-
-        if (testMovies.length === 0) {
-          AppState.hasMoreMovies = false;
-          const noResMsg = AppState.language === 'es' 
-            ? `No se encontraron resultados para "${AppState.searchQuery}"`
-            : `No results found for "${AppState.searchQuery}"`;
-          const clearBtnText = AppState.language === 'es' ? 'Limpiar búsqueda' : 'Clear search';
-          
-          resultsContainer.innerHTML = `
-            <div class="search-empty-state" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 16px; text-align: center; width: 100%;">
-              <span style="font-size: 48px; margin-bottom: 16px;">🔍</span>
-              <h4 style="color: var(--text-primary); margin-bottom: 8px; font-size: 16px; font-weight: 700;">${noResMsg}</h4>
-              <button class="pagination-retry-btn" onclick="clearSearchQuery()" style="margin-top: 12px;">
-                ${clearBtnText}
-              </button>
-            </div>
-          `;
-          return;
-        }
-      } catch (error) {
-        console.error("Error al verificar resultados:", error);
-      }
     }
 
     // Cargar el primer lote paginado (sugerencias o resultados de búsqueda)
-    await renderSearchSuggestionsGrid();
+    await renderSearchSuggestionsGrid(currentToken, false);
   } catch (error) {
     console.error("Error en sugerencias de búsqueda:", error);
   }
 }
 
-async function renderSearchSuggestionsGrid() {
+async function renderSearchSuggestionsGrid(requestToken = AppState.exploreRequestToken, isIncremental = false) {
   const resultsContainer = document.getElementById('explore-search-results');
   if (!resultsContainer) return;
 
@@ -1322,8 +1313,42 @@ async function renderSearchSuggestionsGrid() {
       trend: AppState.exploreFilters.trend,
       search: AppState.searchQuery,
       page: AppState.currentPage,
-      limit: AppState.moviesPerPage
+      limit: AppState.moviesPerPage,
+      reliableMode: true
     });
+
+    // Ignorar respuestas antiguas si cambió la combinación de filtros/búsqueda
+    if (requestToken !== AppState.exploreRequestToken) {
+      return;
+    }
+
+    if (total === 0) {
+      AppState.hasMoreMovies = false;
+      const hasQuery = AppState.searchQuery.trim() !== '';
+      const hasFilters = hasActiveExploreFilters();
+      const noResMsg = AppState.language === 'es'
+        ? 'No encontramos resultados para la combinación aplicada.'
+        : 'No results found for the selected combination.';
+      const actionText = hasQuery
+        ? (AppState.language === 'es' ? 'Limpiar búsqueda' : 'Clear search')
+        : (AppState.language === 'es' ? 'Limpiar filtros' : 'Clear filters');
+      const actionFn = hasQuery ? 'clearSearchQuery()' : 'clearAllFilters()';
+      const hintText = hasFilters || hasQuery
+        ? (AppState.language === 'es' ? 'Prueba con menos filtros o una búsqueda diferente.' : 'Try fewer filters or a different search.')
+        : (AppState.language === 'es' ? 'Vuelve a intentarlo en unos segundos.' : 'Please try again in a few seconds.');
+
+      resultsContainer.innerHTML = `
+        <div class="search-empty-state" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 16px; text-align: center; width: 100%;">
+          <span style="font-size: 48px; margin-bottom: 16px;">🔍</span>
+          <h4 style="color: var(--text-primary); margin-bottom: 8px; font-size: 16px; font-weight: 700;">${noResMsg}</h4>
+          <p style="color: var(--text-secondary); margin-bottom: 10px; font-size: 13px;">${hintText}</p>
+          <button class="pagination-retry-btn" onclick="${actionFn}" style="margin-top: 8px;">
+            ${actionText}
+          </button>
+        </div>
+      `;
+      return;
+    }
 
     const limit = AppState.currentPage * AppState.moviesPerPage;
     const start = (AppState.currentPage - 1) * AppState.moviesPerPage;
@@ -1353,7 +1378,38 @@ async function renderSearchSuggestionsGrid() {
     resultsContainer.parentNode.appendChild(loader);
   } catch (error) {
     console.error("Error en paginación de exploración:", error);
-    AppState.hasMoreMovies = true;
+    AppState.hasMoreMovies = false;
+
+    const errorText = AppState.language === 'es' ? 'Error al cargar resultados de exploración.' : 'Failed to load explore results.';
+    const retryText = AppState.language === 'es' ? 'Reintentar' : 'Retry';
+
+    if (isIncremental && AppState.currentPage > 1) {
+      AppState.currentPage = Math.max(1, AppState.currentPage - 1);
+      let loader = document.getElementById('pagination-loader');
+      if (!loader) {
+        loader = document.createElement('div');
+        loader.id = 'pagination-loader';
+        loader.className = 'pagination-loader-container';
+        resultsContainer.parentNode.appendChild(loader);
+      }
+      loader.innerHTML = `
+        <div class="pagination-error-wrapper">
+          <span class="pagination-error-text">⚠️ ${errorText}</span>
+          <button class="pagination-retry-btn" onclick="loadMoreMovies()">${retryText}</button>
+        </div>
+      `;
+      return;
+    }
+
+    resultsContainer.innerHTML = `
+      <div class="search-empty-state" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 16px; text-align: center; width: 100%;">
+        <span style="font-size: 40px; margin-bottom: 12px;">⚠️</span>
+        <h4 style="color: var(--text-primary); margin-bottom: 8px; font-size: 16px; font-weight: 700;">${errorText}</h4>
+        <button class="pagination-retry-btn" onclick="renderSearchSuggestions()" style="margin-top: 8px;">
+          ${retryText}
+        </button>
+      </div>
+    `;
   }
 }
 
@@ -1379,6 +1435,8 @@ function clearSearchQuery() {
 
 // Hacer la función accesible de forma global para los onclick inline
 window.clearSearchQuery = clearSearchQuery;
+window.clearAllFilters = clearAllFilters;
+window.renderSearchSuggestions = renderSearchSuggestions;
 
 // 3. Renderizar la pantalla de favoritos (Likes)
 function renderLikes() {
@@ -2165,7 +2223,18 @@ function loadMoreMovies() {
     try {
       // Renderizar según la pestaña actual
       if (AppState.currentTab === 'explore') {
-        await renderSearchSuggestionsGrid();
+        const resultsContainer = document.getElementById('explore-search-results');
+        if (resultsContainer) {
+          const loader = document.getElementById('pagination-loader');
+          if (!loader) {
+            const extraLoader = document.createElement('div');
+            extraLoader.id = 'pagination-loader';
+            extraLoader.className = 'pagination-loader-container';
+            extraLoader.innerHTML = `<div class="pagination-spinner"></div>`;
+            resultsContainer.parentNode.appendChild(extraLoader);
+          }
+        }
+        await renderSearchSuggestionsGrid(AppState.exploreRequestToken, true);
       } else {
         await renderHomeGrid();
       }
