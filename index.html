@@ -338,7 +338,7 @@
       <div class="detail-backdrop" id="detail-backdrop">
         <div class="detail-nav-actions">
           <button class="detail-circle-btn" id="detail-back-btn" aria-label="Volver">←</button>
-          <button class="detail-circle-btn" onclick="alert('Enlace para compartir copiado al portapapeles!')" aria-label="Compartir">🔗</button>
+          <button class="detail-circle-btn" id="detail-share-action-btn" aria-label="Compartir" onclick="copyMovieShareLink()">🔗</button>
         </div>
         
         <div class="detail-hero-content">
@@ -363,9 +363,15 @@
         <button class="detail-btn detail-btn-secondary" id="detail-list-btn" aria-label="Guardar en lista">
           📁 <span>Mi Lista</span>
         </button>
-        <button class="detail-btn detail-btn-secondary" id="detail-ticket-btn" aria-label="Comprar Entradas">
-          🎟️ <span>Entradas</span>
-        </button>
+      </div>
+
+      <div class="detail-share-group">
+        <span class="detail-share-label">Compartir:</span>
+        <button class="share-chip" type="button" onclick="copyMovieShareLink()">Copiar enlace</button>
+        <button class="share-chip" type="button" onclick="shareMovie('whatsapp')">WhatsApp</button>
+        <button class="share-chip" type="button" onclick="shareMovie('facebook')">Facebook</button>
+        <button class="share-chip" type="button" onclick="shareMovie('linkedin')">LinkedIn</button>
+        <button class="share-chip" type="button" onclick="shareMovie('discord')">Discord</button>
       </div>
 
       <!-- Etiquetas / Géneros -->
@@ -399,7 +405,7 @@
           <span class="logo-subtitle" style="font-size: 10px;">User</span>
         </div>
         <h2 class="profile-username">María Carrillo</h2>
-        <span class="profile-role">Miembro Premium de Watch Movies</span>
+        <span class="profile-role">Social Developer & Miembro Premium de Watch Movies</span>
       </div>
 
       <!-- Formulario de Acceso a biblioteca (Login / Register) -->

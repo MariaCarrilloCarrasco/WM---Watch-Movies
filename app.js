@@ -518,7 +518,7 @@ const MovieAPIService = {
         if (limit !== null) {
           const start = (page - 1) * limit;
           const end = start + limit;
-          apiResponse = apiResponse.slice(0, end);
+          apiResponse = apiResponse.slice(start, end);
         }
 
         // --- TRANSFORMACIÓN Y MAPEADO AL MODELO CONSCIENTE ---
@@ -593,6 +593,10 @@ document.addEventListener('DOMContentLoaded', () => {
   renderHome();
   renderFavoritesCount();
   renderMyListCount();
+
+  // Manejar enrutamiento inicial y cambios de hash
+  handleRouting();
+  window.addEventListener('hashchange', handleRouting);
 });
 
 // Configurar los manejadores de eventos del menú de navegación (Responsivo y Consistente)
@@ -627,6 +631,10 @@ function setupNavigation() {
 // Cambiar de vista con animaciones suaves
 function switchTab(tabName) {
   if (AppState.currentTab === tabName && tabName !== 'details') return;
+
+  if (tabName !== 'details' && window.location.hash.startsWith('#movie-')) {
+    history.replaceState(null, '', window.location.pathname);
+  }
 
   AppState.currentTab = tabName;
 
@@ -793,13 +801,27 @@ function renderActiveFilters() {
   
   if (!container || !filterList) return;
 
+  const isEs = AppState.language === 'es';
+
+  // Actualizar los textos de cabecera y botón según el idioma
+  const labelEl = container.querySelector('.active-filters-label');
+  if (labelEl) {
+    labelEl.textContent = isEs ? 'Filtros activos:' : 'Active filters:';
+  }
+  const clearBtnEl = document.getElementById('clear-all-filters-btn');
+  if (clearBtnEl) {
+    clearBtnEl.innerHTML = isEs ? '✕ Limpiar todo' : '✕ Clear all';
+    clearBtnEl.title = isEs ? 'Limpiar todos los filtros' : 'Clear all filters';
+  }
+
   // Obtener filtros activos (no "All")
   const activeFilters = [];
   
   if (AppState.exploreFilters.genre !== 'All') {
+    const genreName = GENRE_TRANSLATIONS[AppState.language][AppState.exploreFilters.genre] || AppState.exploreFilters.genre;
     activeFilters.push({
       type: 'genre',
-      label: `Género: ${AppState.exploreFilters.genre}`,
+      label: `${isEs ? 'Género' : 'Genre'}: ${genreName}`,
       value: AppState.exploreFilters.genre
     });
   }
@@ -807,13 +829,18 @@ function renderActiveFilters() {
   if (AppState.exploreFilters.rating !== 'All') {
     activeFilters.push({
       type: 'rating',
-      label: `Puntuación: ${AppState.exploreFilters.rating}+`,
+      label: `${isEs ? 'Puntuación' : 'Rating'}: ${AppState.exploreFilters.rating}+`,
       value: AppState.exploreFilters.rating
     });
   }
   
   if (AppState.exploreFilters.trend !== 'All') {
-    const trendLabel = AppState.exploreFilters.trend === 'trending' ? 'Tendencia' : 'Estrenos Recientes';
+    let trendLabel = '';
+    if (AppState.exploreFilters.trend === 'trending') {
+      trendLabel = isEs ? 'Tendencia' : 'Trending';
+    } else if (AppState.exploreFilters.trend === 'recent') {
+      trendLabel = isEs ? 'Estrenos Recientes' : 'Recent Releases';
+    }
     activeFilters.push({
       type: 'trend',
       label: trendLabel,
@@ -835,12 +862,12 @@ function renderActiveFilters() {
     <div class="active-filter-pill">
       <span>${filter.label}</span>
       <span class="active-filter-pill-remove" data-filter-type="${filter.type}" 
-            title="Remover filtro">✕</span>
+            title="${isEs ? 'Remover filtro' : 'Remove filter'}">✕</span>
     </div>
   `).join('');
 
   // Agregar listeners para remover filtros individuales
-  document.querySelectorAll('.active-filter-pill-remove').forEach(btn => {
+  filterList.querySelectorAll('.active-filter-pill-remove').forEach(btn => {
     btn.addEventListener('click', () => {
       const filterType = btn.getAttribute('data-filter-type');
       removeFilter(filterType);
@@ -1002,6 +1029,9 @@ function setupMovieClicks() {
       const movie = MOVIES_DATA.find(m => m.id === movieId);
       if (movie) {
         showMovieDetails(movie);
+        if (typeof window.closePersonModal === 'function') {
+          window.closePersonModal(false);
+        }
       }
     }
   });
@@ -1013,6 +1043,30 @@ function setupMovieClicks() {
       const mainMovie = MOVIES_DATA.find(m => m.id === 1); // The Midnight Echo
       if (mainMovie) showMovieDetails(mainMovie);
     });
+  }
+
+  // Configurar click en el botón "+ MY LIST" del banner destacado
+  const heroMyListBtn = document.getElementById('hero-like-main');
+  if (heroMyListBtn) {
+    const updateMainMyListBtn = () => {
+      const isListed = AppState.myListMovies.includes(1);
+      const isEs = AppState.language === 'es';
+      heroMyListBtn.textContent = isListed 
+        ? (isEs ? '✓ EN MI LISTA' : '✓ IN MY LIST')
+        : (isEs ? '+ MI LISTA' : '+ MY LIST');
+    };
+    
+    // Ejecutar al inicio
+    updateMainMyListBtn();
+    
+    heroMyListBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMyList(1);
+      updateMainMyListBtn();
+    });
+    
+    // Guardar referencia para actualizar cuando cambie el idioma o el estado
+    window.updateMainMyListBtn = updateMainMyListBtn;
   }
 }
 
@@ -1044,6 +1098,9 @@ function toggleMyList(movieId) {
   if (AppState.currentTab === 'mylist') {
     renderMyListGrid();
   }
+  if (movieId === 1 && typeof window.updateMainMyListBtn === 'function') {
+    window.updateMainMyListBtn();
+  }
 }
 
 // Actualizar contadores de favoritos en la UI
@@ -1061,7 +1118,10 @@ function renderFavoritesCount() {
 
   const likesSubtitle = document.querySelector('.likes-subtitle');
   if (likesSubtitle) {
-    likesSubtitle.textContent = `Tienes ${count} títulos guardados en tu biblioteca.`;
+    const isEs = AppState.language === 'es';
+    likesSubtitle.textContent = isEs
+      ? `Tienes ${count} títulos guardados en tu biblioteca.`
+      : `You have ${count} titles saved in your library.`;
   }
 }
 
@@ -1080,7 +1140,10 @@ function renderMyListCount() {
 
   const subtitle = document.getElementById('mylist-subtitle-text');
   if (subtitle) {
-    subtitle.textContent = `Tienes ${count} títulos guardados en tu lista de seguimiento.`;
+    const isEs = AppState.language === 'es';
+    subtitle.textContent = isEs
+      ? `Tienes ${count} títulos guardados en tu lista de seguimiento.`
+      : `You have ${count} titles saved in your watchlist.`;
   }
 }
 
@@ -1142,6 +1205,7 @@ async function renderHomeGrid() {
   // Si es la primera página, limpiamos la grilla para refrescar el contenido
   if (AppState.currentPage === 1) {
     grid.innerHTML = '';
+    renderHomeInitialLoadingState(grid);
   }
 
   // Eliminar el loader viejo de su posición para añadir las películas y colocar el loader nuevo abajo
@@ -1150,17 +1214,20 @@ async function renderHomeGrid() {
     oldLoader.remove();
   }
 
+  AppState.loadingMovies = true;
+
   try {
     // 1. Consultar listado inicial / filtrado / búsqueda a través de la API simulada centralizada
     const { movies, total } = await MovieAPIService.getMovies({
       genre: AppState.activeGenre,
       search: AppState.searchQuery,
       page: AppState.currentPage,
-      limit: AppState.moviesPerPage
+      limit: AppState.moviesPerPage,
+      reliableMode: true
     });
 
     // Excluimos la película principal destacada de ID 1 de la lista secundaria solo si NO hay una búsqueda activa
-    const filteredMovies = AppState.searchQuery.trim() === '' ? movies.filter(m => m.id !== 1) : movies;
+    const displayedMovies = AppState.searchQuery.trim() === '' ? movies.filter(m => m.id !== 1) : movies;
     const totalCount = AppState.searchQuery.trim() === ''
       ? total - (MOVIES_DATA.some(m => m.id === 1 && m.genre.includes(AppState.activeGenre)) ? 1 : 0)
       : total;
@@ -1185,12 +1252,12 @@ async function renderHomeGrid() {
       return;
     }
 
-    const limit = AppState.currentPage * AppState.moviesPerPage;
-    const start = (AppState.currentPage - 1) * AppState.moviesPerPage;
+    if (AppState.currentPage === 1) {
+      grid.innerHTML = '';
+    }
 
-    // Obtener y agregar únicamente el nuevo lote de películas (evitando duplicados)
-    const pageMovies = filteredMovies.slice(start, limit);
-    pageMovies.forEach(movie => {
+    // Insertar los resultados paginados directamente, la API ya devuelve el corte correcto
+    displayedMovies.forEach(movie => {
       if (!grid.querySelector(`[data-id="${movie.id}"]`)) {
         grid.appendChild(createMovieCardElement(movie));
       }
@@ -1201,35 +1268,53 @@ async function renderHomeGrid() {
     loader.id = 'pagination-loader';
     loader.className = 'pagination-loader-container';
 
-    if (limit < totalCount) {
+    const hasMore = AppState.currentPage * AppState.moviesPerPage < totalCount;
+    if (hasMore) {
       AppState.hasMoreMovies = true;
       loader.innerHTML = `<div class="pagination-spinner"></div>`;
     } else {
       AppState.hasMoreMovies = false;
-      const msg = AppState.language === 'es' ? 'No hay más resultados disponibles' : 'No more results available';
+      const msg = AppState.language === 'es' ? 'Has llegado al final: no hay más películas por cargar.' : 'You reached the end: there are no more movies to load.';
       loader.innerHTML = `<div class="no-more-results">${msg}</div>`;
     }
     
     grid.parentNode.appendChild(loader);
   } catch (error) {
     console.error("Error al cargar películas:", error);
+    if (AppState.currentPage > 1) {
+      AppState.currentPage = Math.max(1, AppState.currentPage - 1);
+    }
     AppState.hasMoreMovies = true;
     
     let loader = document.createElement('div');
     loader.id = 'pagination-loader';
     loader.className = 'pagination-loader-container';
-    const errorText = AppState.language === 'es' ? 'Error al cargar más películas.' : 'Failed to load more movies.';
-    const retryText = AppState.language === 'es' ? 'Reintentar' : 'Retry';
+    const errorText = AppState.language === 'es' ? 'No pudimos cargar las películas en este momento.' : 'We could not load movies at this time.';
+    const recoveryText = AppState.language === 'es' ? 'Recuperar resultados' : 'Recover results';
+    const retryText = AppState.language === 'es' ? 'Reintentar carga' : 'Retry load';
     loader.innerHTML = `
       <div class="pagination-error-wrapper">
         <span class="pagination-error-text">⚠️ ${errorText}</span>
-        <button class="pagination-retry-btn" onclick="loadMoreMovies()">
-          ${retryText}
-        </button>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+          <button class="pagination-retry-btn" onclick="recoverCurrentViewData()">${recoveryText}</button>
+          <button class="pagination-retry-btn" onclick="retryCurrentLoad()">${retryText}</button>
+        </div>
       </div>
     `;
     grid.parentNode.appendChild(loader);
+  } finally {
+    AppState.loadingMovies = false;
   }
+}
+
+function renderHomeInitialLoadingState(grid) {
+  if (!grid) return;
+  grid.innerHTML = `
+    <div class="explore-initial-loading" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 16px; text-align: center; width: 100%; gap: 12px;">
+      <div class="pagination-spinner"></div>
+      <p style="color: var(--text-secondary); font-size: 14px; font-weight: 600;">${AppState.language === 'es' ? 'Cargando películas...' : 'Loading movies...'}</p>
+    </div>
+  `;
 }
 
 // 2. Renderizar la pantalla de exploración (Explore)
@@ -1276,6 +1361,7 @@ async function renderSearchSuggestions() {
 
   // Invalidar respuestas en vuelo para evitar inconsistencias de UI
   AppState.exploreRequestToken += 1;
+  AppState.loadingMovies = true;
   const currentToken = AppState.exploreRequestToken;
 
   try {
@@ -1289,6 +1375,8 @@ async function renderSearchSuggestions() {
     await renderSearchSuggestionsGrid(currentToken, false);
   } catch (error) {
     console.error("Error en sugerencias de búsqueda:", error);
+  } finally {
+    AppState.loadingMovies = false;
   }
 }
 
@@ -1350,12 +1438,8 @@ async function renderSearchSuggestionsGrid(requestToken = AppState.exploreReques
       return;
     }
 
-    const limit = AppState.currentPage * AppState.moviesPerPage;
-    const start = (AppState.currentPage - 1) * AppState.moviesPerPage;
-
-    // Obtener lote y agregar evitando duplicados
-    const pageMovies = movies.slice(start, limit);
-    pageMovies.forEach(movie => {
+    // Insertar los resultados paginados directamente, la API ya devuelve el corte correcto.
+    movies.forEach(movie => {
       if (!resultsContainer.querySelector(`[data-id="${movie.id}"]`)) {
         resultsContainer.appendChild(createMovieCardElement(movie));
       }
@@ -1366,12 +1450,13 @@ async function renderSearchSuggestionsGrid(requestToken = AppState.exploreReques
     loader.id = 'pagination-loader';
     loader.className = 'pagination-loader-container';
 
-    if (limit < total) {
+    const hasMore = AppState.currentPage * AppState.moviesPerPage < total;
+    if (hasMore) {
       AppState.hasMoreMovies = true;
       loader.innerHTML = `<div class="pagination-spinner"></div>`;
     } else {
       AppState.hasMoreMovies = false;
-      const msg = AppState.language === 'es' ? 'No hay más resultados disponibles' : 'No more results available';
+      const msg = AppState.language === 'es' ? 'Has llegado al final: no hay más películas por cargar.' : 'You reached the end: there are no more movies to load.';
       loader.innerHTML = `<div class="no-more-results">${msg}</div>`;
     }
     
@@ -1380,10 +1465,12 @@ async function renderSearchSuggestionsGrid(requestToken = AppState.exploreReques
     console.error("Error en paginación de exploración:", error);
     AppState.hasMoreMovies = false;
 
-    const errorText = AppState.language === 'es' ? 'Error al cargar resultados de exploración.' : 'Failed to load explore results.';
-    const retryText = AppState.language === 'es' ? 'Reintentar' : 'Retry';
+    const errorText = AppState.language === 'es' ? 'No pudimos recuperar los resultados de exploración.' : 'We could not recover explore results.';
+    const recoveryText = AppState.language === 'es' ? 'Recuperar resultados' : 'Recover results';
+    const retryText = AppState.language === 'es' ? 'Reintentar carga' : 'Retry load';
 
     if (isIncremental && AppState.currentPage > 1) {
+      AppState.hasMoreMovies = true;
       AppState.currentPage = Math.max(1, AppState.currentPage - 1);
       let loader = document.getElementById('pagination-loader');
       if (!loader) {
@@ -1395,7 +1482,10 @@ async function renderSearchSuggestionsGrid(requestToken = AppState.exploreReques
       loader.innerHTML = `
         <div class="pagination-error-wrapper">
           <span class="pagination-error-text">⚠️ ${errorText}</span>
-          <button class="pagination-retry-btn" onclick="loadMoreMovies()">${retryText}</button>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+            <button class="pagination-retry-btn" onclick="recoverCurrentViewData()">${recoveryText}</button>
+            <button class="pagination-retry-btn" onclick="retryCurrentLoad()">${retryText}</button>
+          </div>
         </div>
       `;
       return;
@@ -1405,11 +1495,14 @@ async function renderSearchSuggestionsGrid(requestToken = AppState.exploreReques
       <div class="search-empty-state" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 16px; text-align: center; width: 100%;">
         <span style="font-size: 40px; margin-bottom: 12px;">⚠️</span>
         <h4 style="color: var(--text-primary); margin-bottom: 8px; font-size: 16px; font-weight: 700;">${errorText}</h4>
-        <button class="pagination-retry-btn" onclick="renderSearchSuggestions()" style="margin-top: 8px;">
-          ${retryText}
-        </button>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:8px;">
+          <button class="pagination-retry-btn" onclick="recoverCurrentViewData()">${recoveryText}</button>
+          <button class="pagination-retry-btn" onclick="retryCurrentLoad()">${retryText}</button>
+        </div>
       </div>
     `;
+  } finally {
+    AppState.loadingMovies = false;
   }
 }
 
@@ -1433,10 +1526,43 @@ function clearSearchQuery() {
   }
 }
 
+function recoverCurrentViewData() {
+  AppState.currentPage = 1;
+  AppState.loadingMovies = false;
+  AppState.hasMoreMovies = true;
+
+  if (AppState.currentTab === 'explore') {
+    renderSearchSuggestions();
+  } else {
+    renderHomeGrid();
+  }
+}
+
+function retryCurrentLoad() {
+  AppState.loadingMovies = false;
+  AppState.hasMoreMovies = true;
+
+  if (AppState.currentTab === 'explore') {
+    if (AppState.currentPage <= 1) {
+      renderSearchSuggestions();
+    } else {
+      loadMoreMovies();
+    }
+  } else {
+    if (AppState.currentPage <= 1) {
+      renderHomeGrid();
+    } else {
+      loadMoreMovies();
+    }
+  }
+}
+
 // Hacer la función accesible de forma global para los onclick inline
 window.clearSearchQuery = clearSearchQuery;
 window.clearAllFilters = clearAllFilters;
 window.renderSearchSuggestions = renderSearchSuggestions;
+window.recoverCurrentViewData = recoverCurrentViewData;
+window.retryCurrentLoad = retryCurrentLoad;
 
 // 3. Renderizar la pantalla de favoritos (Likes)
 function renderLikes() {
@@ -1573,6 +1699,10 @@ function showMovieDetails(movie) {
     if (movie.director) {
       const directorCard = document.createElement('div');
       directorCard.className = 'director-card-wrapper';
+      directorCard.style.cursor = 'pointer';
+      directorCard.addEventListener('click', () => {
+        window.location.hash = '#person/' + encodeURIComponent(movie.director.name.replace(/\s+/g, '-'));
+      });
       directorCard.innerHTML = `
         <div class="director-photo" style="background-image: url('${movie.director.photo}')"></div>
         <div class="director-info">
@@ -1591,6 +1721,10 @@ function showMovieDetails(movie) {
     movie.cast.forEach((actor, index) => {
       const actorCard = document.createElement('div');
       actorCard.className = 'actor-card';
+      actorCard.style.cursor = 'pointer';
+      actorCard.addEventListener('click', () => {
+        window.location.hash = '#person/' + encodeURIComponent(actor.name.replace(/\s+/g, '-'));
+      });
 
       // Usamos retratos aleatorios pero estéticos de Unsplash basados en su nombre
       const imageIndex = 40 + index + movie.id;
@@ -1616,30 +1750,88 @@ function showMovieDetails(movie) {
     };
   }
 
-  // Botón comprar entradas / trailer con alertas de interacción
-  const ticketBtn = document.getElementById('detail-ticket-btn');
-  if (ticketBtn) {
-    ticketBtn.onclick = () => {
-      alert(`🎟️ ¡Reserva de entradas para "${movie.title}" iniciada! Selecciona tu cine favorito.`);
+  // Botón de copiado directo de enlace
+  const shareActionBtn = document.getElementById('detail-share-action-btn');
+  if (shareActionBtn) {
+    shareActionBtn.onclick = () => {
+      if (typeof window.copyMovieShareLink === 'function') {
+        window.copyMovieShareLink();
+      }
     };
   }
 
   const trailerBtn = document.getElementById('detail-trailer-btn');
   if (trailerBtn) {
     trailerBtn.onclick = () => {
-      alert(`▶️ Reproduciendo tráiler oficial de "${movie.title}"...`);
+      const query = encodeURIComponent(`${movie.title} ${movie.year} trailer`);
+      const youtubeUrl = `https://www.youtube.com/results?search_query=${query}`;
+      window.open(youtubeUrl, '_blank');
     };
   }
+
+  const detailHash = `#movie-${movie.id}`;
+  if (window.location.hash !== detailHash) {
+    history.replaceState(null, '', `${window.location.pathname}${detailHash}`);
+  }
+
+  // Establecer la URL de compartición de la película en el estado del detalle
+  window.currentMovieShareUrl = `${window.location.origin}${window.location.pathname}${detailHash}`;
+
+  const copyMovieShareLink = () => {
+    const url = window.currentMovieShareUrl;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(() => {
+        alert('Enlace copiado al portapapeles');
+      }).catch(() => {
+        prompt('Copiar enlace manualmente:', url);
+      });
+    } else {
+      prompt('Copiar enlace manualmente:', url);
+    }
+  };
+
+  const shareMovie = (channel) => {
+    const url = encodeURIComponent(window.currentMovieShareUrl);
+    const title = encodeURIComponent(movie.title);
+    let shareUrl = '';
+
+    switch (channel) {
+      case 'whatsapp':
+        shareUrl = `https://api.whatsapp.com/send?text=${title}%20${url}`;
+        break;
+      case 'facebook':
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        break;
+      case 'linkedin':
+        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+        break;
+      case 'discord':
+        shareUrl = `https://discord.com/channels/@me`;
+        break;
+      default:
+        return;
+    }
+
+    if (channel === 'discord') {
+      alert('Abre Discord y comparte el enlace manualmente: ' + window.currentMovieShareUrl);
+    } else {
+      window.open(shareUrl, '_blank');
+    }
+  };
+
+  window.copyMovieShareLink = copyMovieShareLink;
+  window.shareMovie = shareMovie;
 
   const listBtn = document.getElementById('detail-list-btn');
   if (listBtn) {
     const isWatchlisted = AppState.myListMovies.includes(movie.id);
+    const isEs = AppState.language === 'es';
     if (isWatchlisted) {
       listBtn.classList.add('watchlisted');
-      listBtn.innerHTML = '📁 <span>Quitar Lista</span>';
+      listBtn.innerHTML = `📁 <span>${isEs ? 'Quitar Lista' : 'Remove List'}</span>`;
     } else {
       listBtn.classList.remove('watchlisted');
-      listBtn.innerHTML = '📁 <span>Mi Lista</span>';
+      listBtn.innerHTML = `📁 <span>${isEs ? 'Mi Lista' : 'My List'}</span>`;
     }
 
     const newListBtn = listBtn.cloneNode(true);
@@ -1648,8 +1840,12 @@ function showMovieDetails(movie) {
     newListBtn.addEventListener('click', () => {
       toggleMyList(movie.id);
       const isWatchlistedNow = AppState.myListMovies.includes(movie.id);
+      const isEsNow = AppState.language === 'es';
       newListBtn.classList.toggle('watchlisted', isWatchlistedNow);
-      newListBtn.innerHTML = isWatchlistedNow ? '📁 <span>Quitar Lista</span>' : '📁 <span>Mi Lista</span>';
+      const label = isWatchlistedNow 
+        ? (isEsNow ? 'Quitar Lista' : 'Remove List') 
+        : (isEsNow ? 'Mi Lista' : 'My List');
+      newListBtn.innerHTML = `📁 <span>${label}</span>`;
     });
   }
 
@@ -1737,7 +1933,7 @@ const TRANSLATIONS = {
     profileWelcome: "Bienvenido",
     profileSubtitle: "Accede a tu biblioteca y listas de seguimiento",
     profileUser: "María Carrillo",
-    profileRole: "Miembro Premium de Watch Movies",
+    profileRole: "Social Developer & Miembro Premium de Watch Movies",
     loginSubmit: "Iniciar Sesión",
     loginEmail: "Correo Electrónico",
     loginPassword: "Contraseña",
@@ -1781,7 +1977,7 @@ const TRANSLATIONS = {
     profileWelcome: "Welcome",
     profileSubtitle: "Access your library and watchlists",
     profileUser: "María Carrillo",
-    profileRole: "Watch Movies Premium Member",
+    profileRole: "Social Developer & Watch Movies Premium Member",
     loginSubmit: "Log In",
     loginEmail: "Email Address",
     loginPassword: "Password",
@@ -1984,10 +2180,33 @@ function changeLanguage(lang) {
   const searchInput = document.getElementById('search-input');
   if (searchInput) searchInput.placeholder = dict.searchPlaceholder;
 
+  // Traducir vista de My List
+  const mylistTitle = document.querySelector('#view-mylist .explore-section-title');
+  if (mylistTitle) {
+    mylistTitle.textContent = lang === 'es' ? 'Mi Lista' : 'My List';
+  }
+  const mylistEmptyTitle = document.querySelector('#mylist-empty-state .empty-state-title');
+  if (mylistEmptyTitle) {
+    mylistEmptyTitle.textContent = dict.emptyListTitle;
+  }
+  const mylistEmptyDesc = document.querySelector('#mylist-empty-state .empty-state-desc');
+  if (mylistEmptyDesc) {
+    mylistEmptyDesc.textContent = dict.emptyListDesc;
+  }
+  renderMyListCount();
+
   // Actualizar listas activas
   if (AppState.currentTab === 'home') renderHome();
   else if (AppState.currentTab === 'likes') renderLikes();
   else if (AppState.currentTab === 'mylist') renderMyList();
+
+  // Re-renderizar filtros activos si están en pantalla
+  renderActiveFilters();
+
+  // Actualizar botón del banner destacado
+  if (typeof window.updateMainMyListBtn === 'function') {
+    window.updateMainMyListBtn();
+  }
 
   // Si Braille está activo, volver a aplicar
   if (AppState.brailleActive) {
@@ -2042,7 +2261,10 @@ function speakText(text) {
 function toggleNarratorMode(checked) {
   AppState.narratorActive = checked;
   if (checked) {
-    speakText(AppState.language === 'es' ? 'Narrador activado.' : 'Screen narrator enabled.');
+    const msg = AppState.language === 'es'
+      ? 'Narrador activado. Hola María Carrillo, social developer. Bienvenido a Watch Movies, la plataforma de cine definitiva.'
+      : 'Screen narrator enabled. Hello María Carrillo, social developer. Welcome to Watch Movies, the ultimate cinema experience.';
+    speakText(msg);
   } else {
     window.speechSynthesis.cancel();
   }
@@ -2163,7 +2385,10 @@ function enterPlatform() {
   if (welcome) {
     welcome.classList.add('fade-out');
     sessionStorage.setItem('hasWelcomed', 'true');
-    speakText(AppState.language === 'es' ? 'Bienvenido a Cinestream' : 'Welcome to Cinestream');
+    const msg = AppState.language === 'es'
+      ? 'Hola María Carrillo, social developer. Bienvenido a Watch Movies, la plataforma de cine definitiva.'
+      : 'Hello María Carrillo, social developer. Welcome to Watch Movies, the ultimate cinema experience.';
+    speakText(msg);
   }
 }
 
@@ -2238,9 +2463,12 @@ function loadMoreMovies() {
       } else {
         await renderHomeGrid();
       }
-      AppState.loadingMovies = false;
     } catch (error) {
       console.error("Error al cargar más películas:", error);
+      if (AppState.currentPage > 1) {
+        AppState.currentPage = Math.max(1, AppState.currentPage - 1);
+      }
+    } finally {
       AppState.loadingMovies = false;
     }
   }, 800);
@@ -2258,3 +2486,118 @@ function setupInfiniteScroll() {
     }
   });
 }
+
+// =================================================================
+// LÓGICA DE DETALLES DE PERSONA (DIRECTOR Y ACTORES) Y ENRUTAMIENTO SPA
+// =================================================================
+
+function showPersonDetails(personName) {
+  const directedMovies = MOVIES_DATA.filter(m => m.director && m.director.name.toLowerCase() === personName.toLowerCase());
+  const actedMovies = MOVIES_DATA.filter(m => m.cast.some(actor => actor.name.toLowerCase() === personName.toLowerCase()));
+  const allAssociatedMovies = [...new Set([...directedMovies, ...actedMovies])];
+
+  if (allAssociatedMovies.length === 0) {
+    console.warn(`No se encontraron películas para la persona: ${personName}`);
+    return;
+  }
+
+  let photoUrl = '';
+  let roleLabel = '';
+  const isEs = AppState.language === 'es';
+
+  if (directedMovies.length > 0) {
+    photoUrl = directedMovies[0].director.photo;
+    roleLabel = isEs ? 'Director de Cine' : 'Film Director';
+  } else if (actedMovies.length > 0) {
+    const firstMovie = actedMovies[0];
+    const actorIndex = firstMovie.cast.findIndex(actor => actor.name.toLowerCase() === personName.toLowerCase());
+    const imageIndex = 40 + actorIndex + firstMovie.id;
+    photoUrl = `https://images.unsplash.com/photo-${1500000000000 + imageIndex * 100000}?auto=format&fit=crop&w=150&h=150&q=80`;
+    roleLabel = isEs ? 'Actor / Actriz' : 'Actor / Actress';
+  }
+
+  // Quitar modal anterior si existe
+  const oldModal = document.getElementById('person-modal');
+  if (oldModal) oldModal.remove();
+
+  // Crear modal overlay
+  const modal = document.createElement('div');
+  modal.id = 'person-modal';
+  modal.className = 'modal-overlay';
+  modal.style.display = 'flex';
+  
+  // Cerrar al hacer click fuera del contenido
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closePersonModal();
+    }
+  });
+
+  modal.innerHTML = `
+    <div class="modal-content person-modal-content">
+      <button class="modal-close" onclick="closePersonModal()">×</button>
+      <div class="person-modal-header">
+        <div class="person-modal-photo" style="background-image: url('${photoUrl}')"></div>
+        <div class="person-modal-info">
+          <h3 class="person-modal-name">${personName}</h3>
+          <span class="person-modal-role">${roleLabel}</span>
+        </div>
+      </div>
+      <div class="person-modal-body">
+        <h4 class="person-modal-section-title">${isEs ? 'Filmografía' : 'Filmography'}</h4>
+        <div class="person-movies-grid" id="person-movies-grid"></div>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  // Agregar las tarjetas de películas
+  const grid = document.getElementById('person-movies-grid');
+  if (grid) {
+    allAssociatedMovies.forEach(movie => {
+      grid.appendChild(createMovieCardElement(movie));
+    });
+  }
+}
+
+function closePersonModal(triggerBack = true) {
+  const modal = document.getElementById('person-modal');
+  if (modal) {
+    modal.remove();
+  }
+  if (triggerBack && window.location.hash.startsWith('#person/')) {
+    // Si el usuario cierra el modal manualmente, limpiamos el hash
+    window.location.hash = '';
+  }
+}
+
+function handleRouting() {
+  const hash = window.location.hash;
+
+  if (hash.startsWith('#person/')) {
+    const personName = decodeURIComponent(hash.substring(8)).replace(/-/g, ' ');
+    showPersonDetails(personName);
+    return;
+  }
+
+  if (hash.startsWith('#movie-')) {
+    const movieId = Number(hash.replace('#movie-', ''));
+    const movie = MOVIES_DATA.find(m => m.id === movieId);
+    if (movie) {
+      closePersonModal(false);
+      showMovieDetails(movie);
+      return;
+    }
+  }
+
+  closePersonModal(false);
+  if (AppState.currentTab === 'details') {
+    switchTab('home');
+  }
+}
+
+// Hacer las funciones disponibles globalmente
+window.closePersonModal = closePersonModal;
+window.handleRouting = handleRouting;
+window.showPersonDetails = showPersonDetails;

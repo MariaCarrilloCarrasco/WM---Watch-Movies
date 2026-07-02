@@ -720,6 +720,36 @@ body {
   gap: 16px;
   margin-bottom: 32px;
   width: 100%;
+  flex-wrap: wrap;
+}
+
+.detail-share-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.detail-share-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.share-chip {
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  color: var(--text-primary);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.share-chip:hover {
+  background: rgba(139, 92, 246, 0.2);
 }
 
 .detail-btn {
@@ -1306,7 +1336,13 @@ body {
   }
 
   .app-header {
-    display: none !important; /* Ocultar cabecera móvil en desktop */
+    display: flex !important;
+    left: 260px;
+    width: calc(100% - 260px);
+    position: sticky;
+    top: 0;
+    z-index: 102;
+    margin: 0;
   }
 
   /* Mostrar y dar formato al sidebar lateral de escritorio */
@@ -1441,7 +1477,15 @@ body {
   .app-content-container {
     max-width: 1200px;
     margin: 0;
-    padding: 40px;
+    padding: 120px 40px 40px 40px;
+  }
+
+  .app-header {
+    margin-left: 260px;
+  }
+
+  .content-top-bar {
+    margin-top: 88px;
   }
 
   .hero-banner {
@@ -2385,4 +2429,94 @@ body {
 .active-filter-pill-remove:hover {
   background: rgba(255, 30, 39, 0.4);
   color: var(--brand-red);
+}
+
+/* Estilos para el Modal de Persona (Director/Actor) */
+.person-modal-content {
+  max-width: 800px;
+  width: 90%;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-lg);
+  padding: 32px;
+  backdrop-filter: blur(20px);
+  position: relative;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.person-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 24px;
+}
+
+.person-modal-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid var(--accent-cyan);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+}
+
+.person-modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.person-modal-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.person-modal-role {
+  font-size: 14px;
+  color: var(--accent-purple);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.person-modal-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.person-movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* En pantallas móviles */
+@media screen and (max-width: 480px) {
+  .person-modal-content {
+    padding: 20px;
+  }
+  .person-modal-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .person-movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
 }
