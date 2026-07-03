@@ -1,0 +1,49 @@
+{
+  "defaultLanguage": "es",
+  "texts": {
+    "es": {
+      "welcome_title": "Bienvenido a la experiencia de cine definitiva",
+      "welcome_desc": "Explora, descubre y organiza tus películas preferidas en un universo galáctico premium.",
+      "login_required_msg": "Esta sección es de acceso privado. Por favor, inicia sesión o regístrate para continuar.",
+      "auth_error_title": "Error de Autenticación",
+      "auth_ok": "Entendido",
+      "remember_me": "Recordarme",
+      "logout": "Cerrar sesión",
+      "login_success": "Autenticado con éxito.",
+      "register_success": "Registro exitoso. Bienvenido.",
+      "assignment_saved": "Asignación guardada.",
+      "comment_login_required": "Debes iniciar sesión para publicar comentarios."
+    },
+    "en": {
+      "welcome_title": "Welcome to the ultimate movie experience",
+      "welcome_desc": "Explore, discover and organize your favorite movies in a premium galactic universe.",
+      "login_required_msg": "This section is private. Please log in or sign up to continue.",
+      "auth_error_title": "Authentication Error",
+      "auth_ok": "OK",
+      "remember_me": "Remember me",
+      "logout": "Sign out",
+      "login_success": "Authenticated successfully.",
+      "register_success": "Sign up successful. Welcome.",
+      "assignment_saved": "Assignment saved.",
+      "comment_login_required": "You must sign in to post comments."
+    }
+  }
+  ,
+  "firebase": {
+    "enabled": false,
+    "config": {
+      "apiKey": "YOUR_API_KEY",
+      "authDomain": "your-app.firebaseapp.com",
+      "projectId": "your-app-id",
+      "storageBucket": "your-app.appspot.com",
+      "messagingSenderId": "SENDER_ID",
+      "appId": "APP_ID"
+    },
+    "providers": ["google", "github"]
+  }
+  ,
+  "localDb": {
+    "enabled": true,
+    "name": "wm_local_db"
+  }
+}

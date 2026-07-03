@@ -1,49 +1,16 @@
-# WM - Watch Movies 🎬
+# React + Vite
 
-En esta plataforma, encontrarás sugerencias sobre películas adaptadas a tus gustos y preferencias que podrás visualizar. El objetivo principal es proporcionar una experiencia de usuario fluida y visualmente atractiva para descubrir y explorar nuevo contenido cinematográfico de manera sencilla.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
----
+Currently, two official plugins are available:
 
-## 🚀 Características Principales
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-*   **Sugerencias Personalizadas:** Recomendaciones adaptadas a las preferencias de los usuarios.
-*   **Diseño Premium y Responsivo:** Interfaz moderna, limpia y adaptada a todo tipo de dispositivos (móviles, tablets y ordenadores).
-*   **Navegación Intuitiva:** Acceso rápido a las secciones clave de la plataforma.
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🛠️ Tecnologías y Dependencias
+## Expanding the Oxlint configuration
 
-El proyecto está desarrollado utilizando tecnologías web estándar (Vanilla stack) para asegurar un rendimiento óptimo, compatibilidad y tiempos de carga rápidos:
-
-*   **HTML5:** Estructura semántica de la aplicación.
-*   **CSS3 (Vanilla):** Diseño visual, animaciones y maquetación utilizando variables CSS y Flexbox/CSS Grid.
-*   **JavaScript (Vanilla ES6+):** Lógica del lado del cliente, manipulación del DOM y control de eventos.
-
-*Nota: Al ser una aplicación construida con tecnologías nativas del navegador, no requiere la instalación de frameworks pesados o gestores de paquetes externos.*
-
----
-
-## 💻 Instalación y Uso en Local
-
-Sigue estos sencillos pasos para ejecutar el proyecto en tu entorno local:
-
-### 1. Clonar el repositorio
-Clona este repositorio en tu máquina local utilizando Git:
-```bash
-git clone https://github.com/MariaCarrilloCarrasco/WM---Watch-Movies.git
-```
-
-### 2. Acceder al directorio
-Entra en la carpeta del proyecto:
-```bash
-cd WM---Watch-Movies
-```
-
-### 3. Ejecutar la aplicación
-Puedes abrir la aplicación de dos maneras:
-
-*   **Opción rápida:** Haz doble clic en el archivo [index.html](file:///c:/Users/Coder/Desktop/FactoriaF5/Movies/index.html) para abrirlo directamente en tu navegador web.
-*   **Opción recomendada (Servidor Local):** Utiliza una extensión de servidor local como **Live Server** en VS Code, o ejecuta el siguiente comando en tu terminal para evitar problemas con peticiones locales:
-    *   **Python 3:** `python -m http.server 8000` (luego accede a `http://localhost:8000`)
-    *   **Node.js (serve):** `npx serve` (luego accede a `http://localhost:3000`)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.

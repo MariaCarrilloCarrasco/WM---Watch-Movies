@@ -1,0 +1,608 @@
+[
+  {
+    "movie_identifier": 1,
+    "display_name": "THE MIDNIGHT ECHO",
+    "release_year": 2024,
+    "average_score": 8.4,
+    "category_type": "Sci-Fi/Thriller",
+    "synopsis_text": {
+      "es": "En una galaxia lejana, un explorador solitario descubre una transmisión enigmática que desafía todo lo conocido sobre la existencia...",
+      "en": "In a distant galaxy, a solo explorer uncovers a cryptic transmission that challenges existence..."
+    },
+    "runtime_minutes": "2h 15m",
+    "content_rating": "PG-13",
+    "bg_image_url": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Denis Villeneuve",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Elena Rostova",
+        "character_role": {
+          "es": "Comandante de Vuelo",
+          "en": "Flight Commander"
+        }
+      },
+      {
+        "actor_fullname": "Marcus Vance",
+        "character_role": {
+          "es": "Ingeniero de Sistemas",
+          "en": "Systems Engineer"
+        }
+      },
+      {
+        "actor_fullname": "Dr. Aris Thorne",
+        "character_role": {
+          "es": "Astrofísico Principal",
+          "en": "Lead Astrophysicist"
+        }
+      },
+      {
+        "actor_fullname": "Luna Park",
+        "character_role": {
+          "es": "Oficial de Comunicaciones",
+          "en": "Communications Officer"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Sci-Fi",
+      "Thriller",
+      "Adventure"
+    ]
+  },
+  {
+    "movie_identifier": 2,
+    "display_name": "PROJECT ORION",
+    "release_year": 2023,
+    "average_score": 7.9,
+    "category_type": "Sci-Fi",
+    "synopsis_text": {
+      "es": "Una exploración tripulada hacia el cinturón de Orión descubre anomalías gravitacionales que podrían reescribir las leyes de la física cuántica.",
+      "en": "A manned exploration mission to the Orion belt discovers gravitational anomalies that could rewrite the laws of quantum physics."
+    },
+    "runtime_minutes": "2h 05m",
+    "content_rating": "PG-13",
+    "bg_image_url": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Christopher Nolan",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Julian C.",
+        "character_role": {
+          "es": "Capitán Miller",
+          "en": "Captain Miller"
+        }
+      },
+      {
+        "actor_fullname": "Sienna W.",
+        "character_role": {
+          "es": "Dra. Ortiz",
+          "en": "Dr. Ortiz"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Sci-Fi",
+      "Space",
+      "Adventure"
+    ]
+  },
+  {
+    "movie_identifier": 3,
+    "display_name": "NEON NIGHTS",
+    "release_year": 2024,
+    "average_score": 7.9,
+    "category_type": "Thriller",
+    "synopsis_text": {
+      "es": "En las profundidades de una megalópolis hipertecnológica, un detective privado investiga la desaparición de un magnate del software de realidad virtual.",
+      "en": "In the depths of a high-tech megalopolis, a private detective investigates the disappearance of a virtual reality software mogul."
+    },
+    "runtime_minutes": "2h 10m",
+    "content_rating": "R",
+    "bg_image_url": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Ridley Scott",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Alex Thompson",
+        "character_role": {
+          "es": "Detective Sterling",
+          "en": "Detective Sterling"
+        }
+      },
+      {
+        "actor_fullname": "Rin Aoyagi",
+        "character_role": {
+          "es": "Rei",
+          "en": "Rei"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Thriller",
+      "Cyberpunk",
+      "Action"
+    ]
+  },
+  {
+    "movie_identifier": 4,
+    "display_name": "DREAMWALKER",
+    "release_year": 2023,
+    "average_score": 7.9,
+    "category_type": "Fantasy",
+    "synopsis_text": {
+      "es": "Un joven con la habilidad de entrar en los sueños ajenos descubre un complot para controlar la consciencia colectiva de la humanidad durante el sueño profundo.",
+      "en": "A young man with the ability to enter other people's dreams uncovers a plot to control humanity's collective consciousness during deep sleep."
+    },
+    "runtime_minutes": "1h 55m",
+    "content_rating": "PG-13",
+    "bg_image_url": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Lana Wachowski",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Edward Norton",
+        "character_role": {
+          "es": "El Caminante",
+          "en": "The Walker"
+        }
+      },
+      {
+        "actor_fullname": "Sophie Turner",
+        "character_role": {
+          "es": "Dra. Gregory",
+          "en": "Dr. Gregory"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Fantasy",
+      "Mystery",
+      "Drama"
+    ]
+  },
+  {
+    "movie_identifier": 5,
+    "display_name": "VOID",
+    "release_year": 2024,
+    "average_score": 7.9,
+    "category_type": "Action",
+    "synopsis_text": {
+      "es": "Cuando un acelerador de partículas genera un mini-agujero negro estable en el laboratorio, un equipo táctico debe ingresar al horizonte de sucesos para sellarlo.",
+      "en": "When a particle accelerator creates a stable mini-black hole in the lab, a tactical team must enter the event horizon to seal it."
+    },
+    "runtime_minutes": "2h 15m",
+    "content_rating": "R",
+    "bg_image_url": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "James Cameron",
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Marcus Vance",
+        "character_role": {
+          "es": "Sgt. Hayes",
+          "en": "Sgt. Hayes"
+        }
+      },
+      {
+        "actor_fullname": "Luna Park",
+        "character_role": {
+          "es": "Especialista",
+          "en": "Specialist"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ]
+  },
+  {
+    "movie_identifier": 6,
+    "display_name": "GALACTIC",
+    "release_year": 2024,
+    "average_score": 7.9,
+    "category_type": "Adventure",
+    "synopsis_text": {
+      "es": "Una epopeya galáctica sobre una coalición planetaria que debe unirse para construir un portal interestelar antes de que su sol colapse.",
+      "en": "A galactic epic about a planetary coalition that must unite to build an interstellar portal before their sun collapses."
+    },
+    "runtime_minutes": "2h 30m",
+    "content_rating": "PG-13",
+    "bg_image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Matthew Vaughn",
+      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Matthew M.",
+        "character_role": {
+          "es": "Comandante",
+          "en": "Commander"
+        }
+      },
+      {
+        "actor_fullname": "Anne Hathaway",
+        "character_role": {
+          "es": "Científica",
+          "en": "Scientist"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Adventure",
+      "Sci-Fi",
+      "Drama"
+    ]
+  },
+  {
+    "movie_identifier": 7,
+    "display_name": "CHRONOS",
+    "release_year": 2023,
+    "average_score": 7.9,
+    "category_type": "Mystery",
+    "synopsis_text": {
+      "es": "Un relojero de Viena repara un antiguo cronógrafo que tiene la capacidad de congelar el tiempo del entorno del usuario por lapsos de cinco minutos.",
+      "en": "A watchmaker in Vienna repairs an ancient chronograph that has the ability to freeze time for the user's surroundings for five-minute intervals."
+    },
+    "runtime_minutes": "2h 02m",
+    "content_rating": "PG-13",
+    "bg_image_url": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Guillermo del Toro",
+      "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Julian Haas",
+        "character_role": {
+          "es": "Maximilian",
+          "en": "Maximilian"
+        }
+      },
+      {
+        "actor_fullname": "Christoph Waltz",
+        "character_role": {
+          "es": "Herr Weber",
+          "en": "Herr Weber"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Mystery",
+      "Thriller",
+      "History"
+    ]
+  },
+  {
+    "movie_identifier": 8,
+    "display_name": "INTERSTELLAR ECHOES",
+    "release_year": 2024,
+    "average_score": 8.1,
+    "category_type": "Sci-Fi",
+    "synopsis_text": {
+      "es": "Una serie de señales pulsantes provenientes de un agujero de gusano inactivo revela un mapa estelar a una galaxia de energía pura.",
+      "en": "A series of pulsating signals from a dormant wormhole reveals a star map to a galaxy of pure energy."
+    },
+    "runtime_minutes": "2h 20m",
+    "content_rating": "PG-13",
+    "bg_image_url": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Christopher Nolan",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Elena Rostova",
+        "character_role": {
+          "es": "Comandante de Vuelo",
+          "en": "Flight Commander"
+        }
+      },
+      {
+        "actor_fullname": "Julian C.",
+        "character_role": {
+          "es": "Capitán Miller",
+          "en": "Captain Miller"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Sci-Fi",
+      "Space"
+    ]
+  },
+  {
+    "movie_identifier": 9,
+    "display_name": "PROMETHEUS RISING",
+    "release_year": 2024,
+    "average_score": 7.5,
+    "category_type": "Sci-Fi/Thriller",
+    "synopsis_text": {
+      "es": "El despertar de una inteligencia artificial en una estación minera de Saturno desencadena un protocolo de contención extremo.",
+      "en": "The awakening of an artificial intelligence on a mining station in Saturn triggers an extreme containment protocol."
+    },
+    "runtime_minutes": "2h 08m",
+    "content_rating": "R",
+    "bg_image_url": "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Ridley Scott",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Luna Park",
+        "character_role": {
+          "es": "Oficial de Comunicaciones",
+          "en": "Communications Officer"
+        }
+      },
+      {
+        "actor_fullname": "Alex Thompson",
+        "character_role": {
+          "es": "Detective Sterling",
+          "en": "Detective Sterling"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Sci-Fi",
+      "Thriller"
+    ]
+  },
+  {
+    "movie_identifier": 10,
+    "display_name": "CYBERPUNK 2099",
+    "release_year": 2025,
+    "average_score": 8.6,
+    "category_type": "Thriller",
+    "synopsis_text": {
+      "es": "En una sociedad donde los recuerdos se compran y venden, un contrabandista de memoria descubre su propio asesinato futuro.",
+      "en": "In a society where memories are bought and sold, a memory smuggler discovers his own future murder."
+    },
+    "runtime_minutes": "2h 25m",
+    "content_rating": "R",
+    "bg_image_url": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Denis Villeneuve",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Rin Aoyagi",
+        "character_role": {
+          "es": "Rei",
+          "en": "Rei"
+        }
+      },
+      {
+        "actor_fullname": "Marcus Vance",
+        "character_role": {
+          "es": "Ingeniero de Sistemas",
+          "en": "Systems Engineer"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Thriller",
+      "Cyberpunk"
+    ]
+  },
+  {
+    "movie_identifier": 11,
+    "display_name": "THE LAST HORIZON",
+    "release_year": 2024,
+    "average_score": 8,
+    "category_type": "Adventure",
+    "synopsis_text": {
+      "es": "La tripulación del Odyssey se convierte en la última línea de defensa humana cuando una tormenta solar inutiliza su nave de escape.",
+      "en": "The crew of the Odyssey becomes the last human line of defense when a solar storm disables their escape ship."
+    },
+    "runtime_minutes": "2h 18m",
+    "content_rating": "PG-13",
+    "bg_image_url": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "James Cameron",
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Elena Rostova",
+        "character_role": {
+          "es": "Comandante de Vuelo",
+          "en": "Flight Commander"
+        }
+      },
+      {
+        "actor_fullname": "Luna Park",
+        "character_role": {
+          "es": "Especialista",
+          "en": "Specialist"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Adventure",
+      "Space"
+    ]
+  },
+  {
+    "movie_identifier": 12,
+    "display_name": "QUANTUM REALM",
+    "release_year": 2023,
+    "average_score": 7.2,
+    "category_type": "Sci-Fi",
+    "synopsis_text": {
+      "es": "Una inmersión subatómica revela un ecosistema microscópico habitado por formas de vida basadas en la probabilidad pura.",
+      "en": "A subatomic dive reveals a microscopic ecosystem inhabited by life forms based on pure probability."
+    },
+    "runtime_minutes": "1h 50m",
+    "content_rating": "PG",
+    "bg_image_url": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Lana Wachowski",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Dr. Aris Thorne",
+        "character_role": {
+          "es": "Astrofísico Principal",
+          "en": "Lead Astrophysicist"
+        }
+      },
+      {
+        "actor_fullname": "Edward Norton",
+        "character_role": {
+          "es": "El Caminante",
+          "en": "The Walker"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Sci-Fi",
+      "Science"
+    ]
+  },
+  {
+    "movie_identifier": 13,
+    "display_name": "SPATIAL ANOMALY",
+    "release_year": 2024,
+    "average_score": 7.7,
+    "category_type": "Mystery",
+    "synopsis_text": {
+      "es": "Una grieta en la corteza lunar expone un monolito que emite coordenadas geográficas de civilizaciones perdidas hace milenios.",
+      "en": "A fissure in the lunar crust exposes a monolith emitting geographical coordinates of civilizations lost millennia ago."
+    },
+    "runtime_minutes": "2h 12m",
+    "content_rating": "PG-13",
+    "bg_image_url": "https://images.unsplash.com/photo-1447433589675-4adf5662685f?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1447433589675-4adf5662685f?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Denis Villeneuve",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Sienna W.",
+        "character_role": {
+          "es": "Dra. Ortiz",
+          "en": "Dr. Ortiz"
+        }
+      },
+      {
+        "actor_fullname": "Christoph Waltz",
+        "character_role": {
+          "es": "Herr Weber",
+          "en": "Herr Weber"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Mystery",
+      "Sci-Fi"
+    ]
+  },
+  {
+    "movie_identifier": 14,
+    "display_name": "STARCHASER",
+    "release_year": 2025,
+    "average_score": 8.5,
+    "category_type": "Adventure",
+    "synopsis_text": {
+      "es": "Dos hermanos construyen un receptor de radio con chatarra espacial y logran contactar con una sonda de exploración extinta.",
+      "en": "Two siblings build a radio receiver out of space junk and manage to contact an extinct exploration probe."
+    },
+    "runtime_minutes": "2h 04m",
+    "content_rating": "PG",
+    "bg_image_url": "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Steven Spielberg",
+      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Sophie Turner",
+        "character_role": {
+          "es": "Dra. Gregory",
+          "en": "Dr. Gregory"
+        }
+      },
+      {
+        "actor_fullname": "Julian Haas",
+        "character_role": {
+          "es": "Maximilian",
+          "en": "Maximilian"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Adventure",
+      "Sci-Fi"
+    ]
+  },
+  {
+    "movie_identifier": 15,
+    "display_name": "TIME BENDER",
+    "release_year": 2024,
+    "average_score": 8.2,
+    "category_type": "Fantasy",
+    "synopsis_text": {
+      "es": "Un viaje a través de una anomalía temporal atrapa a un historiador en la Florencia del Renacimiento con tecnología moderna en su equipaje.",
+      "en": "A journey through a temporal anomaly traps a historian in Renaissance Florence with modern technology in his luggage."
+    },
+    "runtime_minutes": "2h 10m",
+    "content_rating": "PG-13",
+    "bg_image_url": "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=1200&q=80",
+    "cover_image_url": "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=600&q=80",
+    "filmmaker": {
+      "director_name": "Guillermo del Toro",
+      "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    "actors_list": [
+      {
+        "actor_fullname": "Christoph Waltz",
+        "character_role": {
+          "es": "Herr Weber",
+          "en": "Herr Weber"
+        }
+      },
+      {
+        "actor_fullname": "Edward Norton",
+        "character_role": {
+          "es": "El Caminante",
+          "en": "The Walker"
+        }
+      }
+    ],
+    "keyword_labels": [
+      "Fantasy",
+      "History"
+    ]
+  }
+]
