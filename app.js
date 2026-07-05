@@ -1178,15 +1178,13 @@ function handleFakeLogin() {
     }
     if (AppState.intendedAction && typeof AppState.intendedAction === 'function') {
       const act = AppState.intendedAction; AppState.intendedAction = null; act();
-    } else if (AppState.intendedTarget) {
+        } else if (AppState.intendedTarget) {
       const target = AppState.intendedTarget; AppState.intendedTarget = null; switchTab(target);
     } else {
       switchTab('home');
     }
   
 }
-
-  }
 
 
 function handleLogout() {
@@ -4256,25 +4254,29 @@ function submitWelcomeAuth() {
     }
     
     speakText(msg);
+  } catch (e) {
+    console.error('Error during authentication success logic:', e);
   }
   
-
   // Traducir textos de la pantalla de bienvenida
-  
-  const welcomeDesc = document.getElementById('welcome-desc');
-  const loginTriggerText = document.getElementById('welcome-login-trigger');
-  const registerTriggerText = document.getElementById('welcome-register-trigger');
-  
-  if (lang === 'es') {
-    if (welcomeTitle) welcomeTitle.textContent = "Bienvenido a la experiencia de cine definitiva";
-    if (welcomeDesc) welcomeDesc.textContent = "Explora, descubre y organiza tus películas preferidas en un universo galáctico premium.";
-    if (loginTriggerText) loginTriggerText.textContent = "INICIAR SESIÓN";
-    if (registerTriggerText) registerTriggerText.textContent = "REGISTRARSE";
-  } else {
-    if (welcomeTitle) welcomeTitle.textContent = "Welcome to the Ultimate Cinema Experience";
-    if (welcomeDesc) welcomeDesc.textContent = "Explore, discover, and organize your favorite movies in a premium galactic universe.";
-    if (loginTriggerText) loginTriggerText.textContent = "LOG IN";
-    if (registerTriggerText) registerTriggerText.textContent = "SIGN UP";
+  try {
+    const welcomeDesc = document.getElementById('welcome-desc');
+    const loginTriggerText = document.getElementById('welcome-login-trigger');
+    const registerTriggerText = document.getElementById('welcome-register-trigger');
+
+    if (lang === 'es') {
+      if (welcomeTitle) welcomeTitle.textContent = "Bienvenido a la experiencia de cine definitiva";
+      if (welcomeDesc) welcomeDesc.textContent = "Explora, descubre y organiza tus películas preferidas en un universo galáctico premium.";
+      if (loginTriggerText) loginTriggerText.textContent = "INICIAR SESIÓN";
+      if (registerTriggerText) registerTriggerText.textContent = "REGISTRARSE";
+    } else {
+      if (welcomeTitle) welcomeTitle.textContent = "Welcome to the Ultimate Cinema Experience";
+      if (welcomeDesc) welcomeDesc.textContent = "Explore, discover, and organize your favorite movies in a premium galactic universe.";
+      if (loginTriggerText) loginTriggerText.textContent = "LOG IN";
+      if (registerTriggerText) registerTriggerText.textContent = "SIGN UP";
+    }
+  } catch (e) {
+    console.error('Error translating welcome screen:', e);
   }
 
   // Actualizar textos del formulario si está visible
