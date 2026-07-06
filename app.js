@@ -3,7 +3,7 @@
 const RAW_EXTERNAL_MOVIES_API_DATA = [
   {
     movie_identifier: 1,
-    display_name: "THE MIDNIGHT ECHO",
+    display_name: "Interstellar",
     release_year: 2024,
     average_score: 8.4,
     category_type: "Sci-Fi/Thriller",
@@ -14,7 +14,7 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     runtime_minutes: "2h 15m",
     content_rating: "PG-13",
     bg_image_url: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=600&q=80",
+    cover_image_url: "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
     filmmaker: {
       director_name: "Denis Villeneuve",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80"
@@ -29,7 +29,7 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
   },
   {
     movie_identifier: 2,
-    display_name: "PROJECT ORION",
+    display_name: "Inception",
     release_year: 2023,
     average_score: 7.9,
     category_type: "Sci-Fi",
@@ -40,7 +40,7 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     runtime_minutes: "2h 05m",
     content_rating: "PG-13",
     bg_image_url: "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=600&q=80",
+    cover_image_url: "https://m.media-amazon.com/images/I/81mUTY45VyL._SL1500_.jpg",
     filmmaker: {
       director_name: "Christopher Nolan",
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
@@ -53,7 +53,7 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
   },
   {
     movie_identifier: 3,
-    display_name: "NEON NIGHTS",
+    display_name: "The Matrix",
     release_year: 2024,
     average_score: 7.9,
     category_type: "Thriller",
@@ -64,7 +64,7 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     runtime_minutes: "2h 10m",
     content_rating: "R",
     bg_image_url: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80",
+    cover_image_url: "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
     filmmaker: {
       director_name: "Ridley Scott",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
@@ -77,7 +77,7 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
   },
   {
     movie_identifier: 4,
-    display_name: "DREAMWALKER",
+    display_name: "The Dark Knight",
     release_year: 2023,
     average_score: 7.9,
     category_type: "Fantasy",
@@ -88,7 +88,7 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     runtime_minutes: "1h 55m",
     content_rating: "PG-13",
     bg_image_url: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=crop&w=600&q=80",
+    cover_image_url: "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
     filmmaker: {
       director_name: "Lana Wachowski",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
@@ -368,6 +368,20 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
 let MOVIES_DATA = [];
 
 const PERSON_PROFILE_DATA = {
+  "elena rostova": { photo: "ai_cast/actor_female_one_1783254168757.png" },
+  "marcus vance": { photo: "ai_cast/actor_male_one_1783254179999.png" },
+  "dr. aris thorne": { photo: "ai_cast/actor_male_two_1783254193629.png" },
+  "luna park": { photo: "ai_cast/actor_female_two_1783254205060.png" },
+  "julian c.": { photo: "ai_cast/actor_male_two_1783254193629.png" },
+  "sienna w.": { photo: "ai_cast/actor_female_one_1783254168757.png" },
+  "alex thompson": { photo: "ai_cast/actor_male_one_1783254179999.png" },
+  "rin aoyagi": { photo: "ai_cast/actor_female_two_1783254205060.png" },
+  "edward norton": { photo: "ai_cast/actor_male_one_1783254179999.png" },
+  "sophie turner": { photo: "ai_cast/actor_female_one_1783254168757.png" },
+  "matthew m.": { photo: "ai_cast/actor_male_two_1783254193629.png" },
+  "anne hathaway": { photo: "ai_cast/actor_female_two_1783254205060.png" },
+  "julian haas": { photo: "ai_cast/actor_male_one_1783254179999.png" },
+  "christoph waltz": { photo: "ai_cast/actor_male_two_1783254193629.png" },
   "denis villeneuve": {
     nationality: "Canadiense",
     birthDate: "03 de octubre de 1967",
@@ -2992,7 +3006,10 @@ function showMovieDetails(movie) {
         if (movie.director) {
           const normalizedDirector = movie.director.name.toLowerCase().trim();
           const profile = PERSON_PROFILE_DATA[normalizedDirector] || null;
-          const photo = profile && profile.photo ? profile.photo : movie.director.photo || 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80';
+          let photo = profile && profile.photo ? profile.photo : movie.director.photo;
+          if (!photo || photo.includes('unsplash.com')) {
+            photo = "ai_cast/actor_male_two_1783254193629.png";
+          }
 
           const directorCard = document.createElement('div');
           directorCard.className = 'director-card-wrapper';
@@ -3026,9 +3043,26 @@ function showMovieDetails(movie) {
           // Preferir foto desde PERSON_PROFILE_DATA si está disponible
           const normalizedActor = actor.name.toLowerCase().trim();
           const actorProfile = PERSON_PROFILE_DATA[normalizedActor] || null;
-          const avatarUrl = actorProfile && actorProfile.photo
-            ? actorProfile.photo
-            : `https://images.unsplash.com/photo-${1500000000000 + (40 + index + movie.id) * 100000}?auto=format&fit=crop&w=150&h=150&q=80`;
+          let avatarUrl = actorProfile && actorProfile.photo ? actorProfile.photo : '';
+          if (!avatarUrl || avatarUrl.includes('ui-avatars') || avatarUrl.includes('unsplash')) {
+            const aiImages = [
+              "ai_cast/actor_female_one_1783254168757.png",
+              "ai_cast/actor_male_one_1783254179999.png",
+              "ai_cast/actor_male_two_1783254193629.png",
+              "ai_cast/actor_female_two_1783254205060.png"
+            ];
+            const charCodeSum = actor.name.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
+            const isFemale = /elena|luna|sienna|rin|sophie|anne/i.test(actor.name);
+            const isMale = /marcus|aris|julian|alex|edward|matthew|christoph/i.test(actor.name);
+            
+            if (isFemale) {
+              avatarUrl = aiImages[charCodeSum % 2 === 0 ? 0 : 3];
+            } else if (isMale) {
+              avatarUrl = aiImages[charCodeSum % 2 === 0 ? 1 : 2];
+            } else {
+              avatarUrl = aiImages[charCodeSum % 4];
+            }
+          }
 
           actorCard.innerHTML = `
             <div class="actor-photo" style="background-image: url('${avatarUrl}')"></div>
@@ -4420,7 +4454,7 @@ function showEntityNotFoundModal(entityType, entityName) {
       <button class="modal-button" onclick="closePersonModal()">${isEs ? 'Cerrar' : 'Close'}</button>
     </div>
   `;
-  document.body.appendChild(modal);
+document.body.appendChild(modal);
 }
 
 function showPersonDetails(personName) {
@@ -4436,25 +4470,32 @@ function showPersonDetails(personName) {
 
   try {
     const role = directedMovies.length > 0 ? 'director' : actedMovies.length > 0 ? 'actor' : 'profile';
-  const roleLabel = role === 'director'
-    ? (isEs ? 'Director de Cine' : 'Film Director')
-    : role === 'actor'
-      ? (isEs ? 'Actor / Actriz' : 'Actor / Actress')
-      : (isEs ? 'Profesional del Cine' : 'Film Professional');
+    const roleLabel = role === 'director'
+      ? (isEs ? 'Director de Cine' : 'Film Director')
+      : role === 'actor'
+        ? (isEs ? 'Actor / Actriz' : 'Actor / Actress')
+        : (isEs ? 'Profesional del Cine' : 'Film Professional');
 
-  let photoUrl = profile?.photo || '';
-  if (!photoUrl) {
-    if (directedMovies.length > 0) {
-      photoUrl = directedMovies[0].director.photo;
-    } else if (actedMovies.length > 0) {
-      const firstMovie = actedMovies[0];
-      const actorIndex = firstMovie.cast.findIndex(actor => actor.name.toLowerCase() === normalizedPerson);
-      const imageIndex = 40 + actorIndex + firstMovie.id;
-      photoUrl = `https://images.unsplash.com/photo-${1500000000000 + imageIndex * 100000}?auto=format&fit=crop&w=150&h=150&q=80`;
-    } else {
-      photoUrl = 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80';
+    let photoUrl = profile?.photo || '';
+    if (!photoUrl || photoUrl.includes('unsplash.com') || photoUrl.includes('ui-avatars')) {
+      const aiImages = [
+        "ai_cast/actor_female_one_1783254168757.png",
+        "ai_cast/actor_male_one_1783254179999.png",
+        "ai_cast/actor_male_two_1783254193629.png",
+        "ai_cast/actor_female_two_1783254205060.png"
+      ];
+      const charCodeSum = normalizedPerson.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
+      const isFemale = /elena|luna|sienna|rin|sophie|anne/i.test(normalizedPerson);
+      const isMale = /marcus|aris|julian|alex|edward|matthew|christoph/i.test(normalizedPerson);
+      
+      if (isFemale) {
+        photoUrl = aiImages[charCodeSum % 2 === 0 ? 0 : 3];
+      } else if (isMale) {
+        photoUrl = aiImages[charCodeSum % 2 === 0 ? 1 : 2];
+      } else {
+        photoUrl = aiImages[charCodeSum % 4];
+      }
     }
-  }
 
   const nationality = profile?.nationality || (isEs ? 'Desconocida' : 'Unknown');
   const birthDate = profile?.birthDate || (isEs ? 'No disponible' : 'Not available');
@@ -4559,14 +4600,15 @@ function handleRouting() {
   }
 
   if (hash.startsWith('#movie-')) {
-    const movieId = Number(hash.replace('#movie-', ''));
+    const movieIdStr = hash.replace('#movie-', '');
+    const movieId = Number(movieIdStr);
     const movie = MOVIES_DATA.find(m => m.id === movieId);
     if (movie) {
       closePersonModal(false);
       showMovieDetails(movie);
       return;
     }
-    showEntityNotFoundModal(isEs ? 'película' : 'movie', hash.replace('#movie-', ''));
+    showEntityNotFoundModal(isEs ? 'película' : 'movie', movieIdStr);
     return;
   }
 
@@ -4576,7 +4618,6 @@ function handleRouting() {
   }
 }
 
-// Hacer las funciones disponibles globalmente
 window.closePersonModal = closePersonModal;
 window.handleRouting = handleRouting;
 window.showPersonDetails = showPersonDetails;
@@ -4586,6 +4627,10 @@ window.showPersonDetails = showPersonDetails;
 // =================================================================
 
 function openTrailerModal(movie) {
+  const isEs = AppState.language === 'es';
+  if (!movie) return;
+
+  
   const oldModal = document.getElementById('trailer-modal');
   if (oldModal) oldModal.remove();
 
@@ -4601,17 +4646,14 @@ function openTrailerModal(movie) {
     }
   });
 
-  const isEs = AppState.language === 'es';
-  const videoSrc = movie.videoSrc || 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4';
+  const searchQuery = encodeURIComponent(`${movie.title} official trailer`);
+  const youtubeEmbedUrl = `https://www.youtube.com/embed?listType=search&list=${searchQuery}&autoplay=1`;
 
   modal.innerHTML = `
     <div class="modal-content trailer-modal-content" style="max-width: 800px; width: 90%; background: #000; padding: 0; border-radius: var(--border-radius-lg); overflow: hidden; position: relative;">
       <button class="modal-close" onclick="closeTrailerModal()" style="position: absolute; right: 16px; top: 16px; z-index: 10; background: rgba(0,0,0,0.5); color: #fff; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border: none; font-size: 20px; cursor: pointer;">×</button>
       <div style="position: relative; padding-top: 56.25%;">
-        <video id="trailer-video-player" controls autoplay style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-          <source src="${videoSrc}" type="video/mp4">
-          ${isEs ? 'Tu navegador no soporta video HTML5.' : 'Your browser does not support HTML5 video.'}
-        </video>
+        <iframe src="${youtubeEmbedUrl}" title="Trailer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div style="padding: 16px; background: #0f172a; color: #fff;">
         <h3 style="margin: 0 0 4px 0; font-size: 18px; font-weight: 700;">${movie.title}</h3>
@@ -5357,3 +5399,17 @@ window.showMonologistaDetails = showMonologistaDetails;
 window.showTeatroDetails = showTeatroDetails;
 window.buyTicketAction = buyTicketAction;
 window.handleLogout = handleLogout;
+
+function getUserRating(movieId) {
+  return (AppState.userRatings && AppState.userRatings[movieId] !== undefined) ? AppState.userRatings[movieId] : null;
+}
+
+function enterPlatform(name) {
+  const welcome = document.getElementById('welcome-screen');
+  if (welcome) {
+    welcome.style.display = 'none';
+  }
+}
+
+window.getUserRating = getUserRating;
+window.enterPlatform = enterPlatform;
