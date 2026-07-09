@@ -1,4 +1,4 @@
-# WM - Watch Movies 🎬
+# WoM! - Watch Movies and More 🎬
 
 En esta plataforma, encontrarás sugerencias sobre películas adaptadas a tus gustos y preferencias que podrás visualizar. El objetivo principal es proporcionar una experiencia de usuario fluida y visualmente atractiva para descubrir y explorar nuevo contenido cinematográfico de manera sencilla.
 
