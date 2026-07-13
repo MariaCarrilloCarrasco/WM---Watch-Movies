@@ -20,10 +20,10 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Elena Rostova", character_role: { es: "Comandante de Vuelo", en: "Flight Commander" } },
-      { actor_fullname: "Marcus Vance", character_role: { es: "Ingeniero de Sistemas", en: "Systems Engineer" } },
-      { actor_fullname: "Dr. Aris Thorne", character_role: { es: "Astrofísico Principal", en: "Lead Astrophysicist" } },
-      { actor_fullname: "Luna Park", character_role: { es: "Oficial de Comunicaciones", en: "Communications Officer" } }
+      { actor_fullname: "Elena Rostova", character_role: { es: "Comandante de Vuelo", en: "Flight Commander" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Marcus Vance", character_role: { es: "Ingeniero de Sistemas", en: "Systems Engineer" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Dr. Aris Thorne", character_role: { es: "Astrofísico Principal", en: "Lead Astrophysicist" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Luna Park", character_role: { es: "Oficial de Comunicaciones", en: "Communications Officer" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Sci-Fi", "Thriller", "Adventure"]
   },
@@ -46,8 +46,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Julian C.", character_role: { es: "Capitán Miller", en: "Captain Miller" } },
-      { actor_fullname: "Sienna W.", character_role: { es: "Dra. Ortiz", en: "Dr. Ortiz" } }
+      { actor_fullname: "Julian C.", character_role: { es: "Capitán Miller", en: "Captain Miller" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Sienna W.", character_role: { es: "Dra. Ortiz", en: "Dr. Ortiz" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Sci-Fi", "Space", "Adventure"]
   },
@@ -70,8 +70,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Alex Thompson", character_role: { es: "Detective Sterling", en: "Detective Sterling" } },
-      { actor_fullname: "Rin Aoyagi", character_role: { es: "Rei", en: "Rei" } }
+      { actor_fullname: "Alex Thompson", character_role: { es: "Detective Sterling", en: "Detective Sterling" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Rin Aoyagi", character_role: { es: "Rei", en: "Rei" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Thriller", "Cyberpunk", "Action"]
   },
@@ -94,8 +94,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Edward Norton", character_role: { es: "El Caminante", en: "The Walker" } },
-      { actor_fullname: "Sophie Turner", character_role: { es: "Dra. Gregory", en: "Dr. Gregory" } }
+      { actor_fullname: "Edward Norton", character_role: { es: "El Caminante", en: "The Walker" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Sophie Turner", character_role: { es: "Dra. Gregory", en: "Dr. Gregory" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Fantasy", "Mystery", "Drama"]
   },
@@ -118,8 +118,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Marcus Vance", character_role: { es: "Sgt. Hayes", en: "Sgt. Hayes" } },
-      { actor_fullname: "Luna Park", character_role: { es: "Especialista", en: "Specialist" } }
+      { actor_fullname: "Marcus Vance", character_role: { es: "Sgt. Hayes", en: "Sgt. Hayes" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Luna Park", character_role: { es: "Especialista", en: "Specialist" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Action", "Sci-Fi", "Thriller"]
   },
@@ -142,8 +142,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Matthew M.", character_role: { es: "Comandante", en: "Commander" } },
-      { actor_fullname: "Anne Hathaway", character_role: { es: "Científica", en: "Scientist" } }
+      { actor_fullname: "Matthew M.", character_role: { es: "Comandante", en: "Commander" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Anne Hathaway", character_role: { es: "Científica", en: "Scientist" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Adventure", "Sci-Fi", "Drama"]
   },
@@ -166,8 +166,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Julian Haas", character_role: { es: "Maximilian", en: "Maximilian" } },
-      { actor_fullname: "Christoph Waltz", character_role: { es: "Herr Weber", en: "Herr Weber" } }
+      { actor_fullname: "Julian Haas", character_role: { es: "Maximilian", en: "Maximilian" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Christoph Waltz", character_role: { es: "Herr Weber", en: "Herr Weber" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Mystery", "Thriller", "History"]
   },
@@ -190,8 +190,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Elena Rostova", character_role: { es: "Comandante de Vuelo", en: "Flight Commander" } },
-      { actor_fullname: "Julian C.", character_role: { es: "Capitán Miller", en: "Captain Miller" } }
+      { actor_fullname: "Elena Rostova", character_role: { es: "Comandante de Vuelo", en: "Flight Commander" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Julian C.", character_role: { es: "Capitán Miller", en: "Captain Miller" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Sci-Fi", "Space"]
   },
@@ -214,8 +214,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Luna Park", character_role: { es: "Oficial de Comunicaciones", en: "Communications Officer" } },
-      { actor_fullname: "Alex Thompson", character_role: { es: "Detective Sterling", en: "Detective Sterling" } }
+      { actor_fullname: "Luna Park", character_role: { es: "Oficial de Comunicaciones", en: "Communications Officer" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Alex Thompson", character_role: { es: "Detective Sterling", en: "Detective Sterling" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Sci-Fi", "Thriller"]
   },
@@ -238,8 +238,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Rin Aoyagi", character_role: { es: "Rei", en: "Rei" } },
-      { actor_fullname: "Marcus Vance", character_role: { es: "Ingeniero de Sistemas", en: "Systems Engineer" } }
+      { actor_fullname: "Rin Aoyagi", character_role: { es: "Rei", en: "Rei" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Marcus Vance", character_role: { es: "Ingeniero de Sistemas", en: "Systems Engineer" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Thriller", "Cyberpunk"]
   },
@@ -262,8 +262,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Elena Rostova", character_role: { es: "Comandante de Vuelo", en: "Flight Commander" } },
-      { actor_fullname: "Luna Park", character_role: { es: "Especialista", en: "Specialist" } }
+      { actor_fullname: "Elena Rostova", character_role: { es: "Comandante de Vuelo", en: "Flight Commander" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Luna Park", character_role: { es: "Especialista", en: "Specialist" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Adventure", "Space"]
   },
@@ -286,8 +286,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Dr. Aris Thorne", character_role: { es: "Astrofísico Principal", en: "Lead Astrophysicist" } },
-      { actor_fullname: "Edward Norton", character_role: { es: "El Caminante", en: "The Walker" } }
+      { actor_fullname: "Dr. Aris Thorne", character_role: { es: "Astrofísico Principal", en: "Lead Astrophysicist" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Edward Norton", character_role: { es: "El Caminante", en: "The Walker" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Sci-Fi", "Science"]
   },
@@ -310,8 +310,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Sienna W.", character_role: { es: "Dra. Ortiz", en: "Dr. Ortiz" } },
-      { actor_fullname: "Christoph Waltz", character_role: { es: "Herr Weber", en: "Herr Weber" } }
+      { actor_fullname: "Sienna W.", character_role: { es: "Dra. Ortiz", en: "Dr. Ortiz" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Christoph Waltz", character_role: { es: "Herr Weber", en: "Herr Weber" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Mystery", "Sci-Fi"]
   },
@@ -334,8 +334,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Sophie Turner", character_role: { es: "Dra. Gregory", en: "Dr. Gregory" } },
-      { actor_fullname: "Julian Haas", character_role: { es: "Maximilian", en: "Maximilian" } }
+      { actor_fullname: "Sophie Turner", character_role: { es: "Dra. Gregory", en: "Dr. Gregory" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Julian Haas", character_role: { es: "Maximilian", en: "Maximilian" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Adventure", "Sci-Fi"]
   },
@@ -358,8 +358,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
     },
     actors_list: [
-      { actor_fullname: "Christoph Waltz", character_role: { es: "Herr Weber", en: "Herr Weber" } },
-      { actor_fullname: "Edward Norton", character_role: { es: "El Caminante", en: "The Walker" } }
+      { actor_fullname: "Christoph Waltz", character_role: { es: "Herr Weber", en: "Herr Weber" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } },
+      { actor_fullname: "Edward Norton", character_role: { es: "El Caminante", en: "The Walker" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Fantasy", "History"]
   }
@@ -390,7 +390,11 @@ const PERSON_PROFILE_DATA = {
       es: "Denis Villeneuve es un director canadiense reconocido por su enfoque visual y narrativo único, creando historias extensas y personajes profundos.",
       en: "Denis Villeneuve is a Canadian director known for his unique visual and narrative style, creating expansive stories and deep characters."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Esta historia de vida se presenta con interpretación en lengua de signos, narración y subtítulos para mayor accesibilidad.",
       en: "This life story is presented with sign language interpretation, narration, and subtitles for enhanced accessibility."
@@ -408,7 +412,11 @@ const PERSON_PROFILE_DATA = {
       es: "Christopher Nolan es conocido por su capacidad de combinar ciencia ficción con emoción humana, creando universos narrativos complejos.",
       en: "Christopher Nolan is known for his ability to combine science fiction with human emotion, creating complex narrative universes."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "El relato muestra su carrera en lengua de signos, con un narrador que contextualiza su trayectoria.",
       en: "The story shows his career in sign language, with a narrator contextualizing his trajectory."
@@ -426,7 +434,11 @@ const PERSON_PROFILE_DATA = {
       es: "Ridley Scott ha llevado el cine a un nivel épico, con mundos visualmente impresionantes y tono oscuro.",
       en: "Ridley Scott has taken cinema to an epic level, with visually stunning worlds and dark tone."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Una narración accesible acompaña la interpretación en lengua de signos para explicar sus proyectos más destacados.",
       en: "An accessible narration accompanies the sign language interpretation to explain his most notable projects."
@@ -444,7 +456,11 @@ const PERSON_PROFILE_DATA = {
       es: "Lana Wachowski ha creado historias que mezclan tecnología y conciencia humana con intensidad visual.",
       en: "Lana Wachowski has created stories mixing technology and human consciousness with visual intensity."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "El video combina la narrativa con subtítulos y una interpretación en lengua de signos." ,
       en: "The video combines narration with subtitles and sign language interpretation."
@@ -462,7 +478,11 @@ const PERSON_PROFILE_DATA = {
       es: "James Cameron es uno de los directores más influyentes del cine de aventuras y ciencia ficción moderna.",
       en: "James Cameron is one of the most influential directors in modern adventure and science fiction cinema."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Su biografía se transmite con claridad para personas sordas y oyentes gracias a los subtítulos." ,
       en: "His biography is delivered clearly for deaf and hearing viewers thanks to subtitles."
@@ -480,7 +500,11 @@ const PERSON_PROFILE_DATA = {
       es: "Steven Spielberg es un pionero del cine contemporáneo, conocido por su capacidad para contar historias emotivas y accesibles.",
       en: "Steven Spielberg is a pioneer of contemporary cinema, known for telling emotional and accessible stories."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Una narración clara y un intérprete en lengua de signos acompañan su historia de vida.",
       en: "Clear narration and a sign language interpreter accompany his life story."
@@ -497,7 +521,11 @@ const PERSON_PROFILE_DATA = {
       es: "Elena Rostova es una actriz emergente con papeles destacados en cine de ciencia ficción y acción.",
       en: "Elena Rostova is an emerging actress with prominent roles in science fiction and action films."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Su historia de vida se cuenta con subtítulos y lenguaje de señas para reforzar la accesibilidad.",
       en: "Her life story is told with subtitles and sign language to reinforce accessibility."
@@ -514,7 +542,11 @@ const PERSON_PROFILE_DATA = {
       es: "Marcus Vance es un actor versátil especializado en personajes de acción y ciencia ficción.",
       en: "Marcus Vance is a versatile actor specializing in action and science fiction characters."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Se narra su trayectoria con apoyo en lengua de signos y subtítulos.",
       en: "His career is narrated with sign language support and subtitles."
@@ -531,7 +563,11 @@ const PERSON_PROFILE_DATA = {
       es: "Luna Park es una actriz con presencia magnética y un talento claro para el drama emocional.",
       en: "Luna Park is an actress with magnetic presence and a clear talent for emotional drama."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Una voz narradora guía la historia de Luna mientras se proyecta en lengua de signos.",
       en: "A narrator guides Luna's story while it is presented in sign language."
@@ -548,7 +584,11 @@ const PERSON_PROFILE_DATA = {
       es: "Christoph Waltz es un actor prestigioso conocido por sus interpretaciones complejas y carismáticas.",
       en: "Christoph Waltz is a distinguished actor known for his complex and charismatic performances."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Su trayectoria se ilustra con una lectura accesible y una intérprete en lengua de signos.",
       en: "His career is illustrated with accessible narration and sign language interpretation."
@@ -566,7 +606,11 @@ const PERSON_PROFILE_DATA = {
       es: "Julian C. es un actor conocido por papeles heroicos en cine espacial.",
       en: "Julian C. is an actor known for heroic roles in space cinema."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Una narración accesible presenta su trayectoria, acompañada de lengua de signos.",
       en: "An accessible narration presents his career, accompanied by sign language."
@@ -584,7 +628,11 @@ const PERSON_PROFILE_DATA = {
       es: "Sienna W. destaca por su versatilidad dramática en papeles científicos.",
       en: "Sienna W. stands out for her dramatic versatility in scientific roles."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Su historia combina interpretación en lengua de signos y subtítulos.",
       en: "Her story combines sign language interpretation and subtitles."
@@ -602,7 +650,11 @@ const PERSON_PROFILE_DATA = {
       es: "Alex Thompson es un actor de carácter con papeles memorables en thrillers.",
       en: "Alex Thompson is a character actor with memorable roles in thrillers."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Narración y lengua de signos describen su carrera y proyectos.",
       en: "Narration and sign language describe his career and projects."
@@ -620,7 +672,11 @@ const PERSON_PROFILE_DATA = {
       es: "Rin Aoyagi ha brillado en papeles que mezclan delicadeza y fuerza.",
       en: "Rin Aoyagi has shone in roles that mix delicacy and strength."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Su biografía incluye interpretación en lengua de signos y subtítulos.",
       en: "Her biography includes sign language interpretation and subtitles."
@@ -638,7 +694,11 @@ const PERSON_PROFILE_DATA = {
       es: "Edward Norton es un actor y cineasta con interpretaciones intensas y comprometidas.",
       en: "Edward Norton is an actor and filmmaker with intense, committed performances."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Narrador y lengua de signos acompañan su trayectoria profesional.",
       en: "Narration and sign language accompany his professional trajectory."
@@ -656,7 +716,11 @@ const PERSON_PROFILE_DATA = {
       es: "Sophie Turner es una actriz que ha crecido en papeles protagonistas y dramáticos.",
       en: "Sophie Turner is an actress who has grown into leading and dramatic roles."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Historia presentada con intérprete en lengua de signos y subtítulos.",
       en: "Story presented with sign language interpreter and subtitles."
@@ -674,7 +738,11 @@ const PERSON_PROFILE_DATA = {
       es: "Julian Haas es conocido por su trabajo en cine europeo y personajes intensos.",
       en: "Julian Haas is known for his work in European cinema and intense characters."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Su historia se cuenta con apoyo en lengua de signos y subtítulos.",
       en: "His story is told with sign language support and subtitles."
@@ -692,7 +760,11 @@ const PERSON_PROFILE_DATA = {
       es: "Matthew M. es un actor de carácter con trayectoria en acción y aventuras.",
       en: "Matthew M. is a character actor with a background in action and adventure."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Narración accesible y lengua de signos acompañan su biografía.",
       en: "Accessible narration and sign language accompany his biography."
@@ -710,7 +782,11 @@ const PERSON_PROFILE_DATA = {
       es: "Anne Hathaway es una actriz reconocida por su versatilidad y presencia en grandes producciones.",
       en: "Anne Hathaway is an actress renowned for her versatility and presence in major productions."
     },
-    videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    qualities: {
+      es: "Destaca por su increíble versatilidad, carisma natural y capacidad para transmitir emociones complejas.",
+      en: "Stands out for their incredible versatility, natural charisma, and ability to convey complex emotions."
+    },
+    videoSrc: "",
     videoText: {
       es: "Biografía narrada con subtítulos y acompañamiento en lengua de signos.",
       en: "Biography narrated with subtitles and sign language accompaniment."
@@ -883,7 +959,7 @@ class MovieModel {
     } : null;
     this.cast = Array.isArray(raw.actors_list) ? raw.actors_list.map(actor => ({
       name: String(actor.actor_fullname),
-      character: actor.character_role // es/en object
+      character: actor.character_role, characterDesc: actor.character_desc
     })) : [];
     this.tags = Array.isArray(raw.keyword_labels) ? raw.keyword_labels.map(t => String(t)) : [];
   }
@@ -892,7 +968,7 @@ class MovieModel {
 // Servicio centralizado de la API de películas
 const MovieAPIService = {
   // Recuperar listado de películas con soporte de filtros por género, búsqueda, puntuación, tendencia y paginación
-  async getMovies({ genre = 'All', search = '', page = 1, limit = null, rating = 'All', trend = 'All', reliableMode = false } = {}) {
+  async getMovies({ genre = 'All', search = '', page = 1, limit = null, rating = 'All', trend = 'All', year = 'All', awards = false, streaming = 'All', director = 'All', reliableMode = false } = {}) {
     // 1. Promesa de límite de tiempo (Timeout) a 3 segundos
     const timeoutPromise = new Promise((_, reject) => {
       setTimeout(() => reject(new TimeoutError("Tiempo de espera agotado: El servidor no respondió dentro del límite de 3 segundos.")), 3000);
@@ -937,6 +1013,28 @@ const MovieAPIService = {
         // Filtrado por género
         if (genre !== 'All') {
           apiResponse = apiResponse.filter(movie => movie.category_type && movie.category_type.includes(genre));
+        }
+
+        if (year !== 'All') {
+          apiResponse = apiResponse.filter(movie => movie.release_year == year);
+        }
+
+        if (awards === true) {
+          apiResponse = apiResponse.filter(movie => movie.rating_score >= 8.5 || (movie.keyword_labels && movie.keyword_labels.some(t => t.toLowerCase().includes('award') || t.toLowerCase().includes('oscar'))));
+        }
+
+        if (streaming !== 'All') {
+          const plat = streaming.toLowerCase();
+          apiResponse = apiResponse.filter(movie => movie.keyword_labels && movie.keyword_labels.some(t => t.toLowerCase().includes(plat)));
+        }
+
+        if (director !== 'All') {
+          const dir = director.toLowerCase();
+          apiResponse = apiResponse.filter(movie => {
+            const hasDirTag = movie.keyword_labels && movie.keyword_labels.some(t => t.toLowerCase().includes(dir));
+            const hasCastMatch = movie.actors_list && movie.actors_list.some(a => a.actor_fullname && a.actor_fullname.toLowerCase().includes(dir));
+            return hasDirTag || hasCastMatch;
+          });
         }
 
         // Filtrado por puntuación (rating)
@@ -1681,20 +1779,102 @@ function setupSearch() {
     });
   }
 
-  // Botones de categorías rápidas en Explore
+  // Botones de categorías interactivas en Explore
   const exploreCategories = document.querySelectorAll('.explore-category-card');
+  const subcatContainer = document.getElementById('explore-subcategories-container');
+  const subcatList = document.getElementById('explore-subcategories-list');
+  const subcatTitle = document.getElementById('explore-subcategories-title');
+  const categoriesGrid = document.getElementById('explore-categories-grid');
+  const subcatBack = document.getElementById('explore-subcategories-back');
+
+  if (subcatBack) {
+    subcatBack.addEventListener('click', () => {
+      subcatContainer.style.display = 'none';
+      categoriesGrid.style.display = 'grid';
+    });
+  }
+
+  function applyExploreFilter(key, value) {
+    if (key === 'trend') AppState.exploreFilters.trend = value;
+    else if (key === 'genre') AppState.exploreFilters.genre = value;
+    else AppState.exploreFilters[key] = value;
+    
+    // Si la propiedad no existía en el objeto principal de filtros, se añade:
+    if (!('year' in AppState.exploreFilters)) {
+      AppState.exploreFilters.year = 'All';
+      AppState.exploreFilters.awards = false;
+      AppState.exploreFilters.streaming = 'All';
+      AppState.exploreFilters.director = 'All';
+    }
+    AppState.exploreFilters[key] = value;
+    
+    subcatContainer.style.display = 'none';
+    categoriesGrid.style.display = 'grid';
+    
+    renderActiveFilters();
+    renderSearchSuggestions();
+  }
+
   exploreCategories.forEach(card => {
     card.addEventListener('click', () => {
       const category = card.getAttribute('data-category');
-      let query = '';
-      if (category === 'genres') query = 'Sci-Fi';
-      else if (category === 'year') query = '2024';
-      else if (category === 'popular') query = '8.6';
-      else if (category === 'awards') query = 'Villeneuve';
-      else if (category === 'streaming') query = 'The Midnight Echo';
-      else if (category === 'directors') query = 'Nolan';
-
-      handleSearchInput(query);
+      subcatList.innerHTML = '';
+      
+      const isEs = AppState.language === 'es';
+      
+      if (category === 'popular') {
+        applyExploreFilter('trend', 'trending');
+        return;
+      }
+      
+      if (category === 'awards') {
+        applyExploreFilter('awards', true);
+        return;
+      }
+      
+      categoriesGrid.style.display = 'none';
+      subcatContainer.style.display = 'block';
+      
+      let options = [];
+      let filterKey = '';
+      
+      if (category === 'genres') {
+        subcatTitle.textContent = isEs ? 'Selecciona un Género' : 'Select a Genre';
+        options = ['Action', 'Sci-Fi', 'Drama', 'Adventure', 'Thriller', 'Animation'];
+        filterKey = 'genre';
+      } else if (category === 'year') {
+        subcatTitle.textContent = isEs ? 'Selecciona un Año' : 'Select a Year';
+        options = ['2026', '2025', '2024', '2023', '2022', '2021', '2020'];
+        filterKey = 'year';
+      } else if (category === 'streaming') {
+        subcatTitle.textContent = isEs ? 'Plataforma de Streaming' : 'Streaming Platform';
+        options = ['Netflix', 'Apple TV+', 'Max', 'Amazon Prime', 'Disney+', 'Hulu'];
+        filterKey = 'streaming';
+      } else if (category === 'directors') {
+        subcatTitle.textContent = isEs ? 'Directores Destacados' : 'Top Directors';
+        options = ['Christopher Nolan', 'Denis Villeneuve', 'Ridley Scott', 'Wes Ball', 'Bong Joon-ho'];
+        filterKey = 'director';
+      }
+      
+      options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.style.padding = '8px 16px';
+        btn.style.background = 'rgba(255,255,255,0.1)';
+        btn.style.color = '#fff';
+        btn.style.border = '1px solid rgba(255,255,255,0.2)';
+        btn.style.borderRadius = '20px';
+        btn.style.cursor = 'pointer';
+        btn.textContent = opt;
+        
+        btn.onmouseover = () => btn.style.background = 'rgba(255,255,255,0.2)';
+        btn.onmouseout = () => btn.style.background = 'rgba(255,255,255,0.1)';
+        
+        btn.onclick = () => {
+          applyExploreFilter(filterKey, opt);
+        };
+        
+        subcatList.appendChild(btn);
+      });
     });
   });
 
@@ -1823,6 +2003,14 @@ function removeFilter(filterType) {
   } else if (filterType === 'trend' && selectTrend) {
     selectTrend.value = 'All';
     AppState.exploreFilters.trend = 'All';
+  } else if (filterType === 'year') {
+    AppState.exploreFilters.year = 'All';
+  } else if (filterType === 'streaming') {
+    AppState.exploreFilters.streaming = 'All';
+  } else if (filterType === 'director') {
+    AppState.exploreFilters.director = 'All';
+  } else if (filterType === 'awards') {
+    AppState.exploreFilters.awards = false;
   }
 
   AppState.currentPage = 1;
@@ -2835,43 +3023,97 @@ function renderMyList() {
 function renderMyListGrid() {
   const grid = document.getElementById('mylist-movies-grid');
   const emptyState = document.getElementById('mylist-empty-state');
+  const headerActions = document.getElementById('playlist-header-actions');
+  const playText = document.getElementById('playlist-play-text');
   if (!grid) return;
 
   grid.innerHTML = '';
+  
+  if (playText) {
+    playText.textContent = AppState.language === 'es' ? 'Reproducir Todo' : 'Play All';
+  }
 
-  // Filtrar películas en la lista de seguimiento
-  const watchlisted = MOVIES_DATA.filter(movie => {
-    return AppState.myListMovies.includes(movie.id);
+  // Ordenar películas en la lista de seguimiento según el orden en que se añadieron
+  // (myListMovies guarda los IDs en orden de inserción)
+  const watchlisted = [];
+  AppState.myListMovies.forEach(id => {
+    const movie = MOVIES_DATA.find(m => m.id === id);
+    if (movie) watchlisted.push(movie);
   });
 
   if (watchlisted.length === 0) {
     grid.style.display = 'none';
+    if (headerActions) headerActions.style.display = 'none';
     if (emptyState) emptyState.style.display = 'block';
   } else {
-    grid.style.display = 'grid';
+    grid.style.display = 'flex';
+    if (headerActions) headerActions.style.display = 'flex';
     if (emptyState) emptyState.style.display = 'none';
 
-    watchlisted.forEach(movie => {
-        // Si existe una asignación con imagen, crear un elemento customizado para mayor visibilidad
-        const assign = getMovieAssignment(movie.id);
-        if (assign && assign.image) {
-          const item = document.createElement('div');
-          item.className = 'assigned-movie-item';
-          item.innerHTML = `
-            <div class="assigned-thumb" style="background-image: url('${assign.image}')"></div>
-            <div class="assigned-meta">
-              <div class="assigned-title">${movie.title}</div>
-              <div class="assigned-note">${assign.note || ''}</div>
-            </div>
-          `;
-          item.addEventListener('click', () => showMovieDetails(movie));
-          grid.appendChild(item);
-        } else {
-          grid.appendChild(createMovieCardElement(movie));
-        }
+    watchlisted.forEach((movie, index) => {
+      const item = document.createElement('div');
+      item.className = 'playlist-item';
+      
+      const thumbUrl = movie.thumbnail_url || (movie.images && movie.images.length > 0 ? movie.images[0] : 'https://via.placeholder.com/48x48?text=No+Image');
+      const year = movie.year || (movie.release_year ? movie.release_year : '2024');
+      const genre = Array.isArray(movie.genres) ? movie.genres[0] : (movie.category_type ? movie.category_type.split(',')[0] : 'Cine');
+      
+      item.innerHTML = `
+        <div class="playlist-index">${index + 1}</div>
+        <div class="playlist-thumb" style="background-image: url('${thumbUrl}')"></div>
+        <div class="playlist-details">
+          <div class="playlist-title">${movie.title}</div>
+          <div class="playlist-meta">${year} • ${genre}</div>
+        </div>
+        <div class="playlist-actions">
+          <button class="playlist-play-btn" title="${AppState.language === 'es' ? 'Reproducir' : 'Play'}">
+            ▶
+          </button>
+          <button class="playlist-remove-btn" title="${AppState.language === 'es' ? 'Quitar de la lista' : 'Remove from list'}">
+            ✕
+          </button>
+        </div>
+      `;
+
+      // Clic en la carátula o detalles abre la ficha
+      item.querySelector('.playlist-thumb').addEventListener('click', () => showMovieDetails(movie));
+      item.querySelector('.playlist-details').addEventListener('click', () => showMovieDetails(movie));
+
+      // Clic en Play reproduce el trailer (simulado abriendo ficha y haciendo clic en trailer)
+      item.querySelector('.playlist-play-btn').addEventListener('click', () => {
+        showMovieDetails(movie);
+        setTimeout(() => {
+          const trailerBtn = document.getElementById('detail-trailer-btn');
+          if (trailerBtn) trailerBtn.click();
+        }, 300);
+      });
+
+      // Clic en eliminar quita de la lista y recarga
+      item.querySelector('.playlist-remove-btn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMyList(movie.id);
+      });
+
+      grid.appendChild(item);
     });
   }
 }
+
+// Reproducción automática de toda la lista (Abre la primera y simula)
+window.playAllMyList = function() {
+  if (AppState.myListMovies && AppState.myListMovies.length > 0) {
+    const firstId = AppState.myListMovies[0];
+    const movie = MOVIES_DATA.find(m => m.id === firstId);
+    if (movie) {
+      showMovieDetails(movie);
+      setTimeout(() => {
+        const trailerBtn = document.getElementById('detail-trailer-btn');
+        if (trailerBtn) trailerBtn.click();
+      }, 500);
+    }
+  }
+};
+
 
 // 4. Renderizar la pantalla de Perfil (Profile)
 function renderProfile() {
@@ -3222,6 +3464,7 @@ function showMovieDetails(movie) {
         listBtn.parentNode.replaceChild(newListBtn, listBtn);
 
         newListBtn.addEventListener('click', () => {
+          // Directamente añade/quita de la lista por defecto
           toggleMyList(movie.id);
           const isWatchlistedNow = AppState.myListMovies.includes(movie.id);
           const isEsNow = AppState.language === 'es';
@@ -3230,6 +3473,9 @@ function showMovieDetails(movie) {
             ? (isEsNow ? 'Quitar Lista' : 'Remove List') 
             : (isEsNow ? 'Mi Lista' : 'My List');
           newListBtn.innerHTML = `📁 <span>${label}</span>`;
+          
+          // Si el usuario quiere guardar en otra lista personalizada, podríamos añadir otro botón aquí o en el perfil, 
+          // pero restauramos la experiencia directa a "Mi Lista" según pidió.
         });
       }
 
@@ -4415,6 +4661,7 @@ function setupInfiniteScroll() {
 
 
 function closePersonModal(triggerBack = true) {
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
   const modal = document.getElementById('person-modal');
   if (modal) {
     modal.remove();
@@ -4497,10 +4744,27 @@ function showPersonDetails(personName) {
       }
     }
 
+  let currentCharacterDesc = '';
+  if (window.AppState && AppState.selectedMovie && AppState.selectedMovie.cast) {
+    const actorInMovie = AppState.selectedMovie.cast.find(a => a.name.toLowerCase() === normalizedPerson);
+    if (actorInMovie) {
+      const charName = actorInMovie.character?.[AppState.language] || 'este personaje';
+      const charDesc = actorInMovie.characterDesc?.[AppState.language] || '';
+      if (charName || charDesc) {
+        const intro = isEs
+          ? `En la película ${AppState.selectedMovie.title}, interpreta a ${charName}. `
+          : `In the movie ${AppState.selectedMovie.title}, plays ${charName}. `;
+        currentCharacterDesc = intro + charDesc;
+      }
+    }
+  }
   const nationality = profile?.nationality || (isEs ? 'Desconocida' : 'Unknown');
   const birthDate = profile?.birthDate || (isEs ? 'No disponible' : 'Not available');
   const biography = profile?.biography?.[AppState.language] || (isEs ? 'Biografía no disponible.' : 'Biography not available.');
-  const videoSrc = profile?.videoSrc || 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4';
+  const qualities = profile?.qualities?.[AppState.language] || (isEs ? 'Cualidades no especificadas.' : 'Qualities not specified.');
+  const projectsListText = allAssociatedMovies.length > 0 ? (isEs ? ` Además, ha participado en: ${allAssociatedMovies.map(m => m.title).join(', ')}.` : ` Also, has participated in: ${allAssociatedMovies.map(m => m.title).join(', ')}.`) : '';
+  const textToRead = (currentCharacterDesc || `${biography}. ${qualities}`) + projectsListText;
+  const videoSrc = profile?.videoSrc || '';
   const videoText = profile?.videoText?.[AppState.language] || (isEs ? 'Esta historia de vida se presenta con interpretación en lengua de signos, narración y subtítulos.' : 'This life story is presented with sign language interpretation, narration, and subtitles.');
   const videoSubtitles = profile?.videoSubtitles?.[AppState.language] || (isEs ? 'Subtítulos no disponibles.' : 'Subtitles not available.');
 
@@ -4528,7 +4792,10 @@ function showPersonDetails(personName) {
       <div class="person-modal-header">
         <div class="person-modal-photo" style="background-image: url('${photoUrl}')"></div>
         <div class="person-modal-info">
-          <h3 class="person-modal-name">${personName}</h3>
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <h3 class="person-modal-name" style="margin: 0;">${personName}</h3>
+            <button id="person-header-tts-btn" style="background: rgba(255,255,255,0.15); border: none; font-size: 0.9em; cursor: pointer; padding: 4px 10px; border-radius: 6px; color: #fff; display: flex; align-items: center; gap: 4px; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'" title="${isEs ? 'Leer descripción' : 'Read description'}"><span style="font-size: 1.2em;">🔊</span> ${isEs ? 'Escuchar info' : 'Listen'}</button>
+          </div>
           <span class="person-modal-role">${roleLabel}</span>
         </div>
       </div>
@@ -4545,13 +4812,17 @@ function showPersonDetails(personName) {
           <span class="person-profile-label">${isEs ? 'Biografía' : 'Biography'}</span>
           <span>${biography}</span>
         </div>
+        <div class="person-profile-row person-qualities-row">
+          <span class="person-profile-label">${isEs ? 'Cualidades' : 'Qualities'}</span>
+          <span>${qualities}</span>
+        </div>
       </div>
       <div class="person-video-card">
         <h4 class="person-modal-section-title">${isEs ? 'Historia de vida' : 'Life story'}</h4>
-        <video controls class="person-story-video" aria-label="${isEs ? 'Historia de vida en lengua de signos' : 'Life story in sign language'} for ${personName}">
+        ${videoSrc ? `<video controls class="person-story-video" aria-label="${isEs ? 'Historia de vida en lengua de signos' : 'Life story in sign language'} for ${personName}">
           <source src="${videoSrc}" type="video/mp4">
           ${isEs ? 'Tu navegador no soporta video HTML5.' : 'Your browser does not support HTML5 video.'}
-        </video>
+        </video>` : `<div style="padding: 20px; background: #1e293b; color: #94a3b8; border-radius: 8px; text-align: center; margin-bottom: 10px;">${isEs ? '🎥 [Vídeo en lengua de signos no disponible por el momento]' : '🎥 [Sign language video currently unavailable]'}</div>`}
         <div class="person-video-caption">${videoText}</div>
         <div class="person-video-subtitles">
           <strong>${isEs ? 'Subtítulos:' : 'Subtitles:'}</strong>
@@ -4567,11 +4838,60 @@ function showPersonDetails(personName) {
 
   document.body.appendChild(modal);
 
+  const headerTtsBtn = document.getElementById('person-header-tts-btn');
+  if (headerTtsBtn) {
+    headerTtsBtn.onclick = (e) => {
+      e.stopPropagation();
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+      if (!textToRead) return;
+      const utterance = new SpeechSynthesisUtterance(textToRead);
+      utterance.lang = AppState.language === 'es' ? 'es-ES' : 'en-US';
+      window.speechSynthesis.speak(utterance);
+    };
+  }
+
   const grid = document.getElementById('person-movies-grid');
   if (grid) {
     if (allAssociatedMovies.length > 0) {
       allAssociatedMovies.forEach(movie => {
-        grid.appendChild(createMovieCardElement(movie));
+        const card = createMovieCardElement(movie);
+        const actorInfo = movie.cast.find(a => a.name.toLowerCase() === normalizedPerson);
+        if (actorInfo) {
+          const descEl = document.createElement('div');
+          descEl.className = 'person-character-desc';
+          descEl.innerHTML = `<strong>${isEs ? 'Personaje' : 'Character'}:</strong> ${actorInfo.character?.[AppState.language] || ''}<br><div style="display:flex; align-items:flex-start; gap:8px; margin-top:4px;"><small style="flex:1;">${actorInfo.characterDesc?.[AppState.language] || ''}</small></div>`;
+          descEl.style.marginTop = '10px';
+          descEl.style.padding = '10px';
+          descEl.style.background = 'rgba(0,0,0,0.4)';
+          descEl.style.borderRadius = '6px';
+          descEl.style.fontSize = '0.85em';
+          descEl.style.color = '#cbd5e1';
+          
+          const ttsButton = document.createElement('button');
+          ttsButton.innerHTML = '🔊';
+          ttsButton.title = isEs ? 'Escuchar descripción' : 'Listen to description';
+          ttsButton.style.background = 'rgba(255,255,255,0.1)';
+          ttsButton.style.border = 'none';
+          ttsButton.style.borderRadius = '4px';
+          ttsButton.style.cursor = 'pointer';
+          ttsButton.style.padding = '4px 6px';
+          ttsButton.style.fontSize = '1em';
+          ttsButton.style.color = '#fff';
+          
+          ttsButton.onclick = (e) => {
+            e.stopPropagation();
+            const textToRead = actorInfo.characterDesc?.[AppState.language] || '';
+            if (!textToRead) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(textToRead);
+            utterance.lang = AppState.language === 'es' ? 'es-ES' : 'en-US';
+            window.speechSynthesis.speak(utterance);
+          };
+          
+          descEl.querySelector('div').appendChild(ttsButton);
+          card.appendChild(descEl);
+        }
+        grid.appendChild(card);
       });
     } else {
       grid.innerHTML = `<div class="person-no-filmography">${isEs ? 'No hay filmografía disponible para esta persona.' : 'No filmography available for this person.'}</div>`;
@@ -4655,17 +4975,42 @@ function openTrailerModal(movie) {
       <div style="position: relative; padding-top: 56.25%;">
         <iframe src="${youtubeEmbedUrl}" title="Trailer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <div style="padding: 16px; background: #0f172a; color: #fff;">
-        <h3 style="margin: 0 0 4px 0; font-size: 18px; font-weight: 700;">${movie.title}</h3>
-        <p style="margin: 0; font-size: 13px; color: #94a3b8;">${isEs ? 'Tráiler Oficial' : 'Official Trailer'}</p>
+      <div style="padding: 16px; background: #0f172a; color: #fff; display: flex; flex-direction: column; gap: 12px;">
+        <div>
+          <h3 style="margin: 0 0 4px 0; font-size: 18px; font-weight: 700;">${movie.title}</h3>
+          <p style="margin: 0; font-size: 13px; color: #94a3b8;">${isEs ? 'Tráiler Oficial' : 'Official Trailer'}</p>
+        </div>
+        <button id="trailer-fallback-tts-btn" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); font-size: 0.9em; cursor: pointer; padding: 8px 12px; border-radius: 6px; color: #cbd5e1; display: flex; align-items: center; gap: 8px; transition: background 0.2s; align-self: flex-start;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+          <span style="font-size: 1.2em;">🔊</span> 
+          <span>${isEs ? '¿No puedes ver el tráiler? Escuchar descripción de la película' : 'Cannot see the video? Listen to movie description'}</span>
+        </button>
       </div>
     </div>
   `;
 
   document.body.appendChild(modal);
+
+  const fallbackBtn = document.getElementById('trailer-fallback-tts-btn');
+  if (fallbackBtn) {
+    fallbackBtn.onclick = (e) => {
+      e.stopPropagation();
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+      const descText = typeof movie.description === 'object' ? movie.description[AppState.language] : movie.description;
+      if (!descText) return;
+      
+      // Ocultar iframe para que no interfiera
+      const iframe = modal.querySelector('iframe');
+      if (iframe) iframe.style.display = 'none';
+
+      const utterance = new SpeechSynthesisUtterance(descText);
+      utterance.lang = AppState.language === 'es' ? 'es-ES' : 'en-US';
+      window.speechSynthesis.speak(utterance);
+    };
+  }
 }
 
 function closeTrailerModal() {
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
   const modal = document.getElementById('trailer-modal');
   if (modal) {
     const player = document.getElementById('trailer-video-player');
@@ -5413,3 +5758,259 @@ function enterPlatform(name) {
 
 window.getUserRating = getUserRating;
 window.enterPlatform = enterPlatform;
+
+// ======== PROFILE AUTH ========
+function setupProfileAuth() {
+  const form = document.getElementById('profile-auth-form');
+  const toggleLink = document.getElementById('profile-toggle-auth-link');
+  const nameGroup = document.getElementById('profile-name-group');
+  const submitBtn = document.getElementById('profile-submit-btn');
+  const authTitle = document.getElementById('profile-auth-title');
+  const authSubtitle = document.getElementById('profile-auth-subtitle');
+  const logoutBtn = document.getElementById('profile-logout-btn');
+  
+  let mode = 'login';
+  
+  if (toggleLink) {
+    toggleLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isEs = AppState.language === 'es';
+      if (mode === 'login') {
+        mode = 'register';
+        nameGroup.style.display = 'block';
+        submitBtn.textContent = isEs ? 'Registrarse' : 'Sign Up';
+        authTitle.textContent = isEs ? 'Crear una cuenta' : 'Create an Account';
+        authSubtitle.textContent = isEs ? 'Regístrate para guardar películas' : 'Sign up to save movies';
+        toggleLink.textContent = isEs ? 'Inicia sesión' : 'Log in';
+        toggleLink.parentElement.childNodes[0].nodeValue = isEs ? '¿Ya tienes una cuenta? ' : 'Already have an account? ';
+      } else {
+        mode = 'login';
+        nameGroup.style.display = 'none';
+        submitBtn.textContent = isEs ? 'Iniciar Sesión' : 'Log In';
+        authTitle.textContent = isEs ? 'Bienvenido' : 'Welcome';
+        authSubtitle.textContent = isEs ? 'Accede a tu biblioteca' : 'Access your library';
+        toggleLink.textContent = isEs ? 'Regístrate Ahora' : 'Register Now';
+        toggleLink.parentElement.childNodes[0].nodeValue = isEs ? '¿No tienes una cuenta? ' : 'Don\'t have an account? ';
+      }
+    });
+  }
+  
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const isEs = AppState.language === 'es';
+      const email = document.getElementById('profile-email').value;
+      const password = document.getElementById('profile-password').value;
+      
+      try {
+        if (mode === 'register') {
+          const name = document.getElementById('profile-name').value;
+          if (!name) return alert(isEs ? 'El nombre es obligatorio' : 'Name is required');
+          await AuthService.register({ name, email, password });
+          alert(isEs ? '¡Registro completado!' : 'Registration successful!');
+        } else {
+          await AuthService.login({ email, password });
+        }
+        if (typeof window.refreshProfileUI === 'function') window.refreshProfileUI();
+        refreshHeaderAuthState();
+      } catch (err) {
+        alert((isEs ? 'Error: ' : 'Error: ') + (err.message === 'email_exists' ? (isEs ? 'El correo ya existe' : 'Email already exists') : (err.message === 'invalid_credentials' ? (isEs ? 'Credenciales incorrectas' : 'Invalid credentials') : err.message)));
+      }
+    });
+  }
+  
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+      if (AuthService.logout) AuthService.logout();
+      if (typeof window.refreshProfileUI === 'function') window.refreshProfileUI();
+      refreshHeaderAuthState();
+    });
+  }
+}
+
+window.refreshProfileUI = function() {
+  const profileAuthContainer = document.getElementById('profile-auth-container');
+  const profileLoggedInContainer = document.getElementById('profile-logged-in-container');
+  const profileUsername = document.querySelector('.profile-username');
+  
+  if (AppState.user) {
+    if (profileAuthContainer) profileAuthContainer.style.display = 'none';
+    if (profileLoggedInContainer) profileLoggedInContainer.style.display = 'block';
+    if (profileUsername) profileUsername.textContent = AppState.user.name || AppState.user.email;
+  } else {
+    if (profileAuthContainer) profileAuthContainer.style.display = 'block';
+    if (profileLoggedInContainer) profileLoggedInContainer.style.display = 'none';
+    if (profileUsername) profileUsername.textContent = 'Invitado';
+  }
+};
+
+// Call setup once
+document.addEventListener('DOMContentLoaded', () => {
+  setupProfileAuth();
+  setTimeout(() => { if (typeof window.refreshProfileUI === 'function') window.refreshProfileUI(); }, 100);
+});
+
+// ======== CUSTOM LISTS ========
+window.loadCustomLists = function() {
+  if (AppState.user) {
+    const saved = localStorage.getItem('customLists_' + AppState.user.email);
+    if (saved) {
+      AppState.customLists = JSON.parse(saved);
+    } else {
+      AppState.customLists = [{ id: 'default', name: AppState.language === 'es' ? 'Mi Lista' : 'My List', movies: AppState.myListMovies || [] }];
+    }
+  } else {
+    AppState.customLists = [{ id: 'default', name: AppState.language === 'es' ? 'Mi Lista' : 'My List', movies: AppState.myListMovies || [] }];
+  }
+};
+
+window.saveCustomLists = function() {
+  if (AppState.user) {
+    localStorage.setItem('customLists_' + AppState.user.email, JSON.stringify(AppState.customLists));
+  } else {
+    localStorage.setItem('customLists_guest', JSON.stringify(AppState.customLists));
+  }
+  
+  // Sync default list back to myListMovies
+  const defaultList = AppState.customLists.find(l => l.id === 'default');
+  if (defaultList) {
+    AppState.myListMovies = defaultList.movies;
+    localStorage.setItem('myListMovies', JSON.stringify(AppState.myListMovies));
+    if (typeof renderMyListCount === 'function') renderMyListCount();
+  }
+};
+
+window.openAddToListModal = function(movieId) {
+  const modal = document.getElementById('list-selection-modal');
+  const container = document.getElementById('list-selection-container');
+  if (!modal || !container) return;
+  
+  if (!AppState.user) {
+    alert(AppState.language === 'es' ? 'Regístrate o inicia sesión para usar listas personalizadas.' : 'Sign in to use custom lists.');
+    openRegister();
+    return;
+  }
+  
+  window.loadCustomLists();
+  container.innerHTML = '';
+  
+  AppState.customLists.forEach(list => {
+    const isChecked = list.movies.includes(movieId);
+    const row = document.createElement('label');
+    row.style.display = 'flex';
+    row.style.alignItems = 'center';
+    row.style.gap = '12px';
+    row.style.padding = '10px';
+    row.style.background = 'rgba(255,255,255,0.05)';
+    row.style.borderRadius = '8px';
+    row.style.cursor = 'pointer';
+    row.style.border = '1px solid rgba(255,255,255,0.1)';
+    row.style.transition = 'background 0.2s';
+    row.onmouseover = () => row.style.background = 'rgba(255,255,255,0.1)';
+    row.onmouseout = () => row.style.background = 'rgba(255,255,255,0.05)';
+    
+    row.innerHTML = `
+      <input type="checkbox" style="width: 18px; height: 18px;" ${isChecked ? 'checked' : ''}>
+      <span style="color: #fff; font-size: 15px;">${list.name}</span>
+    `;
+    
+    row.querySelector('input').addEventListener('change', (e) => {
+      if (e.target.checked) {
+        if (!list.movies.includes(movieId)) list.movies.push(movieId);
+      } else {
+        list.movies = list.movies.filter(id => id !== movieId);
+      }
+      window.saveCustomLists();
+    });
+    
+    container.appendChild(row);
+  });
+  
+  modal.style.display = 'flex';
+};
+
+// Sobrescribir renderMyList
+window.renderMyList = function() {
+  if (typeof renderMyListCount === 'function') renderMyListCount();
+  
+  const container = document.getElementById('custom-lists-container');
+  const emptyState = document.getElementById('mylist-empty-state');
+  if (!container) return;
+  
+  window.loadCustomLists();
+  container.innerHTML = '';
+  
+  if (!AppState.customLists || AppState.customLists.length === 0) {
+    if (emptyState) emptyState.style.display = 'flex';
+    return;
+  } else {
+    if (emptyState) emptyState.style.display = 'none';
+  }
+  
+  AppState.customLists.forEach(list => {
+    const listSection = document.createElement('div');
+    listSection.style.marginBottom = '32px';
+    
+    const listHeader = document.createElement('div');
+    listHeader.style.display = 'flex';
+    listHeader.style.justifyContent = 'space-between';
+    listHeader.style.alignItems = 'center';
+    listHeader.style.marginBottom = '12px';
+    listHeader.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+    listHeader.style.paddingBottom = '8px';
+    
+    listHeader.innerHTML = `
+      <h3 style="font-size: 20px; color: #fff; margin: 0;">${list.name} <span style="font-size: 14px; color: #94a3b8; font-weight: normal;">(${list.movies.length})</span></h3>
+      ${list.id !== 'default' ? `<button class="delete-list-btn" style="background: transparent; color: #ef4444; border: none; cursor: pointer; font-size: 14px;">${AppState.language === 'es' ? 'Eliminar' : 'Delete'}</button>` : ''}
+    `;
+    
+    if (list.id !== 'default') {
+      listHeader.querySelector('.delete-list-btn').onclick = () => {
+        if (confirm(AppState.language === 'es' ? `¿Seguro que deseas eliminar la lista "${list.name}"?` : `Are you sure you want to delete "${list.name}"?`)) {
+          AppState.customLists = AppState.customLists.filter(l => l.id !== list.id);
+          window.saveCustomLists();
+          window.renderMyList();
+        }
+      };
+    }
+    
+    listSection.appendChild(listHeader);
+    
+    const moviesGrid = document.createElement('div');
+    moviesGrid.className = 'movies-grid';
+    
+    if (list.movies.length === 0) {
+      moviesGrid.innerHTML = `<p style="color: #94a3b8; font-size: 14px; grid-column: 1 / -1;">${AppState.language === 'es' ? 'Esta lista está vacía.' : 'This list is empty.'}</p>`;
+    } else {
+      const movies = MOVIES_DATA.filter(m => list.movies.includes(m.id));
+      movies.forEach(movie => {
+        if (typeof createMovieCardElement === 'function') {
+          moviesGrid.appendChild(createMovieCardElement(movie));
+        }
+      });
+    }
+    
+    listSection.appendChild(moviesGrid);
+    container.appendChild(listSection);
+  });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const createListBtn = document.getElementById('create-custom-list-btn');
+  if (createListBtn) {
+    createListBtn.onclick = () => {
+      if (!AppState.user) {
+        alert(AppState.language === 'es' ? 'Regístrate o inicia sesión para crear listas personalizadas.' : 'Sign in to create custom lists.');
+        openRegister();
+        return;
+      }
+      const name = prompt(AppState.language === 'es' ? 'Nombre de la nueva lista:' : 'New list name:');
+      if (name && name.trim()) {
+        window.loadCustomLists();
+        AppState.customLists.push({ id: 'list_' + Date.now(), name: name.trim(), movies: [] });
+        window.saveCustomLists();
+        window.renderMyList();
+      }
+    };
+  }
+});
