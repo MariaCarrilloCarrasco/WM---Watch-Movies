@@ -1,4 +1,8 @@
 {
+  "name": "movies-web-app",
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]

@@ -13,8 +13,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 15m",
     content_rating: "PG-13",
-    bg_image_url: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Interstellar-logo.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Interstellar-logo.jpg",
     filmmaker: {
       director_name: "Denis Villeneuve",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80"
@@ -39,8 +39,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 05m",
     content_rating: "PG-13",
-    bg_image_url: "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://m.media-amazon.com/images/I/81mUTY45VyL._SL1500_.jpg",
+    bg_image_url: "https://picsum.photos/seed/2bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/2cov/600/900",
     filmmaker: {
       director_name: "Christopher Nolan",
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
@@ -63,8 +63,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 10m",
     content_rating: "R",
-    bg_image_url: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+    bg_image_url: "https://picsum.photos/seed/3bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/3cov/600/900",
     filmmaker: {
       director_name: "Ridley Scott",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
@@ -87,8 +87,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "1h 55m",
     content_rating: "PG-13",
-    bg_image_url: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+    bg_image_url: "https://picsum.photos/seed/4bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/4cov/600/900",
     filmmaker: {
       director_name: "Lana Wachowski",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
@@ -111,8 +111,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 15m",
     content_rating: "R",
-    bg_image_url: "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?auto=format&fit=crop&w=600&q=80",
+    bg_image_url: "https://picsum.photos/seed/5bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/5cov/600/900",
     filmmaker: {
       director_name: "James Cameron",
       avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80"
@@ -135,8 +135,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 30m",
     content_rating: "PG-13",
-    bg_image_url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Star_Wars_Galactic_Battlegrounds_Logo.jpg/960px-Star_Wars_Galactic_Battlegrounds_Logo.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Star_Wars_Galactic_Battlegrounds_Logo.jpg/960px-Star_Wars_Galactic_Battlegrounds_Logo.jpg",
     filmmaker: {
       director_name: "Matthew Vaughn",
       avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80"
@@ -159,8 +159,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 02m",
     content_rating: "PG-13",
-    bg_image_url: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80",
+    bg_image_url: "https://picsum.photos/seed/7bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/7cov/600/900",
     filmmaker: {
       director_name: "Guillermo del Toro",
       avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
@@ -183,8 +183,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 20m",
     content_rating: "PG-13",
-    bg_image_url: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=80",
+    bg_image_url: "https://picsum.photos/seed/8bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/8cov/600/900",
     filmmaker: {
       director_name: "Christopher Nolan",
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
@@ -207,8 +207,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 08m",
     content_rating: "R",
-    bg_image_url: "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&w=600&q=80",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Noomi_Rapace_PFW_2019.jpg/960px-Noomi_Rapace_PFW_2019.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Noomi_Rapace_PFW_2019.jpg/960px-Noomi_Rapace_PFW_2019.jpg",
     filmmaker: {
       director_name: "Ridley Scott",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
@@ -231,8 +231,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 25m",
     content_rating: "R",
-    bg_image_url: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/%E5%9B%BD%E5%86%85%E3%81%AE%E6%96%B0%E8%A6%8F%E6%84%9F%E6%9F%93%E8%80%85%E3%81%AF%EF%BC%91%EF%BC%95%EF%BC%91%EF%BC%96_%2851008728635%29.jpg/960px-%E5%9B%BD%E5%86%85%E3%81%AE%E6%96%B0%E8%A6%8F%E6%84%9F%E6%9F%93%E8%80%85%E3%81%AF%EF%BC%91%EF%BC%95%EF%BC%91%EF%BC%96_%2851008728635%29.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/%E5%9B%BD%E5%86%85%E3%81%AE%E6%96%B0%E8%A6%8F%E6%84%9F%E6%9F%93%E8%80%85%E3%81%AF%EF%BC%91%EF%BC%95%EF%BC%91%EF%BC%96_%2851008728635%29.jpg/960px-%E5%9B%BD%E5%86%85%E3%81%AE%E6%96%B0%E8%A6%8F%E6%84%9F%E6%9F%93%E8%80%85%E3%81%AF%EF%BC%91%EF%BC%95%EF%BC%91%EF%BC%96_%2851008728635%29.jpg",
     filmmaker: {
       director_name: "Denis Villeneuve",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80"
@@ -255,8 +255,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 18m",
     content_rating: "PG-13",
-    bg_image_url: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=600&q=80",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2016_RiP_Bring_Me_the_Horizon_-_by_2eight_-_DSC6735.jpg/960px-2016_RiP_Bring_Me_the_Horizon_-_by_2eight_-_DSC6735.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2016_RiP_Bring_Me_the_Horizon_-_by_2eight_-_DSC6735.jpg/960px-2016_RiP_Bring_Me_the_Horizon_-_by_2eight_-_DSC6735.jpg",
     filmmaker: {
       director_name: "James Cameron",
       avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80"
@@ -279,8 +279,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "1h 50m",
     content_rating: "PG",
-    bg_image_url: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=600&q=80",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Lee_De_Forest_with_Audion_tubes.jpg/960px-Lee_De_Forest_with_Audion_tubes.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Lee_De_Forest_with_Audion_tubes.jpg/960px-Lee_De_Forest_with_Audion_tubes.jpg",
     filmmaker: {
       director_name: "Lana Wachowski",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
@@ -303,8 +303,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 12m",
     content_rating: "PG-13",
-    bg_image_url: "https://images.unsplash.com/photo-1447433589675-4adf5662685f?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1447433589675-4adf5662685f?auto=format&fit=crop&w=600&q=80",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Subwavelength_slits.JPG/960px-Subwavelength_slits.JPG",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Subwavelength_slits.JPG/960px-Subwavelength_slits.JPG",
     filmmaker: {
       director_name: "Denis Villeneuve",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80"
@@ -327,8 +327,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 04m",
     content_rating: "PG",
-    bg_image_url: "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&w=600&q=80",
+    bg_image_url: "https://picsum.photos/seed/14bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/14cov/600/900",
     filmmaker: {
       director_name: "Steven Spielberg",
       avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80"
@@ -351,8 +351,8 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
     },
     runtime_minutes: "2h 10m",
     content_rating: "PG-13",
-    bg_image_url: "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=1200&q=80",
-    cover_image_url: "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=600&q=80",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/LawrenceBenderIBAug09.jpg/960px-LawrenceBenderIBAug09.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/LawrenceBenderIBAug09.jpg/960px-LawrenceBenderIBAug09.jpg",
     filmmaker: {
       director_name: "Guillermo del Toro",
       avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
@@ -362,6 +362,2655 @@ const RAW_EXTERNAL_MOVIES_API_DATA = [
       { actor_fullname: "Edward Norton", character_role: { es: "El Caminante", en: "The Walker" }, character_desc: { es: "Una figura central que aporta dinamismo y profundidad a la narrativa de la película.", en: "A central figure that brings dynamism and depth to the film's narrative." } }
     ],
     keyword_labels: ["Fantasy", "History"]
+  },
+  {
+    movie_identifier: 16,
+    display_name: "ENCANTO MÁGICO",
+    release_year: 2025,
+    average_score: 8.8,
+    category_type: "Animation",
+    synopsis_text: {
+      es: "Una nueva aventura de animación Disney llena de magia, donde una joven descubre que su familia tiene poderes ocultos.",
+      en: "A new Disney animation adventure full of magic, where a young girl discovers her family has hidden powers."
+    },
+    runtime_minutes: "1h 45m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Disney%27s_Encanto_print_logo.svg/960px-Disney%27s_Encanto_print_logo.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Disney%27s_Encanto_print_logo.svg/960px-Disney%27s_Encanto_print_logo.svg.png",
+    filmmaker: {
+      director_name: "Byron Howard",
+      avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Stephanie Beatriz", character_role: { es: "Mirabel", en: "Mirabel" }, character_desc: { es: "La protagonista que busca su lugar en la familia.", en: "The protagonist looking for her place in the family." } }
+    ],
+    keyword_labels: ["Disney", "Animation", "Family"]
+  },
+  {
+    movie_identifier: 17,
+    display_name: "ECHOES OF EQUALITY",
+    release_year: 2024,
+    average_score: 9.1,
+    category_type: "Social",
+    synopsis_text: {
+      es: "Un poderoso drama social que explora la lucha por los derechos civiles en la actualidad, conectando a personas de diferentes estratos.",
+      en: "A powerful social drama exploring the modern struggle for civil rights, connecting people from different backgrounds."
+    },
+    runtime_minutes: "2h 05m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/b/b8/2008_10_10_Alice_Krige_01.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/b/b8/2008_10_10_Alice_Krige_01.jpg",
+    filmmaker: {
+      director_name: "Ava DuVernay",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Viola Davis", character_role: { es: "Sarah", en: "Sarah" }, character_desc: { es: "Líder del movimiento.", en: "Leader of the movement." } }
+    ],
+    keyword_labels: ["Social", "Drama"]
+  },
+  {
+    movie_identifier: 18,
+    display_name: "SILICON HORIZON",
+    release_year: 2025,
+    average_score: 8.5,
+    category_type: "Sci-Fi",
+    synopsis_text: {
+      es: "Un documental y thriller sobre la evolución de la tecnología, desde los primeros microchips hasta la inteligencia artificial general, y su impacto en la humanidad.",
+      en: "A documentary thriller about the evolution of technology, from early microchips to AGI, and its impact on humanity."
+    },
+    runtime_minutes: "1h 55m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/18bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/18cov/600/900",
+    filmmaker: {
+      director_name: "Alex Garland",
+      avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Oscar Isaac", character_role: { es: "Dr. Alan", en: "Dr. Alan" }, character_desc: { es: "El creador de la nueva IA.", en: "The creator of the new AI." } }
+    ],
+    keyword_labels: ["Technology", "Sci-Fi"]
+  },
+  {
+    movie_identifier: 19,
+    display_name: "TOY ADVENTURE 3D",
+    release_year: 2023,
+    average_score: 8.7,
+    category_type: "Animation",
+    synopsis_text: {
+      es: "Una emocionante película animada en 3D donde juguetes cobran vida para embarcarse en una aventura épica.",
+      en: "An exciting 3D animated film where toys come to life to embark on an epic adventure."
+    },
+    runtime_minutes: "1h 40m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Toy_Story.svg/960px-Toy_Story.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Toy_Story.svg/960px-Toy_Story.svg.png",
+    filmmaker: {
+      director_name: "John Lasseter",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Tom Hanks", character_role: { es: "Comisario", en: "Sheriff" }, character_desc: { es: "Líder de los juguetes.", en: "Leader of the toys." } }
+    ],
+    keyword_labels: ["Animation", "3D", "Family"]
+  },
+  {
+    movie_identifier: 20,
+    display_name: "TITANIC",
+    release_year: 1997,
+    average_score: 9.2,
+    category_type: "Romance",
+    synopsis_text: {
+      es: "Una joven aristócrata se enamora de un artista pobre a bordo del lujoso e infortunado R.M.S. Titanic.",
+      en: "A young aristocrat falls in love with a poor artist aboard the luxurious, ill-fated R.M.S. Titanic."
+    },
+    runtime_minutes: "3h 14m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/20bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/20cov/600/900",
+    filmmaker: {
+      director_name: "James Cameron",
+      avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Leonardo DiCaprio", character_role: { es: "Jack", en: "Jack" }, character_desc: { es: "Un artista apasionado.", en: "A passionate artist." } },
+      { actor_fullname: "Kate Winslet", character_role: { es: "Rose", en: "Rose" }, character_desc: { es: "Una joven de alta sociedad.", en: "A high society young woman." } }
+    ],
+    keyword_labels: ["Romance", "Drama", "Classic"]
+  },
+  {
+    movie_identifier: 21,
+    display_name: "EL PIANISTA",
+    release_year: 2002,
+    average_score: 8.9,
+    category_type: "Social",
+    synopsis_text: {
+      es: "La historia real de un brillante pianista polaco que lucha por sobrevivir a la destrucción del gueto de Varsovia durante la Segunda Guerra Mundial.",
+      en: "The true story of a brilliant Polish pianist who struggles to survive the destruction of the Warsaw ghetto during World War II."
+    },
+    runtime_minutes: "2h 30m",
+    content_rating: "R",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/5/59/Adrien_Brody_Cannes_2013.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/5/59/Adrien_Brody_Cannes_2013.jpg",
+    filmmaker: {
+      director_name: "Roman Polanski",
+      avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Adrien Brody", character_role: { es: "Wladyslaw Szpilman", en: "Wladyslaw Szpilman" }, character_desc: { es: "Un músico excepcional.", en: "An exceptional musician." } }
+    ],
+    keyword_labels: ["Drama", "Biography", "War"]
+  },
+  {
+    movie_identifier: 22,
+    display_name: "SHERLOCK HOLMES",
+    release_year: 2009,
+    average_score: 8.1,
+    category_type: "Action",
+    synopsis_text: {
+      es: "El detective Sherlock Holmes y su compañero el Dr. Watson inician una batalla para detener a una nueva némesis que amenaza Inglaterra.",
+      en: "Detective Sherlock Holmes and his partner Dr. Watson engage in a battle to stop a new nemesis threatening England."
+    },
+    runtime_minutes: "2h 08m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/5/54/Rathbone_as_Holmes_-_F%26R.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/5/54/Rathbone_as_Holmes_-_F%26R.png",
+    filmmaker: {
+      director_name: "Guy Ritchie",
+      avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Robert Downey Jr.", character_role: { es: "Sherlock", en: "Sherlock" }, character_desc: { es: "El detective brillante.", en: "The brilliant detective." } }
+    ],
+    keyword_labels: ["Action", "Mystery", "Adventure"]
+  },
+  {
+    movie_identifier: 23,
+    display_name: "LOS TRES MOSQUETEROS",
+    release_year: 2011,
+    average_score: 7.5,
+    category_type: "Adventure",
+    synopsis_text: {
+      es: "El joven D'Artagnan se une a tres legendarios pero ahora caídos en desgracia mosqueteros para derrotar a un hermoso agente doble y su empleador villano.",
+      en: "The young D'Artagnan joins three legendary but now down-on-their-luck musketeers to defeat a beautiful double agent and her villainous employer."
+    },
+    runtime_minutes: "1h 50m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/23bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/23cov/600/900",
+    filmmaker: {
+      director_name: "Paul W.S. Anderson",
+      avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Logan Lerman", character_role: { es: "D'Artagnan", en: "D'Artagnan" }, character_desc: { es: "Un joven y valiente guerrero.", en: "A young and brave warrior." } }
+    ],
+    keyword_labels: ["Adventure", "Action"]
+  },
+  {
+    movie_identifier: 24,
+    display_name: "PIRATAS DEL CARIBE",
+    release_year: 2003,
+    average_score: 8.5,
+    category_type: "Adventure",
+    synopsis_text: {
+      es: "El herrero Will Turner se une al excéntrico pirata Capitán Jack Sparrow para salvar a la hija del gobernador de las manos de los antiguos aliados piratas de Jack, que ahora son no muertos.",
+      en: "Blacksmith Will Turner teams up with eccentric pirate Captain Jack Sparrow to save the governor's daughter from Jack's former pirate allies, who are now undead."
+    },
+    runtime_minutes: "2h 23m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Vellido2.jpg/960px-Vellido2.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Vellido2.jpg/960px-Vellido2.jpg",
+    filmmaker: {
+      director_name: "Gore Verbinski",
+      avatar: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Johnny Depp", character_role: { es: "Jack Sparrow", en: "Jack Sparrow" }, character_desc: { es: "Un pirata muy peculiar.", en: "A very peculiar pirate." } }
+    ],
+    keyword_labels: ["Adventure", "Fantasy", "Action"]
+  },
+  {
+    movie_identifier: 25,
+    display_name: "PADRE NO HAY MÁS QUE UNO",
+    release_year: 2019,
+    average_score: 7.2,
+    category_type: "Comedy",
+    synopsis_text: {
+      es: "Javier es un padre de cinco hijos que cree saberlo todo, pero su vida se vuelve un caos cuando su mujer decide irse de viaje y dejarlo al mando de la casa.",
+      en: "Javier is a father of five who thinks he knows it all, but his life turns to chaos when his wife decides to go on a trip and leaves him in charge of the house."
+    },
+    runtime_minutes: "1h 38m",
+    content_rating: "PG",
+    bg_image_url: "https://picsum.photos/seed/25bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/25cov/600/900",
+    filmmaker: {
+      director_name: "Santiago Segura",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Santiago Segura", character_role: { es: "Javier", en: "Javier" }, character_desc: { es: "Un padre abrumado por las responsabilidades del hogar.", en: "A father overwhelmed by household responsibilities." } },
+      { actor_fullname: "Toni Acosta", character_role: { es: "Marisa", en: "Marisa" }, character_desc: { es: "La madre que necesita un descanso.", en: "The mother who needs a break." } }
+    ],
+    keyword_labels: ["Comedy", "Family", "Spanish"]
+  },
+  {
+    movie_identifier: 26,
+    display_name: "PARÁSITOS",
+    release_year: 2019,
+    average_score: 8.5,
+    category_type: "Social",
+    synopsis_text: {
+      es: "Toda la familia de Ki-taek está en el paro y se interesa mucho por el nivel de vida de la riquísima familia Park. Un día, su hijo logra que le recomienden para dar clases particulares de inglés en casa de los Park.",
+      en: "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident."
+    },
+    runtime_minutes: "2h 12m",
+    content_rating: "R",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Parasite_Korean_logo.png/960px-Parasite_Korean_logo.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Parasite_Korean_logo.png/960px-Parasite_Korean_logo.png",
+    filmmaker: {
+      director_name: "Bong Joon Ho",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Song Kang-ho", character_role: { es: "Ki-taek", en: "Ki-taek" }, character_desc: { es: "El padre de la familia pobre.", en: "The father of the poor family." } }
+    ],
+    keyword_labels: ["Social", "Thriller", "Drama"]
+  },
+  {
+    movie_identifier: 27,
+    display_name: "ORWELL (1984)",
+    release_year: 1984,
+    average_score: 7.1,
+    category_type: "Social",
+    synopsis_text: {
+      es: "En una sociedad totalitaria, un hombre cuyo trabajo es reescribir la historia intenta rebelarse enamorándose y pensando en secreto.",
+      en: "In a totalitarian society, a man whose daily work is rewriting history tries to rebel by falling in love and maintaining his secret thoughts."
+    },
+    runtime_minutes: "1h 53m",
+    content_rating: "R",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/George_Orwell_press_photo.jpg/960px-George_Orwell_press_photo.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/George_Orwell_press_photo.jpg/960px-George_Orwell_press_photo.jpg",
+    filmmaker: {
+      director_name: "Michael Radford",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "John Hurt", character_role: { es: "Winston Smith", en: "Winston Smith" }, character_desc: { es: "Un ciudadano que empieza a dudar del sistema.", en: "A citizen who begins to doubt the system." } }
+    ],
+    keyword_labels: ["Social", "Sci-Fi", "Dystopia"]
+  },
+  {
+    movie_identifier: 28,
+    display_name: "CIUDAD SIN SUEÑO",
+    release_year: 2002,
+    average_score: 8.6,
+    category_type: "Social",
+    synopsis_text: {
+      es: "Un crudo retrato de las favelas y cómo la criminalidad y la pobreza afectan a los jóvenes que crecen sin oportunidades.",
+      en: "A raw portrait of the slums and how crime and poverty affect young people growing up without opportunities."
+    },
+    runtime_minutes: "2h 10m",
+    content_rating: "R",
+    bg_image_url: "https://picsum.photos/seed/28bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/28cov/600/900",
+    filmmaker: {
+      director_name: "Fernando Meirelles",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Alexandre Rodrigues", character_role: { es: "Buscapé", en: "Rocket" }, character_desc: { es: "Un joven fotógrafo.", en: "A young photographer." } }
+    ],
+    keyword_labels: ["Social", "Crime", "Drama"]
+  },
+  {
+    movie_identifier: 29,
+    display_name: "EL 47",
+    release_year: 2024,
+    average_score: 7.5,
+    category_type: "Social",
+    synopsis_text: {
+      es: "Basada en hechos reales, narra la lucha vecinal en Barcelona para conseguir que el autobús número 47 llegara a su barrio.",
+      en: "Based on true events, it tells the story of the neighborhood struggle in Barcelona to get the number 47 bus to reach their district."
+    },
+    runtime_minutes: "1h 45m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Solihull_Station_-_National_Express_West_Midlands_buses_%2811609361284%29.jpg/960px-Solihull_Station_-_National_Express_West_Midlands_buses_%2811609361284%29.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Solihull_Station_-_National_Express_West_Midlands_buses_%2811609361284%29.jpg/960px-Solihull_Station_-_National_Express_West_Midlands_buses_%2811609361284%29.jpg",
+    filmmaker: {
+      director_name: "Marcel Barrena",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Eduard Fernández", character_role: { es: "Manolo Vital", en: "Manolo Vital" }, character_desc: { es: "Líder vecinal.", en: "Neighborhood leader." } }
+    ],
+    keyword_labels: ["Social", "History", "Spanish"]
+  },
+  {
+    movie_identifier: 30,
+    display_name: "INTOCABLE",
+    release_year: 2011,
+    average_score: 8.5,
+    category_type: "Social",
+    synopsis_text: {
+      es: "Un aristócrata tetrapléjico contrata a un joven de un barrio marginal para que sea su cuidador, desarrollando una amistad inquebrantable.",
+      en: "After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver."
+    },
+    runtime_minutes: "1h 52m",
+    content_rating: "R",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Elenco_los_intocables.jpg/960px-Elenco_los_intocables.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Elenco_los_intocables.jpg/960px-Elenco_los_intocables.jpg",
+    filmmaker: {
+      director_name: "Olivier Nakache",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Omar Sy", character_role: { es: "Driss", en: "Driss" }, character_desc: { es: "El joven cuidador.", en: "The young caregiver." } },
+      { actor_fullname: "François Cluzet", character_role: { es: "Philippe", en: "Philippe" }, character_desc: { es: "El aristócrata.", en: "The aristocrat." } }
+    ],
+    keyword_labels: ["Social", "Comedy", "Drama"]
+  },
+  {
+    movie_identifier: 31,
+    display_name: "FORREST GUMP",
+    release_year: 1994,
+    average_score: 8.8,
+    category_type: "Social",
+    synopsis_text: {
+      es: "Las presidencias de Kennedy y Johnson, la guerra de Vietnam, el Watergate y otros hechos históricos se desarrollan desde la perspectiva de un hombre de Alabama con un coeficiente intelectual de 75.",
+      en: "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold from the perspective of an Alabama man with an IQ of 75."
+    },
+    runtime_minutes: "2h 22m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Forrest_Gump.svg/960px-Forrest_Gump.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Forrest_Gump.svg/960px-Forrest_Gump.svg.png",
+    filmmaker: {
+      director_name: "Robert Zemeckis",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Tom Hanks", character_role: { es: "Forrest Gump", en: "Forrest Gump" }, character_desc: { es: "Un hombre bueno e inocente.", en: "A good and innocent man." } }
+    ],
+    keyword_labels: ["Social", "Drama", "Romance"]
+  },
+  {
+    movie_identifier: 32,
+    display_name: "YO SOY SAM",
+    release_year: 2001,
+    average_score: 7.6,
+    category_type: "Social",
+    synopsis_text: {
+      es: "Un padre con discapacidad intelectual lucha por recuperar la custodia de su hija de 7 años, demostrando que el amor es lo único que importa.",
+      en: "A mentally disabled father fights to regain custody of his 7-year-old daughter, proving that love is all that matters."
+    },
+    runtime_minutes: "2h 12m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/32bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/32cov/600/900",
+    filmmaker: {
+      director_name: "Jessie Nelson",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Sean Penn", character_role: { es: "Sam Dawson", en: "Sam Dawson" }, character_desc: { es: "Un padre dedicado.", en: "A dedicated father." } },
+      { actor_fullname: "Dakota Fanning", character_role: { es: "Lucy", en: "Lucy" }, character_desc: { es: "La hija de Sam.", en: "Sam's daughter." } }
+    ],
+    keyword_labels: ["Social", "Drama", "Family"]
+  },
+  {
+    movie_identifier: 33,
+    display_name: "YO, ROBOT",
+    release_year: 2004,
+    average_score: 7.1,
+    category_type: "Tech",
+    synopsis_text: {
+      es: "En el año 2035, un detective tecnófobo investiga un crimen que podría haber sido perpetrado por un robot, lo que supondría una amenaza a la raza humana.",
+      en: "In 2035, a technophobic cop investigates a crime that may have been perpetrated by a robot, which leads to a larger threat to humanity."
+    },
+    runtime_minutes: "1h 55m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/9/90/Irobot_head.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/9/90/Irobot_head.jpg",
+    filmmaker: {
+      director_name: "Alex Proyas",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Will Smith", character_role: { es: "Del Spooner", en: "Del Spooner" }, character_desc: { es: "Detective de homicidios.", en: "Homicide detective." } }
+    ],
+    keyword_labels: ["Tech", "Sci-Fi", "Action"]
+  },
+  {
+    movie_identifier: 34,
+    display_name: "WALL·E",
+    release_year: 2008,
+    average_score: 8.4,
+    category_type: "Tech",
+    synopsis_text: {
+      es: "En un futuro lejano, un pequeño robot recolector de basura se embarca en un viaje espacial que decidirá en última instancia el destino de la humanidad.",
+      en: "In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind."
+    },
+    runtime_minutes: "1h 38m",
+    content_rating: "G",
+    bg_image_url: "https://picsum.photos/seed/34bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/34cov/600/900",
+    filmmaker: {
+      director_name: "Andrew Stanton",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Ben Burtt", character_role: { es: "WALL·E (voz)", en: "WALL·E (voice)" }, character_desc: { es: "El último robot en la Tierra.", en: "The last robot on Earth." } }
+    ],
+    keyword_labels: ["Tech", "Animation", "Family"]
+  },
+  {
+    movie_identifier: 35,
+    display_name: "HER",
+    release_year: 2013,
+    average_score: 8.0,
+    category_type: "Tech",
+    synopsis_text: {
+      es: "En un futuro cercano, un escritor solitario desarrolla una relación romántica poco probable con un sistema operativo intuitivo, diseñado para satisfacer todas sus necesidades.",
+      en: "In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need."
+    },
+    runtime_minutes: "2h 06m",
+    content_rating: "R",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/8/87/Spike_Jonze_-_Her.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/8/87/Spike_Jonze_-_Her.jpg",
+    filmmaker: {
+      director_name: "Spike Jonze",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Joaquin Phoenix", character_role: { es: "Theodore", en: "Theodore" }, character_desc: { es: "Un escritor melancólico.", en: "A melancholic writer." } }
+    ],
+    keyword_labels: ["Tech", "Romance", "Sci-Fi"]
+  },
+  {
+    movie_identifier: 36,
+    display_name: "EX MACHINA",
+    release_year: 2014,
+    average_score: 7.7,
+    category_type: "Tech",
+    synopsis_text: {
+      es: "Un joven programador es seleccionado para participar en un experimento revolucionario en inteligencia artificial, evaluando las cualidades humanas de una IA humanoide.",
+      en: "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I."
+    },
+    runtime_minutes: "1h 48m",
+    content_rating: "R",
+    bg_image_url: "https://picsum.photos/seed/36bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/36cov/600/900",
+    filmmaker: {
+      director_name: "Alex Garland",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Alicia Vikander", character_role: { es: "Ava", en: "Ava" }, character_desc: { es: "Un robot con inteligencia artificial avanzada.", en: "An advanced A.I. robot." } }
+    ],
+    keyword_labels: ["Tech", "Sci-Fi", "Thriller"]
+  },
+  {
+    movie_identifier: 37,
+    display_name: "THE MATRIX",
+    release_year: 1999,
+    average_score: 8.7,
+    category_type: "Tech",
+    synopsis_text: {
+      es: "Un hacker informático aprende de misteriosos rebeldes sobre la verdadera naturaleza de su realidad y su papel en la guerra contra sus controladores.",
+      en: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers."
+    },
+    runtime_minutes: "2h 16m",
+    content_rating: "R",
+    bg_image_url: "https://picsum.photos/seed/37bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/37cov/600/900",
+    filmmaker: {
+      director_name: "The Wachowskis",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Keanu Reeves", character_role: { es: "Neo", en: "Neo" }, character_desc: { es: "El elegido para liberar a la humanidad.", en: "The chosen one to free humanity." } }
+    ],
+    keyword_labels: ["Tech", "Sci-Fi", "Action"]
+  },
+  {
+    movie_identifier: 38,
+    display_name: "READY PLAYER ONE",
+    release_year: 2018,
+    average_score: 7.4,
+    category_type: "Tech",
+    synopsis_text: {
+      es: "Cuando el creador de un mundo de realidad virtual llamado OASIS muere, lanza un desafío a todos los usuarios de OASIS para encontrar su huevo de Pascua oculto, que dará al descubridor toda su fortuna y el control de su mundo.",
+      en: "When the creator of a virtual reality called the OASIS dies, he makes a posthumous challenge to all OASIS users to find his Easter Egg, which will give the finder his fortune and control of his world."
+    },
+    runtime_minutes: "2h 20m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/d/df/Ready_Player_One_logo.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/d/df/Ready_Player_One_logo.png",
+    filmmaker: {
+      director_name: "Steven Spielberg",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Tye Sheridan", character_role: { es: "Parzival / Wade", en: "Parzival / Wade" }, character_desc: { es: "Un joven jugador del OASIS.", en: "A young OASIS player." } }
+    ],
+    keyword_labels: ["Tech", "Sci-Fi", "Adventure"]
+  },
+  {
+    movie_identifier: 39,
+    display_name: "INDIANA JONES",
+    release_year: 1981,
+    average_score: 8.4,
+    category_type: "Adventure",
+    synopsis_text: {
+      es: "El arqueólogo y aventurero Indiana Jones es contratado por el gobierno de EE.UU. para encontrar el Arca de la Alianza antes de que los nazis puedan obtener sus asombrosos poderes.",
+      en: "In 1936, archaeologist and adventurer Indiana Jones is hired by the U.S. government to find the Ark of the Covenant before Adolf Hitler's Nazis can obtain its awesome powers."
+    },
+    runtime_minutes: "1h 55m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Indiana_Jones_e_il_quadrante_del_destino_logo.jpg/960px-Indiana_Jones_e_il_quadrante_del_destino_logo.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Indiana_Jones_e_il_quadrante_del_destino_logo.jpg/960px-Indiana_Jones_e_il_quadrante_del_destino_logo.jpg",
+    filmmaker: {
+      director_name: "Steven Spielberg",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Harrison Ford", character_role: { es: "Indiana Jones", en: "Indiana Jones" }, character_desc: { es: "El icónico arqueólogo.", en: "The iconic archaeologist." } }
+    ],
+    keyword_labels: ["Adventure", "Action", "Classic"]
+  },
+  {
+    movie_identifier: 40,
+    display_name: "NOCHE EN EL MUSEO",
+    release_year: 2006,
+    average_score: 6.4,
+    category_type: "Adventure",
+    synopsis_text: {
+      es: "Un guardia de seguridad recién contratado en el Museo de Historia Natural descubre que una antigua maldición hace que los animales y exposiciones del museo cobren vida por la noche.",
+      en: "A newly recruited night security guard at the Museum of Natural History discovers that an ancient curse causes the animals and exhibits on display to come to life and wreak havoc."
+    },
+    runtime_minutes: "1h 48m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Himno_Nacional_de_Colombia.pdf/page1-960px-Himno_Nacional_de_Colombia.pdf.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Himno_Nacional_de_Colombia.pdf/page1-960px-Himno_Nacional_de_Colombia.pdf.jpg",
+    filmmaker: {
+      director_name: "Shawn Levy",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Ben Stiller", character_role: { es: "Larry Daley", en: "Larry Daley" }, character_desc: { es: "El guardia nocturno.", en: "The night guard." } }
+    ],
+    keyword_labels: ["Adventure", "Comedy", "Family"]
+  },
+  {
+    movie_identifier: 41,
+    display_name: "PIRATAS DEL CARIBE",
+    release_year: 2003,
+    average_score: 8.0,
+    category_type: "Adventure",
+    synopsis_text: {
+      es: "El herrero Will Turner se une al excéntrico pirata Capitán Jack Sparrow para salvar al amor de su vida de los aliados piratas malditos de Jack.",
+      en: "Blacksmith Will Turner teams up with eccentric pirate 'Captain' Jack Sparrow to save his love, the governor's daughter, from Jack's former pirate allies, who are now undead."
+    },
+    runtime_minutes: "2h 23m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Vellido2.jpg/960px-Vellido2.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Vellido2.jpg/960px-Vellido2.jpg",
+    filmmaker: {
+      director_name: "Gore Verbinski",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Johnny Depp", character_role: { es: "Jack Sparrow", en: "Jack Sparrow" }, character_desc: { es: "Un pirata excéntrico.", en: "An eccentric pirate." } }
+    ],
+    keyword_labels: ["Adventure", "Action", "Fantasy"]
+  },
+  {
+    movie_identifier: 42,
+    display_name: "HARRY POTTER",
+    release_year: 2001,
+    average_score: 7.6,
+    category_type: "Adventure",
+    synopsis_text: {
+      es: "Un niño huérfano descubre que es un mago y es enviado al Colegio Hogwarts de Magia y Hechicería, donde descubre la verdad sobre su familia.",
+      en: "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world."
+    },
+    runtime_minutes: "2h 32m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Harry_Potter_logo.svg/960px-Harry_Potter_logo.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Harry_Potter_logo.svg/960px-Harry_Potter_logo.svg.png",
+    filmmaker: {
+      director_name: "Chris Columbus",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Daniel Radcliffe", character_role: { es: "Harry Potter", en: "Harry Potter" }, character_desc: { es: "El niño que sobrevivió.", en: "The boy who lived." } }
+    ],
+    keyword_labels: ["Adventure", "Fantasy", "Family"]
+  },
+  {
+    movie_identifier: 43,
+    display_name: "JUMANJI",
+    release_year: 1995,
+    average_score: 7.0,
+    category_type: "Adventure",
+    synopsis_text: {
+      es: "Dos niños encuentran y juegan a un juego de mesa mágico que libera a un hombre atrapado en él durante décadas, así como a una serie de peligros de la selva.",
+      en: "When two kids find and play a magical board game, they release a man trapped in it for decades - and a host of dangers that can only be stopped by finishing the game."
+    },
+    runtime_minutes: "1h 44m",
+    content_rating: "PG",
+    bg_image_url: "https://picsum.photos/seed/43bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/43cov/600/900",
+    filmmaker: {
+      director_name: "Joe Johnston",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Robin Williams", character_role: { es: "Alan Parrish", en: "Alan Parrish" }, character_desc: { es: "Atrapado en el juego.", en: "Trapped in the game." } }
+    ],
+    keyword_labels: ["Adventure", "Comedy", "Family"]
+  },
+  {
+    movie_identifier: 44,
+    display_name: "JURASSIC PARK",
+    release_year: 1993,
+    average_score: 8.2,
+    category_type: "Adventure",
+    synopsis_text: {
+      es: "Un pragmático paleontólogo visita un parque temático casi completo situado en una isla, lleno de dinosaurios clonados, al que se le encarga proteger a un par de niños después de que se produzca un fallo de seguridad.",
+      en: "A pragmatic paleontologist touring an almost complete theme park on an island in Central America is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose."
+    },
+    runtime_minutes: "2h 07m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/44bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/44cov/600/900",
+    filmmaker: {
+      director_name: "Steven Spielberg",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Sam Neill", character_role: { es: "Dr. Alan Grant", en: "Dr. Alan Grant" }, character_desc: { es: "Paleontólogo.", en: "Paleontologist." } }
+    ],
+    keyword_labels: ["Adventure", "Sci-Fi", "Thriller"]
+  },
+  {
+    movie_identifier: 45,
+    display_name: "JURASSIC WORLD",
+    release_year: 2015,
+    average_score: 7.0,
+    category_type: "Adventure",
+    synopsis_text: {
+      es: "Veintidós años después de los incidentes de Jurassic Park, un nuevo parque temático operativo se sume en el caos cuando un dinosaurio híbrido genéticamente modificado escapa.",
+      en: "A new theme park, built on the original site of Jurassic Park, creates a genetically modified hybrid dinosaur, the Indominus Rex, which escapes containment and goes on a killing spree."
+    },
+    runtime_minutes: "2h 04m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/45bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/45cov/600/900",
+    filmmaker: {
+      director_name: "Colin Trevorrow",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Chris Pratt", character_role: { es: "Owen Grady", en: "Owen Grady" }, character_desc: { es: "Entrenador de Velociraptors.", en: "Velociraptor trainer." } }
+    ],
+    keyword_labels: ["Adventure", "Action", "Sci-Fi"]
+  },
+  {
+    movie_identifier: 46,
+    display_name: "101 DÁLMATAS",
+    release_year: 1961,
+    average_score: 7.3,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Una camada de cachorros dálmatas es secuestrada por la malvada Cruella de Vil, que quiere hacerse un abrigo con sus pieles.",
+      en: "When a litter of Dalmatian puppies are abducted by the minions of Cruella de Vil, the parents must find them before she uses them for a diabolical fashion statement."
+    },
+    runtime_minutes: "1h 19m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/101_Dalmatians_The_Series_logo.png/960px-101_Dalmatians_The_Series_logo.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/101_Dalmatians_The_Series_logo.png/960px-101_Dalmatians_The_Series_logo.png",
+    filmmaker: {
+      director_name: "Clyde Geronimi",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Rod Taylor", character_role: { es: "Pongo (voz)", en: "Pongo (voice)" }, character_desc: { es: "El padre de los cachorros.", en: "The father of the puppies." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Family"]
+  },
+  {
+    movie_identifier: 47,
+    display_name: "VAIANA",
+    release_year: 2016,
+    average_score: 7.6,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "En la antigua Polinesia, cuando una terrible maldición incurrida por el semidiós Maui llega a su isla, Vaiana responde a la llamada del Océano para buscar al semidiós y arreglar las cosas.",
+      en: "In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right."
+    },
+    runtime_minutes: "1h 47m",
+    content_rating: "PG",
+    bg_image_url: "https://picsum.photos/seed/47bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/47cov/600/900",
+    filmmaker: {
+      director_name: "Ron Clements",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Auli'i Cravalho", character_role: { es: "Vaiana (voz)", en: "Moana (voice)" }, character_desc: { es: "La valiente heroína.", en: "The brave heroine." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Adventure"]
+  },
+  {
+    movie_identifier: 48,
+    display_name: "LA SIRENITA",
+    release_year: 1989,
+    average_score: 7.6,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Una princesa sirena hace un trato con una bruja del mar para convertirse en humana y ganarse el amor de un príncipe.",
+      en: "A mermaid princess makes a Faustian bargain in an attempt to become human and win a prince's love."
+    },
+    runtime_minutes: "1h 23m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/The_Little_Mermaid_logo.svg/960px-The_Little_Mermaid_logo.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/The_Little_Mermaid_logo.svg/960px-The_Little_Mermaid_logo.svg.png",
+    filmmaker: {
+      director_name: "John Musker",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Jodi Benson", character_role: { es: "Ariel (voz)", en: "Ariel (voice)" }, character_desc: { es: "La princesa sirena.", en: "The mermaid princess." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Family"]
+  },
+  {
+    movie_identifier: 49,
+    display_name: "LA BELLA Y LA BESTIA",
+    release_year: 1991,
+    average_score: 8.0,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Un príncipe hechizado en forma de bestia debe ganarse el amor de una joven hermosa antes de que caiga el último pétalo de una rosa encantada.",
+      en: "A prince cursed to spend his days as a hideous monster sets out to regain his humanity by earning a young woman's love."
+    },
+    runtime_minutes: "1h 24m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Beauty_And_The_Beast_-_Official_Logo.jpg/960px-Beauty_And_The_Beast_-_Official_Logo.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Beauty_And_The_Beast_-_Official_Logo.jpg/960px-Beauty_And_The_Beast_-_Official_Logo.jpg",
+    filmmaker: {
+      director_name: "Gary Trousdale",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Paige O'Hara", character_role: { es: "Bella (voz)", en: "Belle (voice)" }, character_desc: { es: "Una joven soñadora.", en: "A young dreamer." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Romance"]
+  },
+  {
+    movie_identifier: 50,
+    display_name: "FROZEN",
+    release_year: 2013,
+    average_score: 7.4,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "La princesa Anna se embarca en un viaje épico para encontrar a su hermana Elsa, cuyos poderes de hielo han atrapado su reino en un invierno eterno.",
+      en: "When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister Anna teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition."
+    },
+    runtime_minutes: "1h 42m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Frozen_Logo_Black.svg/960px-Frozen_Logo_Black.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Frozen_Logo_Black.svg/960px-Frozen_Logo_Black.svg.png",
+    filmmaker: {
+      director_name: "Chris Buck",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Idina Menzel", character_role: { es: "Elsa (voz)", en: "Elsa (voice)" }, character_desc: { es: "La reina de las nieves.", en: "The snow queen." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Family"]
+  },
+  {
+    movie_identifier: 51,
+    display_name: "ENREDADOS",
+    release_year: 2010,
+    average_score: 7.7,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Rapunzel, una princesa con cabello mágico y larguísimo, ha estado encerrada en una torre toda su vida, hasta que un apuesto ladrón la ayuda a escapar.",
+      en: "The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time, and who she really is."
+    },
+    runtime_minutes: "1h 40m",
+    content_rating: "PG",
+    bg_image_url: "https://picsum.photos/seed/51bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/51cov/600/900",
+    filmmaker: {
+      director_name: "Nathan Greno",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Mandy Moore", character_role: { es: "Rapunzel (voz)", en: "Rapunzel (voice)" }, character_desc: { es: "La princesa perdida.", en: "The lost princess." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Comedy"]
+  },
+  {
+    movie_identifier: 52,
+    display_name: "MULÁN",
+    release_year: 1998,
+    average_score: 7.6,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Para salvar a su padre de la muerte en el ejército, una joven doncella china se disfraza de hombre y toma su lugar en la guerra contra los hunos.",
+      en: "To save her father from death in the army, a young maiden secretly goes in his place and becomes one of China's greatest heroines in the process."
+    },
+    runtime_minutes: "1h 28m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Mulan_Logo_Black.svg/960px-Mulan_Logo_Black.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Mulan_Logo_Black.svg/960px-Mulan_Logo_Black.svg.png",
+    filmmaker: {
+      director_name: "Tony Bancroft",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Ming-Na Wen", character_role: { es: "Mulán (voz)", en: "Mulan (voice)" }, character_desc: { es: "La heroína guerrera.", en: "The warrior heroine." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Action"]
+  },
+  {
+    movie_identifier: 53,
+    display_name: "LA SIRENITA (LIVE ACTION)",
+    release_year: 2023,
+    average_score: 7.2,
+    category_type: "Live Action",
+    synopsis_text: {
+      es: "Ariel, una joven y hermosa sirena con sed de aventura, hace un trato con la malvada bruja del mar Úrsula para experimentar la vida en la tierra.",
+      en: "A young mermaid makes a deal with a sea witch to trade her beautiful voice for human legs so she can discover the world above water and impress a prince."
+    },
+    runtime_minutes: "2h 15m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/The_Little_Mermaid_logo.svg/960px-The_Little_Mermaid_logo.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/The_Little_Mermaid_logo.svg/960px-The_Little_Mermaid_logo.svg.png",
+    filmmaker: {
+      director_name: "Rob Marshall",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Halle Bailey", character_role: { es: "Ariel", en: "Ariel" }, character_desc: { es: "La joven princesa sirena.", en: "The young mermaid princess." } }
+    ],
+    keyword_labels: ["Live Action", "Fantasy", "Romance"]
+  },
+  {
+    movie_identifier: 54,
+    display_name: "ALADDIN (LIVE ACTION)",
+    release_year: 2019,
+    average_score: 6.9,
+    category_type: "Live Action",
+    synopsis_text: {
+      es: "Un joven de la calle de buen corazón y un Gran Visir hambriento de poder compiten por una lámpara mágica que tiene el poder de hacer que sus deseos más profundos se hagan realidad.",
+      en: "A kind-hearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true."
+    },
+    runtime_minutes: "2h 08m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Aladdin_2019_Logo_Black.svg/960px-Aladdin_2019_Logo_Black.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Aladdin_2019_Logo_Black.svg/960px-Aladdin_2019_Logo_Black.svg.png",
+    filmmaker: {
+      director_name: "Guy Ritchie",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Will Smith", character_role: { es: "El Genio", en: "Genie" }, character_desc: { es: "El genio de la lámpara.", en: "The genie of the lamp." } }
+    ],
+    keyword_labels: ["Live Action", "Fantasy", "Adventure"]
+  },
+  {
+    movie_identifier: 55,
+    display_name: "EL REY LEÓN (LIVE ACTION)",
+    release_year: 2019,
+    average_score: 6.8,
+    category_type: "Live Action",
+    synopsis_text: {
+      es: "Tras el asesinato de su padre, un joven príncipe león huye de su reino sólo para aprender el verdadero significado de la responsabilidad y la valentía.",
+      en: "After the murder of his father, a young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery."
+    },
+    runtime_minutes: "1h 58m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Goyas_2024_-_Mar%C3%ADa_Le%C3%B3n.jpg/960px-Goyas_2024_-_Mar%C3%ADa_Le%C3%B3n.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Goyas_2024_-_Mar%C3%ADa_Le%C3%B3n.jpg/960px-Goyas_2024_-_Mar%C3%ADa_Le%C3%B3n.jpg",
+    filmmaker: {
+      director_name: "Jon Favreau",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Donald Glover", character_role: { es: "Simba (voz)", en: "Simba (voice)" }, character_desc: { es: "El príncipe león.", en: "The lion prince." } }
+    ],
+    keyword_labels: ["Live Action", "Adventure", "Family"]
+  },
+  {
+    movie_identifier: 56,
+    display_name: "LA BELLA Y LA BESTIA (LIVE ACTION)",
+    release_year: 2017,
+    average_score: 7.1,
+    category_type: "Live Action",
+    synopsis_text: {
+      es: "Un príncipe arrogante es maldecido a vivir como una bestia aterradora hasta que encuentre el amor verdadero. Curiosamente, su oportunidad llega cuando captura a un relojero despistado, cuya hija hermosa decide tomar su lugar.",
+      en: "A selfish Prince is cursed to become a monster for the rest of his life, unless he learns to fall in love with a beautiful young woman he keeps prisoner."
+    },
+    runtime_minutes: "2h 09m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Beauty_And_The_Beast_-_Official_Logo.jpg/960px-Beauty_And_The_Beast_-_Official_Logo.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Beauty_And_The_Beast_-_Official_Logo.jpg/960px-Beauty_And_The_Beast_-_Official_Logo.jpg",
+    filmmaker: {
+      director_name: "Bill Condon",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Emma Watson", character_role: { es: "Bella", en: "Belle" }, character_desc: { es: "Una joven independiente.", en: "An independent young woman." } }
+    ],
+    keyword_labels: ["Live Action", "Fantasy", "Romance"]
+  },
+  {
+    movie_identifier: 57,
+    display_name: "CENICIENTA (LIVE ACTION)",
+    release_year: 2015,
+    average_score: 6.9,
+    category_type: "Live Action",
+    synopsis_text: {
+      es: "Cuando su padre fallece inesperadamente, la joven Ella se encuentra a merced de su cruel madrastra y sus hermanastras. Nunca abandona la esperanza, y su vida cambia cuando conoce a un apuesto extraño.",
+      en: "When her father unexpectedly dies, young Ella finds herself at the mercy of her cruel stepmother and her scheming stepsisters. Never one to give up hope, Ella's fortunes begin to change after meeting a dashing stranger."
+    },
+    runtime_minutes: "1h 45m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/1950_is_the_Cinderella_year.jpg/960px-1950_is_the_Cinderella_year.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/1950_is_the_Cinderella_year.jpg/960px-1950_is_the_Cinderella_year.jpg",
+    filmmaker: {
+      director_name: "Kenneth Branagh",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Lily James", character_role: { es: "Cenicienta", en: "Cinderella" }, character_desc: { es: "La joven bondadosa.", en: "The kind-hearted young woman." } }
+    ],
+    keyword_labels: ["Live Action", "Fantasy", "Family"]
+  },
+  {
+    movie_identifier: 58,
+    display_name: "MULÁN (LIVE ACTION)",
+    release_year: 2020,
+    average_score: 5.8,
+    category_type: "Live Action",
+    synopsis_text: {
+      es: "Para salvar a su padre enfermo de servir en el Ejército Imperial, una valiente joven se disfraza de hombre para luchar contra los invasores del norte de China.",
+      en: "A young Chinese maiden disguises herself as a male warrior in order to save her father."
+    },
+    runtime_minutes: "1h 55m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Mulan_Logo_Black.svg/960px-Mulan_Logo_Black.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Mulan_Logo_Black.svg/960px-Mulan_Logo_Black.svg.png",
+    filmmaker: {
+      director_name: "Niki Caro",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Yifei Liu", character_role: { es: "Mulán", en: "Mulan" }, character_desc: { es: "La guerrera.", en: "The warrior." } }
+    ],
+    keyword_labels: ["Live Action", "Action", "Adventure"]
+  },
+  {
+    movie_identifier: 59,
+    display_name: "CENICIENTA (1950)",
+    release_year: 1950,
+    average_score: 7.3,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "La vida de Cenicienta cambia para siempre cuando su hada madrina aparece y la ayuda a asistir al baile real.",
+      en: "When Cinderella's cruel stepmother prevents her from attending the Royal Ball, she gets some unexpected help from the lovable mice Gus and Jaq, and from her Fairy Godmother."
+    },
+    runtime_minutes: "1h 14m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/1950_is_the_Cinderella_year.jpg/960px-1950_is_the_Cinderella_year.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/1950_is_the_Cinderella_year.jpg/960px-1950_is_the_Cinderella_year.jpg",
+    filmmaker: {
+      director_name: "Clyde Geronimi",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Ilene Woods", character_role: { es: "Cenicienta (voz)", en: "Cinderella (voice)" }, character_desc: { es: "La joven bondadosa.", en: "The kind-hearted young woman." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Family"]
+  },
+  {
+    movie_identifier: 60,
+    display_name: "FANTASÍA 2000",
+    release_year: 1999,
+    average_score: 7.2,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Una actualización del clásico de Disney con nuevas animaciones espectaculares creadas para acompañar piezas de música clásica.",
+      en: "An update of Disney's classic masterpiece with new extraordinary animations set to classical music."
+    },
+    runtime_minutes: "1h 14m",
+    content_rating: "G",
+    bg_image_url: "https://picsum.photos/seed/60bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/60cov/600/900",
+    filmmaker: {
+      director_name: "James Algar",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Steve Martin", character_role: { es: "Presentador", en: "Presenter" }, character_desc: { es: "Introductor del segmento.", en: "Segment introducer." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Music"]
+  },
+  {
+    movie_identifier: 61,
+    display_name: "HERMANO OSO",
+    release_year: 2003,
+    average_score: 6.8,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Cuando un joven cazador inuit mata impulsivamente a un oso, es mágicamente transformado en oso para aprender a ver el mundo a través de sus ojos.",
+      en: "When a young Inuit hunter needlessly kills a bear, he is magically changed into a bear himself as punishment with a talkative cub being his only guide to change back."
+    },
+    runtime_minutes: "1h 25m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Yogi_Bear_with_%22don%27t_feed_the_bears%22_message_-_NARA_-_286013.jpg/960px-Yogi_Bear_with_%22don%27t_feed_the_bears%22_message_-_NARA_-_286013.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Yogi_Bear_with_%22don%27t_feed_the_bears%22_message_-_NARA_-_286013.jpg/960px-Yogi_Bear_with_%22don%27t_feed_the_bears%22_message_-_NARA_-_286013.jpg",
+    filmmaker: {
+      director_name: "Aaron Blaise",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Joaquin Phoenix", character_role: { es: "Kenai (voz)", en: "Kenai (voice)" }, character_desc: { es: "El cazador transformado.", en: "The transformed hunter." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Adventure"]
+  },
+  {
+    movie_identifier: 62,
+    display_name: "MÉRIDA (BRAVE)",
+    release_year: 2012,
+    average_score: 7.1,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Decidida a forjar su propio camino en la vida, la princesa Mérida desafía una costumbre antigua, desatando el caos en su reino.",
+      en: "Determined to make her own path in life, Princess Merida defies a custom that brings chaos to her kingdom. Granted one wish, Merida must rely on her bravery and her archery skills to undo a beastly curse."
+    },
+    runtime_minutes: "1h 33m",
+    content_rating: "PG",
+    bg_image_url: "https://picsum.photos/seed/62bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/62cov/600/900",
+    filmmaker: {
+      director_name: "Mark Andrews",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Kelly Macdonald", character_role: { es: "Mérida (voz)", en: "Merida (voice)" }, character_desc: { es: "La valiente princesa.", en: "The brave princess." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Adventure"]
+  },
+  {
+    movie_identifier: 63,
+    display_name: "BLANCANIEVES",
+    release_year: 1937,
+    average_score: 7.6,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Exiliada por su malvada madrastra, la princesa Blancanieves encuentra refugio en el bosque junto a siete enanitos mineros.",
+      en: "Exiled into the dangerous forest by her wicked stepmother, a princess is rescued by seven dwarf miners who make her part of their household."
+    },
+    runtime_minutes: "1h 23m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Schneewitchen_%281%29.jpg/960px-Schneewitchen_%281%29.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Schneewitchen_%281%29.jpg/960px-Schneewitchen_%281%29.jpg",
+    filmmaker: {
+      director_name: "David Hand",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Adriana Caselotti", character_role: { es: "Blancanieves (voz)", en: "Snow White (voice)" }, character_desc: { es: "La primera princesa de Disney.", en: "The first Disney princess." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Classic"]
+  },
+  {
+    movie_identifier: 64,
+    display_name: "LA BELLA DURMIENTE",
+    release_year: 1959,
+    average_score: 7.2,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Maldita por una malvada bruja, la princesa Aurora cae en un sueño profundo del que solo podrá despertar con el beso de amor verdadero.",
+      en: "After being snubbed by the royal family, a malevolent fairy places a curse on a princess which only a prince can break, along with the help of three good fairies."
+    },
+    runtime_minutes: "1h 15m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Skyview_Drive-in_Ad_-_23_June_1959%2C_Santa_Cruz%2C_CA.jpg/960px-Skyview_Drive-in_Ad_-_23_June_1959%2C_Santa_Cruz%2C_CA.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Skyview_Drive-in_Ad_-_23_June_1959%2C_Santa_Cruz%2C_CA.jpg/960px-Skyview_Drive-in_Ad_-_23_June_1959%2C_Santa_Cruz%2C_CA.jpg",
+    filmmaker: {
+      director_name: "Clyde Geronimi",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Mary Costa", character_role: { es: "Princesa Aurora (voz)", en: "Princess Aurora (voice)" }, character_desc: { es: "La bella durmiente.", en: "Sleeping Beauty." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Romance"]
+  },
+  {
+    movie_identifier: 65,
+    display_name: "MUFASA: EL REY LEÓN",
+    release_year: 2024,
+    average_score: 7.5,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Rafiki relata la historia del ascenso de Mufasa de cachorro huérfano a uno de los mayores reyes de las Tierras del Reino.",
+      en: "Simba, having become king of the Pride Lands, is determined for his cub to follow in his paw prints while the origins of his late father Mufasa are explored."
+    },
+    runtime_minutes: "2h 00m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Mufasa_The_Lion_King_logo.png/960px-Mufasa_The_Lion_King_logo.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Mufasa_The_Lion_King_logo.png/960px-Mufasa_The_Lion_King_logo.png",
+    filmmaker: {
+      director_name: "Barry Jenkins",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Aaron Pierre", character_role: { es: "Mufasa (voz)", en: "Mufasa (voice)" }, character_desc: { es: "El joven león.", en: "The young lion." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Adventure"]
+  },
+  {
+    movie_identifier: 66,
+    display_name: "LA SIRENITA 2: REGRESO AL MAR",
+    release_year: 2000,
+    average_score: 5.5,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Para protegerla de la hermana de Úrsula, Ariel prohíbe a su hija Melody acercarse al océano, pero la niña anhela vivir en el mar.",
+      en: "To protect her from a sea witch, Ariel's daughter is not allowed in the ocean; but when she becomes 12, she runs away to an adventure under the sea."
+    },
+    runtime_minutes: "1h 15m",
+    content_rating: "G",
+    bg_image_url: "https://picsum.photos/seed/66bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/66cov/600/900",
+    filmmaker: {
+      director_name: "Jim Kammerud",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Tara Strong", character_role: { es: "Melody (voz)", en: "Melody (voice)" }, character_desc: { es: "La hija de Ariel.", en: "Ariel's daughter." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Family"]
+  },
+  {
+    movie_identifier: 67,
+    display_name: "POCAHONTAS",
+    release_year: 1995,
+    average_score: 6.7,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "La historia de amor entre la princesa nativa americana Pocahontas y el capitán inglés John Smith durante la colonización de América.",
+      en: "An English soldier and the daughter of an Algonquin chief share a romance when English colonists invade seventeenth century Virginia."
+    },
+    runtime_minutes: "1h 21m",
+    content_rating: "G",
+    bg_image_url: "https://picsum.photos/seed/67bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/67cov/600/900",
+    filmmaker: {
+      director_name: "Mike Gabriel",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Irene Bedard", character_role: { es: "Pocahontas (voz)", en: "Pocahontas (voice)" }, character_desc: { es: "La valiente nativa americana.", en: "The brave Native American." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Romance"]
+  },
+  {
+    movie_identifier: 68,
+    display_name: "LA SIRENITA: LOS ORÍGENES DE ARIEL",
+    release_year: 2008,
+    average_score: 6.2,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Antes de conocer al Príncipe Eric, a Ariel le prohíben la música en el reino, por lo que se rebela con la ayuda de sus amigos.",
+      en: "Ariel's mother is killed by a pirate's ship, prompting King Triton to ban music from Atlantica. Ariel, however, secretly loves music and tries to bring it back."
+    },
+    runtime_minutes: "1h 17m",
+    content_rating: "G",
+    bg_image_url: "https://picsum.photos/seed/68bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/68cov/600/900",
+    filmmaker: {
+      director_name: "Peggy Holmes",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Jodi Benson", character_role: { es: "Ariel (voz)", en: "Ariel (voice)" }, character_desc: { es: "La joven princesa.", en: "The young princess." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Family"]
+  },
+  {
+    movie_identifier: 69,
+    display_name: "CAMPEONES",
+    release_year: 2018,
+    average_score: 7.2,
+    category_type: "Social",
+    synopsis_text: {
+      es: "Un entrenador de baloncesto es condenado a realizar servicios sociales entrenando a un equipo de personas con discapacidad intelectual.",
+      en: "A basketball coach is sentenced to community service, forced to work with a team of mentally disabled players."
+    },
+    runtime_minutes: "2h 04m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Premios_Goya_2019_-_Ganadores_Campeones.jpg/960px-Premios_Goya_2019_-_Ganadores_Campeones.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Premios_Goya_2019_-_Ganadores_Campeones.jpg/960px-Premios_Goya_2019_-_Ganadores_Campeones.jpg",
+    filmmaker: {
+      director_name: "Javier Fesser",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Javier Gutiérrez", character_role: { es: "Marco", en: "Marco" }, character_desc: { es: "El entrenador.", en: "The coach." } }
+    ],
+    keyword_labels: ["Social", "Comedy", "Drama"]
+  },
+  {
+    movie_identifier: 70,
+    display_name: "CAMPEONEX",
+    release_year: 2023,
+    average_score: 6.5,
+    category_type: "Social",
+    synopsis_text: {
+      es: "El equipo de los Campeones abandona el baloncesto para adentrarse por error en el fascinante mundo del atletismo bajo la tutela de una entrenadora novata.",
+      en: "The Champions team leaves basketball to mistakenly enter the fascinating world of track and field under the guidance of a rookie coach."
+    },
+    runtime_minutes: "2h 04m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/70bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/70cov/600/900",
+    filmmaker: {
+      director_name: "Javier Fesser",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Elisa Hipólito", character_role: { es: "Cecilia", en: "Cecilia" }, character_desc: { es: "La nueva entrenadora.", en: "The new coach." } }
+    ],
+    keyword_labels: ["Social", "Comedy", "Sports"]
+  },
+  {
+    movie_identifier: 71,
+    display_name: "HACIENDO AMIGOS",
+    release_year: 2022,
+    average_score: 6.8,
+    category_type: "Social",
+    synopsis_text: {
+      es: "Una historia inspiradora sobre el valor de la amistad, la inclusión y cómo romper las barreras sociales para conectar de verdad.",
+      en: "An inspiring story about the value of friendship, inclusion, and how to break social barriers to truly connect."
+    },
+    runtime_minutes: "1h 50m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/71bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/71cov/600/900",
+    filmmaker: {
+      director_name: "Director Invitado",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Protagonista", character_role: { es: "Amigo", en: "Friend" }, character_desc: { es: "El nexo del grupo.", en: "The nexus of the group." } }
+    ],
+    keyword_labels: ["Social", "Friendship", "Drama"]
+  },
+  {
+    movie_identifier: 72,
+    display_name: "LA LLAMADA",
+    release_year: 2017,
+    average_score: 6.5,
+    category_type: "Social",
+    synopsis_text: {
+      es: "María y Susana, dos adolescentes rebeldes, se encuentran en un campamento de verano cristiano. La vida de María cambia cuando se le aparece Dios y le canta canciones de Whitney Houston.",
+      en: "Maria and Susana, two rebellious teenagers, are at a Christian summer camp. Maria's life changes when God appears to her and sings Whitney Houston songs."
+    },
+    runtime_minutes: "1h 48m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/A_Streetcar_Named_Desire_%281951%29.jpg/960px-A_Streetcar_Named_Desire_%281951%29.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/A_Streetcar_Named_Desire_%281951%29.jpg/960px-A_Streetcar_Named_Desire_%281951%29.jpg",
+    filmmaker: {
+      director_name: "Javier Ambrossi, Javier Calvo",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Macarena García", character_role: { es: "María", en: "Maria" }, character_desc: { es: "La joven con la visión.", en: "The young girl with the vision." } }
+    ],
+    keyword_labels: ["Social", "Musical", "Comedy"]
+  },
+  {
+    movie_identifier: 73,
+    display_name: "LLENOS DE GRACIA",
+    release_year: 2022,
+    average_score: 6.4,
+    category_type: "Social",
+    synopsis_text: {
+      es: "La hermana Marina es enviada a principios de los años noventa a El Parral, un orfanato amenazado de cierre. Allí, decide formar un equipo de fútbol con los niños.",
+      en: "Sister Marina is sent to El Parral, an orphanage threatened with closure in the 90s. There, she decides to form a football team with the kids."
+    },
+    runtime_minutes: "1h 49m",
+    content_rating: "PG",
+    bg_image_url: "https://picsum.photos/seed/73bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/73cov/600/900",
+    filmmaker: {
+      director_name: "Roberto Bueso",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Carmen Machi", character_role: { es: "Marina", en: "Marina" }, character_desc: { es: "La monja poco convencional.", en: "The unconventional nun." } }
+    ],
+    keyword_labels: ["Social", "Comedy", "Family"]
+  },
+  {
+    movie_identifier: 74,
+    display_name: "LOS NIÑOS DEL CORO",
+    release_year: 2004,
+    average_score: 7.9,
+    category_type: "Social",
+    synopsis_text: {
+      es: "El nuevo profesor de música en un estricto internado para niños con problemas cambia la vida de los alumnos al formar un coro.",
+      en: "The new music teacher at a strict boarding school for troubled boys changes the students' lives by forming a choir."
+    },
+    runtime_minutes: "1h 37m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/T%C3%B6lzer_Knabenchor_Konzertchor_Lederhosen.jpg/960px-T%C3%B6lzer_Knabenchor_Konzertchor_Lederhosen.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/T%C3%B6lzer_Knabenchor_Konzertchor_Lederhosen.jpg/960px-T%C3%B6lzer_Knabenchor_Konzertchor_Lederhosen.jpg",
+    filmmaker: {
+      director_name: "Christophe Barratier",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Gérard Jugnot", character_role: { es: "Clément Mathieu", en: "Clément Mathieu" }, character_desc: { es: "El profesor de música.", en: "The music teacher." } }
+    ],
+    keyword_labels: ["Social", "Drama", "Music"]
+  },
+  {
+    movie_identifier: 75,
+    display_name: "AMÉLIE",
+    release_year: 2001,
+    average_score: 8.3,
+    category_type: "Social",
+    synopsis_text: {
+      es: "Amélie es una joven inocente e imaginativa de París que decide ayudar a las personas que la rodean y, en el camino, descubre el amor.",
+      en: "Amélie is an innocent and naive girl in Paris with her own sense of justice. She decides to help those around her and, along the way, discovers love."
+    },
+    runtime_minutes: "2h 02m",
+    content_rating: "R",
+    bg_image_url: "https://picsum.photos/seed/75bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/75cov/600/900",
+    filmmaker: {
+      director_name: "Jean-Pierre Jeunet",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Audrey Tautou", character_role: { es: "Amélie Poulain", en: "Amélie Poulain" }, character_desc: { es: "La protagonista.", en: "The protagonist." } }
+    ],
+    keyword_labels: ["Social", "Comedy", "Romance"]
+  },
+  {
+    movie_identifier: 76,
+    display_name: "JOKER",
+    release_year: 2019,
+    average_score: 8.4,
+    category_type: "Action",
+    synopsis_text: {
+      es: "En Gotham, Arthur Fleck, un comediante ignorado por la sociedad, desciende a la locura y el crimen mientras se transforma en el infame Joker.",
+      en: "In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime."
+    },
+    runtime_minutes: "2h 02m",
+    content_rating: "R",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Joker_%282019%29_logotype.png/960px-Joker_%282019%29_logotype.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Joker_%282019%29_logotype.png/960px-Joker_%282019%29_logotype.png",
+    filmmaker: {
+      director_name: "Todd Phillips",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Joaquin Phoenix", character_role: { es: "Arthur Fleck", en: "Arthur Fleck" }, character_desc: { es: "El comediante perturbado.", en: "The troubled comedian." } }
+    ],
+    keyword_labels: ["Action", "Drama", "Thriller"]
+  },
+  {
+    movie_identifier: 77,
+    display_name: "AVES DE PRESA (Y LA FANTABULOSA EMANCIPACIÓN DE HARLEY QUINN)",
+    release_year: 2020,
+    average_score: 6.1,
+    category_type: "Action",
+    synopsis_text: {
+      es: "Después de separarse del Joker, Harley Quinn se une a otras heroínas para salvar a una niña de las garras de un malvado rey del crimen.",
+      en: "After splitting with the Joker, Harley Quinn joins superheroes Black Canary, Huntress and Renee Montoya to save a young girl from an evil crime lord."
+    },
+    runtime_minutes: "1h 49m",
+    content_rating: "R",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/1/12/BirdsOfPrey2020Logo.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/1/12/BirdsOfPrey2020Logo.png",
+    filmmaker: {
+      director_name: "Cathy Yan",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Margot Robbie", character_role: { es: "Harley Quinn", en: "Harley Quinn" }, character_desc: { es: "La antiheroína.", en: "The antiheroine." } }
+    ],
+    keyword_labels: ["Action", "Comedy", "Crime"]
+  },
+  {
+    movie_identifier: 78,
+    display_name: "TITANIC",
+    release_year: 1997,
+    average_score: 7.9,
+    category_type: "Romance",
+    synopsis_text: {
+      es: "Una joven de la alta sociedad y un artista pobre se enamoran en el trágico viaje inaugural del RMS Titanic.",
+      en: "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic."
+    },
+    runtime_minutes: "3h 14m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/78bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/78cov/600/900",
+    filmmaker: {
+      director_name: "James Cameron",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Leonardo DiCaprio", character_role: { es: "Jack Dawson", en: "Jack Dawson" }, character_desc: { es: "El joven artista.", en: "The young artist." } }
+    ],
+    keyword_labels: ["Romance", "Drama", "Classic"]
+  },
+  {
+    movie_identifier: 79,
+    display_name: "EL DIARIO DE NOA",
+    release_year: 2004,
+    average_score: 7.8,
+    category_type: "Romance",
+    synopsis_text: {
+      es: "Un anciano lee a una mujer con demencia la historia de dos jóvenes amantes cuyas diferentes clases sociales amenazan con separarlos.",
+      en: "A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social differences."
+    },
+    runtime_minutes: "2h 03m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Juan_Gabriel_---_Pepsi_Center_---_09.26.14_%28cropped_2%29.jpg/960px-Juan_Gabriel_---_Pepsi_Center_---_09.26.14_%28cropped_2%29.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Juan_Gabriel_---_Pepsi_Center_---_09.26.14_%28cropped_2%29.jpg/960px-Juan_Gabriel_---_Pepsi_Center_---_09.26.14_%28cropped_2%29.jpg",
+    filmmaker: {
+      director_name: "Nick Cassavetes",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Ryan Gosling", character_role: { es: "Noah Calhoun", en: "Noah Calhoun" }, character_desc: { es: "El joven apasionado.", en: "The passionate young man." } }
+    ],
+    keyword_labels: ["Romance", "Drama", "Tearjerker"]
+  },
+  {
+    movie_identifier: 80,
+    display_name: "ORGULLO Y PREJUICIO",
+    release_year: 2005,
+    average_score: 7.8,
+    category_type: "Romance",
+    synopsis_text: {
+      es: "La historia de Elizabeth Bennet y el apuesto pero distante señor Darcy, que deben superar sus propios prejuicios para encontrar el amor verdadero.",
+      en: "Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy. But Mr. Darcy reluctantly finds himself falling in love with a woman beneath his class."
+    },
+    runtime_minutes: "2h 09m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bust_of_Matthew_Macfadyen_as_Fitzwilliam_Darcy.jpg/960px-Bust_of_Matthew_Macfadyen_as_Fitzwilliam_Darcy.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bust_of_Matthew_Macfadyen_as_Fitzwilliam_Darcy.jpg/960px-Bust_of_Matthew_Macfadyen_as_Fitzwilliam_Darcy.jpg",
+    filmmaker: {
+      director_name: "Joe Wright",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Keira Knightley", character_role: { es: "Elizabeth Bennet", en: "Elizabeth Bennet" }, character_desc: { es: "La joven de gran ingenio.", en: "The witty young woman." } }
+    ],
+    keyword_labels: ["Romance", "Drama", "Period"]
+  },
+  {
+    movie_identifier: 81,
+    display_name: "NOTTING HILL",
+    release_year: 1999,
+    average_score: 7.2,
+    category_type: "Romance",
+    synopsis_text: {
+      es: "La vida del propietario de una sencilla librería de Londres cambia para siempre cuando la estrella de cine más famosa del mundo entra en su tienda.",
+      en: "The life of a simple bookshop owner changes when he meets the most famous film star in the world."
+    },
+    runtime_minutes: "2h 04m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Notting_Hill.JPG/960px-Notting_Hill.JPG",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Notting_Hill.JPG/960px-Notting_Hill.JPG",
+    filmmaker: {
+      director_name: "Roger Michell",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Hugh Grant", character_role: { es: "William Thacker", en: "William Thacker" }, character_desc: { es: "El librero londinense.", en: "The London bookseller." } }
+    ],
+    keyword_labels: ["Romance", "Comedy", "Classic"]
+  },
+  {
+    movie_identifier: 82,
+    display_name: "LA LA LAND",
+    release_year: 2016,
+    average_score: 8.0,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Un pianista de jazz y una aspirante a actriz se enamoran mientras persiguen sus sueños en Los Ángeles, pero el éxito pondrá a prueba su relación.",
+      en: "While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future."
+    },
+    runtime_minutes: "2h 08m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/82bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/82cov/600/900",
+    filmmaker: {
+      director_name: "Damien Chazelle",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Emma Stone", character_role: { es: "Mia", en: "Mia" }, character_desc: { es: "La aspirante a actriz.", en: "The aspiring actress." } }
+    ],
+    keyword_labels: ["Romance", "Musical", "Drama"]
+  },
+  {
+    movie_identifier: 83,
+    display_name: "RESACÓN EN LAS VEGAS",
+    release_year: 2009,
+    average_score: 7.7,
+    category_type: "Comedy",
+    synopsis_text: {
+      es: "Tres amigos despiertan de una despedida de soltero en Las Vegas sin recordar nada y sin el novio. Ahora deben desandar sus pasos para encontrarlo.",
+      en: "Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing."
+    },
+    runtime_minutes: "1h 40m",
+    content_rating: "R",
+    bg_image_url: "https://picsum.photos/seed/83bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/83cov/600/900",
+    filmmaker: {
+      director_name: "Todd Phillips",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Bradley Cooper", character_role: { es: "Phil", en: "Phil" }, character_desc: { es: "El líder del grupo.", en: "The leader of the group." } }
+    ],
+    keyword_labels: ["Comedy", "Adventure", "Party"]
+  },
+  {
+    movie_identifier: 84,
+    display_name: "SUPER SALIDOS",
+    release_year: 2007,
+    average_score: 7.6,
+    category_type: "Comedy",
+    synopsis_text: {
+      es: "Dos amigos inseparables en el instituto deben enfrentar la realidad de ir a universidades separadas mientras intentan comprar alcohol para una gran fiesta.",
+      en: "Two co-dependent high school seniors are forced to deal with separation anxiety as their plan to stage a booze-soaked party goes awry."
+    },
+    runtime_minutes: "1h 53m",
+    content_rating: "R",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/7/71/Super8_kodachrome_II.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/7/71/Super8_kodachrome_II.jpg",
+    filmmaker: {
+      director_name: "Greg Mottola",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Jonah Hill", character_role: { es: "Seth", en: "Seth" }, character_desc: { es: "El amigo con grandes planes.", en: "The friend with big plans." } }
+    ],
+    keyword_labels: ["Comedy", "Teen", "Friendship"]
+  },
+  {
+    movie_identifier: 85,
+    display_name: "EL GRAN LEBOWSKI",
+    release_year: 1998,
+    average_score: 8.1,
+    category_type: "Comedy",
+    synopsis_text: {
+      es: "Jeff 'El Nota' Lebowski, un tipo vago de Los Ángeles, se ve envuelto en un enredo de secuestro y rescate tras ser confundido con un millonario que comparte su nombre.",
+      en: "Jeff 'The Dude' Lebowski, mistaken for a millionaire of the same name, seeks restitution for his ruined rug and enlists his bowling buddies to help get it."
+    },
+    runtime_minutes: "1h 57m",
+    content_rating: "R",
+    bg_image_url: "https://picsum.photos/seed/85bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/85cov/600/900",
+    filmmaker: {
+      director_name: "Joel Coen, Ethan Coen",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Jeff Bridges", character_role: { es: "El Nota", en: "The Dude" }, character_desc: { es: "El tipo más relajado del mundo.", en: "The most relaxed man in the world." } }
+    ],
+    keyword_labels: ["Comedy", "Crime", "Classic"]
+  },
+  {
+    movie_identifier: 86,
+    display_name: "OCHO APELLIDOS VASCOS",
+    release_year: 2014,
+    average_score: 6.6,
+    category_type: "Comedy",
+    synopsis_text: {
+      es: "Rafa, un andaluz de pura cepa que nunca ha salido de Sevilla, decide abandonar su tierra natal para seguir a Amaia, una chica vasca, hasta su pueblo.",
+      en: "Rafa has never left his native Seville, Andalusia, until he meets a Basque girl named Amaia and decides to follow her to the Basque Country."
+    },
+    runtime_minutes: "1h 38m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Getaria_-_Puerto_1.JPG/960px-Getaria_-_Puerto_1.JPG",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Getaria_-_Puerto_1.JPG/960px-Getaria_-_Puerto_1.JPG",
+    filmmaker: {
+      director_name: "Emilio Martínez-Lázaro",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Dani Rovira", character_role: { es: "Rafa", en: "Rafa" }, character_desc: { es: "El sevillano enamorado.", en: "The Sevillian in love." } }
+    ],
+    keyword_labels: ["Comedy", "Romance", "Spanish"]
+  },
+  {
+    movie_identifier: 87,
+    display_name: "MENTIROSO COMPULSIVO",
+    release_year: 1997,
+    average_score: 6.9,
+    category_type: "Comedy",
+    synopsis_text: {
+      es: "Un abogado mentiroso encuentra su vida trastornada cuando, tras un deseo de cumpleaños de su hijo, pierde la capacidad de decir mentiras durante 24 horas.",
+      en: "A fast-talking lawyer cannot tell a lie for 24 hours due to his son's birthday wish after he turns his son down for the last time."
+    },
+    runtime_minutes: "1h 26m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Mentirosomentiroso.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Mentirosomentiroso.png",
+    filmmaker: {
+      director_name: "Tom Shadyac",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Jim Carrey", character_role: { es: "Fletcher Reede", en: "Fletcher Reede" }, character_desc: { es: "El abogado obligado a ser honesto.", en: "The lawyer forced to be honest." } }
+    ],
+    keyword_labels: ["Comedy", "Family", "Classic"]
+  },
+  {
+    movie_identifier: 88,
+    display_name: "MALÉFICA",
+    release_year: 2014,
+    average_score: 7.0,
+    category_type: "Live Action",
+    synopsis_text: {
+      es: "La historia nunca antes contada de la villana más icónica de Disney, revelando los eventos que endurecieron su corazón y la llevaron a maldecir a la princesa Aurora.",
+      en: "A vengeful fairy is driven to curse an infant princess, only to discover that the child may be the one person who can restore peace to their troubled land."
+    },
+    runtime_minutes: "1h 37m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/a/ad/John_Hopkins_in_2013.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/a/ad/John_Hopkins_in_2013.jpg",
+    filmmaker: {
+      director_name: "Robert Stromberg",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Angelina Jolie", character_role: { es: "Maléfica", en: "Maleficent" }, character_desc: { es: "La hada protectora del Páramo.", en: "The protector fairy of the Moors." } }
+    ],
+    keyword_labels: ["Live Action", "Fantasy", "Action"]
+  },
+  {
+    movie_identifier: 89,
+    display_name: "MUFASA: EL REY LEÓN (LIVE ACTION)",
+    release_year: 2024,
+    average_score: 7.5,
+    category_type: "Live Action",
+    synopsis_text: {
+      es: "La historia de origen de Mufasa, desde sus humildes comienzos como cachorro huérfano hasta convertirse en el mayor rey de las Tierras del Reino.",
+      en: "Simba, having become king of the Pride Lands, is determined for his cub to follow in his paw prints while the origins of his late father Mufasa are explored."
+    },
+    runtime_minutes: "2h 00m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Mufasa_The_Lion_King_logo.png/960px-Mufasa_The_Lion_King_logo.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Mufasa_The_Lion_King_logo.png/960px-Mufasa_The_Lion_King_logo.png",
+    filmmaker: {
+      director_name: "Barry Jenkins",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Aaron Pierre", character_role: { es: "Mufasa (voz)", en: "Mufasa (voice)" }, character_desc: { es: "El joven león.", en: "The young lion." } }
+    ],
+    keyword_labels: ["Live Action", "Adventure", "Drama"]
+  },
+  {
+    movie_identifier: 90,
+    display_name: "BLADE RUNNER 2049",
+    release_year: 2017,
+    average_score: 8.0,
+    category_type: "Tech",
+    synopsis_text: {
+      es: "Un joven blade runner descubre un secreto largamente oculto que podría sumir a la sociedad en el caos, lo que le lleva a buscar a Rick Deckard, un antiguo blade runner desaparecido.",
+      en: "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years."
+    },
+    runtime_minutes: "2h 44m",
+    content_rating: "R",
+    bg_image_url: "https://picsum.photos/seed/90bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/90cov/600/900",
+    filmmaker: {
+      director_name: "Denis Villeneuve",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Ryan Gosling", character_role: { es: "K", en: "K" }, character_desc: { es: "El nuevo blade runner.", en: "The new blade runner." } }
+    ],
+    keyword_labels: ["Tech", "Sci-Fi", "Mystery"]
+  },
+  {
+    movie_identifier: 91,
+    display_name: "TRON: LEGACY",
+    release_year: 2010,
+    average_score: 6.8,
+    category_type: "Tech",
+    synopsis_text: {
+      es: "El hijo de un diseñador de mundos virtuales busca a su padre desaparecido y acaba inmerso en el mismo mundo digital hiperavanzado donde su padre ha estado atrapado durante 20 años.",
+      en: "The son of a virtual world designer goes looking for his father and ends up inside the digital world that his father designed."
+    },
+    runtime_minutes: "2h 05m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Tron_Legacy_Logo.svg/960px-Tron_Legacy_Logo.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Tron_Legacy_Logo.svg/960px-Tron_Legacy_Logo.svg.png",
+    filmmaker: {
+      director_name: "Joseph Kosinski",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Garrett Hedlund", character_role: { es: "Sam Flynn", en: "Sam Flynn" }, character_desc: { es: "El hijo del creador.", en: "The creator's son." } }
+    ],
+    keyword_labels: ["Tech", "Sci-Fi", "Action"]
+  },
+  {
+    movie_identifier: 92,
+    display_name: "GHOST IN THE SHELL",
+    release_year: 2017,
+    average_score: 6.3,
+    category_type: "Tech",
+    synopsis_text: {
+      es: "En un futuro cercano, una cyborg humana única, la Mayor, lidera el grupo de trabajo de élite Sección 9 para detener a los criminales y extremistas más peligrosos.",
+      en: "In the near future, Major Mira Killian is the first of her kind: A human saved from a terrible crash, who is cyber-enhanced to be a perfect soldier devoted to stopping the world's most dangerous criminals."
+    },
+    runtime_minutes: "1h 47m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/92bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/92cov/600/900",
+    filmmaker: {
+      director_name: "Rupert Sanders",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Scarlett Johansson", character_role: { es: "La Mayor", en: "Major" }, character_desc: { es: "La cyborg de élite.", en: "The elite cyborg." } }
+    ],
+    keyword_labels: ["Tech", "Action", "Sci-Fi"]
+  },
+  {
+    movie_identifier: 93,
+    display_name: "MINORITY REPORT",
+    release_year: 2002,
+    average_score: 7.6,
+    category_type: "Tech",
+    synopsis_text: {
+      es: "En un futuro donde una unidad de policía especial puede arrestar asesinos antes de que cometan sus crímenes, un oficial de esa unidad es acusado de un futuro asesinato.",
+      en: "In a future where a special police unit is able to arrest murderers before they commit their crimes, an officer from that unit is himself accused of a future murder."
+    },
+    runtime_minutes: "2h 25m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Lexus_2054_Minority_Report_concept1.jpg/960px-Lexus_2054_Minority_Report_concept1.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Lexus_2054_Minority_Report_concept1.jpg/960px-Lexus_2054_Minority_Report_concept1.jpg",
+    filmmaker: {
+      director_name: "Steven Spielberg",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Tom Cruise", character_role: { es: "John Anderton", en: "John Anderton" }, character_desc: { es: "El oficial de PreCrimen.", en: "The PreCrime officer." } }
+    ],
+    keyword_labels: ["Tech", "Action", "Mystery"]
+  },
+  {
+    movie_identifier: 94,
+    display_name: "GHOST",
+    release_year: 1990,
+    average_score: 7.1,
+    category_type: "Romance",
+    synopsis_text: {
+      es: "Después de ser asesinado, el espíritu de un joven se queda en la Tierra para proteger a su novia de un peligro inminente, con la ayuda de una peculiar médium.",
+      en: "After a young man is murdered, his spirit stays behind to warn his lover of impending danger, with the help of a reluctant psychic."
+    },
+    runtime_minutes: "2h 07m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/NTF_2014_-_Ghost_Rider_%2815614249517%29.jpg/960px-NTF_2014_-_Ghost_Rider_%2815614249517%29.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/NTF_2014_-_Ghost_Rider_%2815614249517%29.jpg/960px-NTF_2014_-_Ghost_Rider_%2815614249517%29.jpg",
+    filmmaker: {
+      director_name: "Jerry Zucker",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Patrick Swayze", character_role: { es: "Sam Wheat", en: "Sam Wheat" }, character_desc: { es: "El espíritu enamorado.", en: "The loving spirit." } }
+    ],
+    keyword_labels: ["Romance", "Fantasy", "Drama"]
+  },
+  {
+    movie_identifier: 95,
+    display_name: "LOS MISERABLES",
+    release_year: 2012,
+    average_score: 7.5,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "En la Francia del siglo XIX, Jean Valjean, que durante décadas ha sido perseguido por el despiadado policía Javert, acepta hacerse cargo de la hija de la trabajadora Fantine.",
+      en: "In 19th-century France, Jean Valjean, who for decades has been hunted by the ruthless policeman Javert after breaking parole, agrees to care for a factory worker's daughter."
+    },
+    runtime_minutes: "2h 38m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/95bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/95cov/600/900",
+    filmmaker: {
+      director_name: "Tom Hooper",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Hugh Jackman", character_role: { es: "Jean Valjean", en: "Jean Valjean" }, character_desc: { es: "El expresidiario en busca de redención.", en: "The ex-convict seeking redemption." } }
+    ],
+    keyword_labels: ["Musical", "Drama", "History"]
+  },
+  {
+    movie_identifier: 96,
+    display_name: "MARY POPPINS",
+    release_year: 1964,
+    average_score: 7.8,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Una niñera mágica llega a Londres para trabajar para un banquero distante y sin amor, usando magia y música para devolver la alegría a su familia.",
+      en: "In turn of the century London, a magical nanny employs music and adventure to help two neglected children become closer to their father."
+    },
+    runtime_minutes: "2h 19m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Mary_Poppins6.jpg/960px-Mary_Poppins6.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Mary_Poppins6.jpg/960px-Mary_Poppins6.jpg",
+    filmmaker: {
+      director_name: "Robert Stevenson",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Julie Andrews", character_role: { es: "Mary Poppins", en: "Mary Poppins" }, character_desc: { es: "La niñera mágica.", en: "The magical nanny." } }
+    ],
+    keyword_labels: ["Musical", "Family", "Classic"]
+  },
+  {
+    movie_identifier: 97,
+    display_name: "MAMMA MIA!",
+    release_year: 2008,
+    average_score: 6.5,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Una futura novia invita a su boda a tres hombres del pasado de su madre para descubrir quién es su verdadero padre, al ritmo de las canciones de ABBA.",
+      en: "The story of a bride-to-be trying to find her real father told using hit songs by the popular 1970s group ABBA."
+    },
+    runtime_minutes: "1h 48m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/97bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/97cov/600/900",
+    filmmaker: {
+      director_name: "Phyllida Lloyd",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Meryl Streep", character_role: { es: "Donna Sheridan", en: "Donna Sheridan" }, character_desc: { es: "La madre independiente.", en: "The independent mother." } }
+    ],
+    keyword_labels: ["Musical", "Comedy", "Romance"]
+  },
+  {
+    movie_identifier: 98,
+    display_name: "MAMMA MIA! UNA Y OTRA VEZ",
+    release_year: 2018,
+    average_score: 6.6,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Mientras Sophie se prepara para la gran reapertura del hotel de su madre, repasa la historia de cómo Donna llegó a la isla mágica.",
+      en: "Five years after the events of Mamma Mia! (2008), Sophie prepares for the grand reopening of the Hotel Bella Donna as she learns more about her mother's past."
+    },
+    runtime_minutes: "1h 54m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Melissa_Barrera_2023.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Melissa_Barrera_2023.jpg",
+    filmmaker: {
+      director_name: "Ol Parker",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Amanda Seyfried", character_role: { es: "Sophie Sheridan", en: "Sophie Sheridan" }, character_desc: { es: "La hija de Donna.", en: "Donna's daughter." } }
+    ],
+    keyword_labels: ["Musical", "Comedy", "Romance"]
+  },
+  {
+    movie_identifier: 99,
+    display_name: "DIRTY DANCING",
+    release_year: 1987,
+    average_score: 7.0,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Una joven que pasa el verano en un resort vacacional se enamora del rebelde instructor de baile.",
+      en: "Spending the summer at a Catskills resort with her family, Frances 'Baby' Houseman falls in love with the camp's dance instructor, Johnny Castle."
+    },
+    runtime_minutes: "1h 40m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Logo_Dirty_Dancing.svg/960px-Logo_Dirty_Dancing.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Logo_Dirty_Dancing.svg/960px-Logo_Dirty_Dancing.svg.png",
+    filmmaker: {
+      director_name: "Emile Ardolino",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Patrick Swayze", character_role: { es: "Johnny Castle", en: "Johnny Castle" }, character_desc: { es: "El instructor de baile.", en: "The dance instructor." } }
+    ],
+    keyword_labels: ["Musical", "Romance", "Drama"]
+  },
+  {
+    movie_identifier: 100,
+    display_name: "GREASE",
+    release_year: 1978,
+    average_score: 7.2,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "El chico malo Danny y la buena chica Sandy tienen un romance de verano, pero cuando se reencuentran en el instituto, descubren que son muy diferentes.",
+      en: "Good girl Sandy Olsson and greaser Danny Zuko fell in love over the summer. When they unexpectedly discover they're now in the same high school, will they be able to rekindle their romance?"
+    },
+    runtime_minutes: "1h 50m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Film_Grease_met_John_Travolta_nog_steeds_succes_lang_rij_wachtenden_voor_bios%2C_Bestanddeelnr_930-0604.jpg/960px-Film_Grease_met_John_Travolta_nog_steeds_succes_lang_rij_wachtenden_voor_bios%2C_Bestanddeelnr_930-0604.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Film_Grease_met_John_Travolta_nog_steeds_succes_lang_rij_wachtenden_voor_bios%2C_Bestanddeelnr_930-0604.jpg/960px-Film_Grease_met_John_Travolta_nog_steeds_succes_lang_rij_wachtenden_voor_bios%2C_Bestanddeelnr_930-0604.jpg",
+    filmmaker: {
+      director_name: "Randal Kleiser",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "John Travolta", character_role: { es: "Danny Zuko", en: "Danny Zuko" }, character_desc: { es: "El chico malo de la escuela.", en: "The school's bad boy." } }
+    ],
+    keyword_labels: ["Musical", "Romance", "Classic"]
+  },
+  {
+    movie_identifier: 101,
+    display_name: "SCHOOL OF ROCK",
+    release_year: 2003,
+    average_score: 7.2,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Un guitarrista expulsado de su banda se hace pasar por profesor sustituto en un estricto colegio privado, donde convierte a sus alumnos en una banda de rock.",
+      en: "After being kicked out of his rock band, Dewey Finn becomes a substitute teacher of an uptight elementary private school, only to try and turn his class into a rock band."
+    },
+    runtime_minutes: "1h 49m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/101bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/101cov/600/900",
+    filmmaker: {
+      director_name: "Richard Linklater",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Jack Black", character_role: { es: "Dewey Finn", en: "Dewey Finn" }, character_desc: { es: "El rockero entusiasta.", en: "The enthusiastic rocker." } }
+    ],
+    keyword_labels: ["Musical", "Comedy", "Family"]
+  },
+  {
+    movie_identifier: 102,
+    display_name: "SNOOP DOGG: MAC & DEVIN GO TO HIGH SCHOOL",
+    release_year: 2012,
+    average_score: 4.5,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Dos estudiantes de secundaria, uno el mejor de su clase y el otro un holgazán veterano, se unen para crear un discurso de graduación, con mucha música de por medio.",
+      en: "A comedy that follows two high school students -- one overachiever struggling to write his valedictorian speech, the other a senior now going on his 15th year of school."
+    },
+    runtime_minutes: "1h 15m",
+    content_rating: "R",
+    bg_image_url: "https://picsum.photos/seed/102bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/102cov/600/900",
+    filmmaker: {
+      director_name: "Dylan C. Brown",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Snoop Dogg", character_role: { es: "Mac Johnson", en: "Mac Johnson" }, character_desc: { es: "El estudiante veterano.", en: "The 15th-year senior." } }
+    ],
+    keyword_labels: ["Comedy", "Musical"]
+  },
+  {
+    movie_identifier: 103,
+    display_name: "HIGH SCHOOL MUSICAL",
+    release_year: 2006,
+    average_score: 5.5,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Un jugador de baloncesto y una estudiante empollona deciden presentarse juntos al casting del musical de su instituto, dividiendo a la escuela en el proceso.",
+      en: "Troy, the popular captain of the basketball team, and Gabriella, the brainy and beautiful member of the academic club, break all the rules of East High society when they secretly audition for the leads in the school's musical."
+    },
+    runtime_minutes: "1h 38m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/High_School_Musical_Text_Logo.png/960px-High_School_Musical_Text_Logo.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/High_School_Musical_Text_Logo.png/960px-High_School_Musical_Text_Logo.png",
+    filmmaker: {
+      director_name: "Kenny Ortega",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Zac Efron", character_role: { es: "Troy Bolton", en: "Troy Bolton" }, character_desc: { es: "El capitán del equipo de baloncesto.", en: "The basketball team captain." } }
+    ],
+    keyword_labels: ["Musical", "Romance", "Family"]
+  },
+  {
+    movie_identifier: 104,
+    display_name: "CAMP ROCK",
+    release_year: 2008,
+    average_score: 5.2,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "En un campamento de verano para jóvenes músicos, una adolescente talentosa pero insegura debe encontrar su propia voz con la ayuda de un ídolo del pop exiliado.",
+      en: "At a music camp for gifted teens, a popular teen idol overhears a girl singing and sets out to find who the talented voice belongs to."
+    },
+    runtime_minutes: "1h 34m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/2/20/DemiLovatoJonasBrothersAug10.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/2/20/DemiLovatoJonasBrothersAug10.jpg",
+    filmmaker: {
+      director_name: "Matthew Diamond",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Demi Lovato", character_role: { es: "Mitchie Torres", en: "Mitchie Torres" }, character_desc: { es: "La joven cantante.", en: "The young singer." } }
+    ],
+    keyword_labels: ["Musical", "Comedy", "Family"]
+  },
+  {
+    movie_identifier: 105,
+    display_name: "BANDSLAM",
+    release_year: 2009,
+    average_score: 6.3,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Un adolescente inadaptado se une a la chica popular del instituto para formar una banda de rock y competir en la batalla de bandas local.",
+      en: "A new kid in town assembles a fledgling rock band -- together with the school's popular girl -- to compete against the best upcoming indie bands in the area."
+    },
+    runtime_minutes: "1h 51m",
+    content_rating: "PG",
+    bg_image_url: "https://picsum.photos/seed/105bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/105cov/600/900",
+    filmmaker: {
+      director_name: "Todd Graff",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Vanessa Hudgens", character_role: { es: "Sa5m", en: "Sa5m" }, character_desc: { es: "La guitarrista rebelde.", en: "The rebel guitarist." } }
+    ],
+    keyword_labels: ["Musical", "Comedy", "Romance"]
+  },
+  {
+    movie_identifier: 106,
+    display_name: "AVATAR",
+    release_year: 2009,
+    average_score: 7.9,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Un marine parapléjico es enviado a la luna Pandora en una misión única, pero se debate entre seguir sus órdenes y proteger el mundo que siente como su hogar.",
+      en: "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home."
+    },
+    runtime_minutes: "2h 42m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Avatar-Logo-avatar.svg/960px-Avatar-Logo-avatar.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Avatar-Logo-avatar.svg/960px-Avatar-Logo-avatar.svg.png",
+    filmmaker: {
+      director_name: "James Cameron",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Sam Worthington", character_role: { es: "Jake Sully", en: "Jake Sully" }, character_desc: { es: "El marine en un nuevo cuerpo.", en: "The marine in a new body." } }
+    ],
+    keyword_labels: ["Fantasy", "Sci-Fi", "Action"]
+  },
+  {
+    movie_identifier: 107,
+    display_name: "AVATAR: EL SENTIDO DEL AGUA",
+    release_year: 2022,
+    average_score: 7.6,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Jake Sully vive con su nueva familia en Pandora. Una vez que una amenaza familiar regresa, Jake debe trabajar con Neytiri y el ejército Na'vi para proteger su planeta.",
+      en: "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home."
+    },
+    runtime_minutes: "3h 12m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Estrena_en_catal%C3%A0_d%27Avatar_El_sentit_de_l%27aigua_3.jpg/960px-Estrena_en_catal%C3%A0_d%27Avatar_El_sentit_de_l%27aigua_3.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Estrena_en_catal%C3%A0_d%27Avatar_El_sentit_de_l%27aigua_3.jpg/960px-Estrena_en_catal%C3%A0_d%27Avatar_El_sentit_de_l%27aigua_3.jpg",
+    filmmaker: {
+      director_name: "James Cameron",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Zoe Saldana", character_role: { es: "Neytiri", en: "Neytiri" }, character_desc: { es: "La guerrera Na'vi.", en: "The Na'vi warrior." } }
+    ],
+    keyword_labels: ["Fantasy", "Sci-Fi", "Adventure"]
+  },
+  {
+    movie_identifier: 108,
+    display_name: "HANNAH MONTANA: LA PELÍCULA",
+    release_year: 2009,
+    average_score: 4.4,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Miley Stewart lucha por mantener en equilibrio sus días de escuela y su identidad secreta como estrella del pop. Cuando su alter ego amenaza con dominar su vida, viaja a casa para recuperar la perspectiva.",
+      en: "As Hannah Montana's popularity begins to take over her life, Miley Stewart, on the urging from her father takes a trip to her hometown of Crowley Corners, Tennessee to get some perspective on what matters in life the most."
+    },
+    runtime_minutes: "1h 42m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Hannah_Montana_The_Movie_Black.svg/960px-Hannah_Montana_The_Movie_Black.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Hannah_Montana_The_Movie_Black.svg/960px-Hannah_Montana_The_Movie_Black.svg.png",
+    filmmaker: {
+      director_name: "Peter Chelsom",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Miley Cyrus", character_role: { es: "Miley Stewart", en: "Miley Stewart" }, character_desc: { es: "La superestrella secreta.", en: "The secret superstar." } }
+    ],
+    keyword_labels: ["Fantasy", "Musical", "Family"]
+  },
+  {
+    movie_identifier: 109,
+    display_name: "LOS MINIONS",
+    release_year: 2015,
+    average_score: 6.4,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Los Minions, seres amarillos que han existido desde el principio de los tiempos, evolucionan sirviendo a los villanos más despreciables de la historia.",
+      en: "Minions Stuart, Kevin, and Bob are recruited by Scarlet Overkill, a supervillain who, alongside her inventor husband Herb, hatches a plot to take over the world."
+    },
+    runtime_minutes: "1h 31m",
+    content_rating: "PG",
+    bg_image_url: "https://picsum.photos/seed/109bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/109cov/600/900",
+    filmmaker: {
+      director_name: "Kyle Balda",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Sandra Bullock", character_role: { es: "Scarlet Overkill", en: "Scarlet Overkill" }, character_desc: { es: "La villana suprema.", en: "The ultimate villain." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Comedy"]
+  },
+  {
+    movie_identifier: 110,
+    display_name: "GRU, MI VILLANO FAVORITO",
+    release_year: 2010,
+    average_score: 7.6,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Un supervillano adopta a tres niñas huérfanas como parte de un plan diabólico para robar la luna, pero descubre que su amor le está cambiando la vida.",
+      en: "When a criminal mastermind uses a trio of orphan girls as pawns for a grand scheme, he finds their love is profoundly changing him for the better."
+    },
+    runtime_minutes: "1h 35m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Despicable_Me_logo_2.svg/960px-Despicable_Me_logo_2.svg.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Despicable_Me_logo_2.svg/960px-Despicable_Me_logo_2.svg.png",
+    filmmaker: {
+      director_name: "Pierre Coffin",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Steve Carell", character_role: { es: "Gru", en: "Gru" }, character_desc: { es: "El villano favorito.", en: "The favorite villain." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Comedy"]
+  },
+  {
+    movie_identifier: 111,
+    display_name: "MONSTRUOS S.A.",
+    release_year: 2001,
+    average_score: 8.1,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Para alimentar la ciudad, los monstruos tienen que asustar a los niños para que griten. Sin embargo, los niños son tóxicos para los monstruos, y uno se cuela en su mundo.",
+      en: "In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think."
+    },
+    runtime_minutes: "1h 32m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Dracula1931BelaLugosiColor.png",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Dracula1931BelaLugosiColor.png",
+    filmmaker: {
+      director_name: "Pete Docter",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "John Goodman", character_role: { es: "Sulley", en: "Sulley" }, character_desc: { es: "El monstruo asustador.", en: "The top scarer." } }
+    ],
+    keyword_labels: ["Fantasy", "Animation", "Family"]
+  },
+  {
+    movie_identifier: 112,
+    display_name: "EL MAGO DE OZ",
+    release_year: 1939,
+    average_score: 8.1,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Una joven es llevada por un tornado a la mágica tierra de Oz y emprende un viaje con nuevos amigos para ver al Mago que puede ayudarla a regresar a casa.",
+      en: "Young Dorothy Gale and her dog Toto are swept away by a tornado from their Kansas farm to the magical Land of Oz, and embark on a quest to see the Wizard who can help them return home."
+    },
+    runtime_minutes: "1h 42m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/WIZARD_OF_OZ_ORIGINAL_POSTER_1939.jpg/960px-WIZARD_OF_OZ_ORIGINAL_POSTER_1939.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/WIZARD_OF_OZ_ORIGINAL_POSTER_1939.jpg/960px-WIZARD_OF_OZ_ORIGINAL_POSTER_1939.jpg",
+    filmmaker: {
+      director_name: "Victor Fleming",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Judy Garland", character_role: { es: "Dorothy", en: "Dorothy" }, character_desc: { es: "La joven de Kansas.", en: "The girl from Kansas." } }
+    ],
+    keyword_labels: ["Musical", "Fantasy", "Classic"]
+  },
+  {
+    movie_identifier: 113,
+    display_name: "WICKED",
+    release_year: 2024,
+    average_score: 7.9,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "La historia nunca contada de las brujas de Oz. Conoce a una joven incomprendida debido a su inusual piel verde y a otra joven popular y ambiciosa.",
+      en: "The untold story of the witches of Oz. Follow a young woman, misunderstood because of her unusual green skin, and a popular young woman, gilded by privilege and ambition."
+    },
+    runtime_minutes: "2h 40m",
+    content_rating: "PG",
+    bg_image_url: "https://picsum.photos/seed/113bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/113cov/600/900",
+    filmmaker: {
+      director_name: "Jon M. Chu",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Cynthia Erivo", character_role: { es: "Elphaba", en: "Elphaba" }, character_desc: { es: "La bruja verde.", en: "The green witch." } }
+    ],
+    keyword_labels: ["Musical", "Fantasy", "Drama"]
+  },
+  {
+    movie_identifier: 114,
+    display_name: "ELVIS",
+    release_year: 2022,
+    average_score: 7.3,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "La vida y la música de Elvis Presley a través del prisma de su complicada relación con el coronel Tom Parker, su enigmático mánager.",
+      en: "The life of American music icon Elvis Presley, from his childhood to becoming a rock and movie star in the 1950s while maintaining a complex relationship with his manager, Colonel Tom Parker."
+    },
+    runtime_minutes: "2h 39m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Elvis_poster_Eva_Rinaldi_%2852124155624%29.jpg/960px-Elvis_poster_Eva_Rinaldi_%2852124155624%29.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Elvis_poster_Eva_Rinaldi_%2852124155624%29.jpg/960px-Elvis_poster_Eva_Rinaldi_%2852124155624%29.jpg",
+    filmmaker: {
+      director_name: "Baz Luhrmann",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Austin Butler", character_role: { es: "Elvis Presley", en: "Elvis Presley" }, character_desc: { es: "El rey del rock and roll.", en: "The King of Rock and Roll." } }
+    ],
+    keyword_labels: ["Musical", "Biography", "Drama"]
+  },
+  {
+    movie_identifier: 115,
+    display_name: "EXPLOTA EXPLOTA",
+    release_year: 2020,
+    average_score: 6.2,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "María es una bailarina joven con ansias de libertad a principios de los años 70 en España. Un musical vibrante al ritmo de los grandes éxitos de Raffaella Carrà.",
+      en: "María is a young dancer with a desire for freedom in early 1970s Spain. A vibrant musical set to the greatest hits of Raffaella Carrà."
+    },
+    runtime_minutes: "1h 56m",
+    content_rating: "PG",
+    bg_image_url: "https://picsum.photos/seed/115bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/115cov/600/900",
+    filmmaker: {
+      director_name: "Nacho Álvarez",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Ingrid García Jonsson", character_role: { es: "María", en: "María" }, character_desc: { es: "La bailarina soñadora.", en: "The dreaming dancer." } }
+    ],
+    keyword_labels: ["Musical", "Comedy", "Romance"]
+  },
+  {
+    movie_identifier: 116,
+    display_name: "HA NACIDO UNA ESTRELLA",
+    release_year: 2018,
+    average_score: 7.6,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Un músico veterano ayuda a una joven cantante a encontrar la fama, incluso mientras la edad y el alcoholismo hunden su propia carrera.",
+      en: "A musician helps a young singer find fame as age and alcoholism send his own career into a downward spiral."
+    },
+    runtime_minutes: "2h 16m",
+    content_rating: "R",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Invitation_%28255758205%29.jpg/960px-Invitation_%28255758205%29.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Invitation_%28255758205%29.jpg/960px-Invitation_%28255758205%29.jpg",
+    filmmaker: {
+      director_name: "Bradley Cooper",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Lady Gaga", character_role: { es: "Ally", en: "Ally" }, character_desc: { es: "La talentosa cantante en ascenso.", en: "The rising talented singer." } }
+    ],
+    keyword_labels: ["Musical", "Romance", "Drama"]
+  },
+  {
+    movie_identifier: 117,
+    display_name: "BOHEMIAN RHAPSODY",
+    release_year: 2018,
+    average_score: 7.9,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "La historia de la legendaria banda de rock británica Queen y su vocalista principal Freddie Mercury, antes de su famosa actuación en el Live Aid.",
+      en: "The story of the legendary British rock band Queen and lead singer Freddie Mercury, leading up to their famous performance at Live Aid (1985)."
+    },
+    runtime_minutes: "2h 14m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bohemian_Rhapsody_cast_on_MTV_Movies.jpg/960px-Bohemian_Rhapsody_cast_on_MTV_Movies.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bohemian_Rhapsody_cast_on_MTV_Movies.jpg/960px-Bohemian_Rhapsody_cast_on_MTV_Movies.jpg",
+    filmmaker: {
+      director_name: "Bryan Singer",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Rami Malek", character_role: { es: "Freddie Mercury", en: "Freddie Mercury" }, character_desc: { es: "El icónico vocalista de Queen.", en: "Queen's iconic lead singer." } }
+    ],
+    keyword_labels: ["Musical", "Biography", "Drama"]
+  },
+  {
+    movie_identifier: 118,
+    display_name: "ROCKETMAN",
+    release_year: 2019,
+    average_score: 7.3,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Una fantasía musical épica sobre la increíble y humana historia de los años revelación del legendario Elton John.",
+      en: "A musical fantasy about the fantastical human story of Elton John's breakthrough years."
+    },
+    runtime_minutes: "2h 01m",
+    content_rating: "R",
+    bg_image_url: "https://picsum.photos/seed/118bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/118cov/600/900",
+    filmmaker: {
+      director_name: "Dexter Fletcher",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Taron Egerton", character_role: { es: "Elton John", en: "Elton John" }, character_desc: { es: "El legendario músico.", en: "The legendary musician." } }
+    ],
+    keyword_labels: ["Musical", "Biography", "Drama"]
+  },
+  {
+    movie_identifier: 119,
+    display_name: "EN LA CUERDA FLOJA",
+    release_year: 2005,
+    average_score: 7.8,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Una crónica sobre la vida de la leyenda del country Johnny Cash, desde sus primeros días en una granja de algodón en Arkansas hasta su ascenso a la fama en Memphis.",
+      en: "A chronicle of country music legend Johnny Cash's life, from his early days on an Arkansas cotton farm to his rise to fame with Sun Records in Memphis, where he recorded alongside Elvis Presley, Jerry Lee Lewis, and Carl Perkins."
+    },
+    runtime_minutes: "2h 16m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/119bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/119cov/600/900",
+    filmmaker: {
+      director_name: "James Mangold",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Joaquin Phoenix", character_role: { es: "Johnny Cash", en: "Johnny Cash" }, character_desc: { es: "El hombre de negro.", en: "The Man in Black." } }
+    ],
+    keyword_labels: ["Musical", "Biography", "Romance"]
+  },
+  {
+    movie_identifier: 120,
+    display_name: "STRAIGHT OUTTA COMPTON",
+    release_year: 2015,
+    average_score: 7.8,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "El grupo de rap N.W.A emerge de las duras calles de Compton en Los Ángeles a mediados de la década de 1980 y revoluciona la cultura del hip hop con su música.",
+      en: "The rap group N.W.A emerges from the mean streets of Compton in Los Angeles, California, in the mid-1980s and revolutionizes Hip Hop culture with their music and tales about life in the hood."
+    },
+    runtime_minutes: "2h 27m",
+    content_rating: "R",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/1/13/Straight_Outta_Compton_logo.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/1/13/Straight_Outta_Compton_logo.jpg",
+    filmmaker: {
+      director_name: "F. Gary Gray",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "O'Shea Jackson Jr.", character_role: { es: "Ice Cube", en: "Ice Cube" }, character_desc: { es: "El rapero poeta.", en: "The rapper poet." } }
+    ],
+    keyword_labels: ["Musical", "Biography", "Drama"]
+  },
+  {
+    movie_identifier: 121,
+    display_name: "YELLOW SUBMARINE",
+    release_year: 1968,
+    average_score: 7.4,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Los Beatles acompañan al Capitán Fred en su submarino amarillo para enfrentarse a los Blue Meanies y liberar Pepperlandia.",
+      en: "The Beatles agree to accompany Captain Fred in his Yellow Submarine and go to Pepperland to free it from the music-hating Blue Meanies."
+    },
+    runtime_minutes: "1h 29m",
+    content_rating: "G",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Corgi_Yellow_Submarine.jpg/960px-Corgi_Yellow_Submarine.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Corgi_Yellow_Submarine.jpg/960px-Corgi_Yellow_Submarine.jpg",
+    filmmaker: {
+      director_name: "George Dunning",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "The Beatles", character_role: { es: "The Beatles", en: "The Beatles" }, character_desc: { es: "Los Fab Four.", en: "The Fab Four." } }
+    ],
+    keyword_labels: ["Musical", "Animation", "Adventure"]
+  },
+  {
+    movie_identifier: 122,
+    display_name: "AMADEUS",
+    release_year: 1984,
+    average_score: 8.4,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "La vida, el éxito y los problemas de Wolfgang Amadeus Mozart, relatados por Antonio Salieri, el compositor contemporáneo que lo envidiaba profundamente.",
+      en: "The life, success and troubles of Wolfgang Amadeus Mozart, as told by Antonio Salieri, the contemporaneous composer who was insanely jealous of Mozart's talent and claimed to have murdered him."
+    },
+    runtime_minutes: "2h 40m",
+    content_rating: "R",
+    bg_image_url: "https://picsum.photos/seed/122bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/122cov/600/900",
+    filmmaker: {
+      director_name: "Milos Forman",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Tom Hulce", character_role: { es: "Wolfgang Amadeus Mozart", en: "Wolfgang Amadeus Mozart" }, character_desc: { es: "El genio musical.", en: "The musical genius." } }
+    ],
+    keyword_labels: ["Musical", "Biography", "Drama"]
+  },
+  {
+    movie_identifier: 123,
+    display_name: "BOB MARLEY: ONE LOVE",
+    release_year: 2024,
+    average_score: 6.5,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "La historia de cómo Bob Marley superó las adversidades y el viaje detrás de su música revolucionaria.",
+      en: "The story of how reggae icon Bob Marley overcame adversity, and the journey behind his revolutionary music."
+    },
+    runtime_minutes: "1h 47m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/123bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/123cov/600/900",
+    filmmaker: {
+      director_name: "Reinaldo Marcus Green",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Kingsley Ben-Adir", character_role: { es: "Bob Marley", en: "Bob Marley" }, character_desc: { es: "La leyenda del reggae.", en: "The reggae legend." } }
+    ],
+    keyword_labels: ["Musical", "Biography", "Drama"]
+  },
+  {
+    movie_identifier: 124,
+    display_name: "WHITNEY HOUSTON: I WANNA DANCE WITH SOMEBODY",
+    release_year: 2022,
+    average_score: 6.6,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "Una celebración alegre, emotiva y desgarradora de la vida y la música de Whitney Houston, una de las mejores cantantes de pop de todos los tiempos.",
+      en: "A joyous, emotional, heartbreaking celebration of the life and music of Whitney Houston, one of the greatest female R&B pop vocalists of all time."
+    },
+    runtime_minutes: "2h 24m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/124bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/124cov/600/900",
+    filmmaker: {
+      director_name: "Kasi Lemmons",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Naomi Ackie", character_role: { es: "Whitney Houston", en: "Whitney Houston" }, character_desc: { es: "La voz legendaria.", en: "The legendary voice." } }
+    ],
+    keyword_labels: ["Musical", "Biography", "Drama"]
+  },
+  {
+    movie_identifier: 125,
+    display_name: "DISCO, IBIZA, LOCOMÍA",
+    release_year: 2024,
+    average_score: 6.0,
+    category_type: "Musical",
+    synopsis_text: {
+      es: "La historia del grupo español Locomía, que con sus abanicos y hombreras gigantes conquistó la escena musical de la Ibiza de los años 80 y dio la vuelta al mundo.",
+      en: "The story of the Spanish group Locomía, which, with their huge shoulder pads and fans, conquered the music scene of Ibiza in the 80s and the world."
+    },
+    runtime_minutes: "1h 44m",
+    content_rating: "R",
+    bg_image_url: "https://picsum.photos/seed/125bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/125cov/600/900",
+    filmmaker: {
+      director_name: "Kike Maíllo",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Jaime Lorente", character_role: { es: "Xavi Font", en: "Xavi Font" }, character_desc: { es: "El carismático creador del grupo.", en: "The charismatic group creator." } }
+    ],
+    keyword_labels: ["Musical", "Biography", "Drama"]
+  },
+  {
+    movie_identifier: 126,
+    display_name: "BABE, EL CERDITO VALIENTE",
+    release_year: 1995,
+    average_score: 6.9,
+    category_type: "Fantasy",
+    synopsis_text: {
+      es: "Babe, un cerdito huérfano criado por perros pastores, aprende a pastorear ovejas con un poco de ayuda del granjero Hoggett.",
+      en: "Babe, a pig raised by sheepdogs, learns to herd sheep with a little help from Farmer Hoggett."
+    },
+    runtime_minutes: "1h 31m",
+    content_rating: "G",
+    bg_image_url: "https://picsum.photos/seed/126bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/126cov/600/900",
+    filmmaker: {
+      director_name: "Chris Noonan",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "James Cromwell", character_role: { es: "Granjero Hoggett", en: "Farmer Hoggett" }, character_desc: { es: "El amable granjero.", en: "The kind farmer." } }
+    ],
+    keyword_labels: ["Fantasy", "Family", "Comedy"]
+  },
+  {
+    movie_identifier: 127,
+    display_name: "MUJERCITAS",
+    release_year: 2019,
+    average_score: 7.8,
+    category_type: "Romance",
+    synopsis_text: {
+      es: "Jo March reflexiona sobre su vida, contando la historia de ella y de sus hermanas, cuatro jóvenes mujeres decididas a vivir la vida en sus propios términos.",
+      en: "Jo March reflects back and forth on her life, telling the beloved story of the March sisters - four young women, each determined to live life on her own terms."
+    },
+    runtime_minutes: "2h 15m",
+    content_rating: "PG",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Little_Women_%281933%29_poster.jpg/960px-Little_Women_%281933%29_poster.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Little_Women_%281933%29_poster.jpg/960px-Little_Women_%281933%29_poster.jpg",
+    filmmaker: {
+      director_name: "Greta Gerwig",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Saoirse Ronan", character_role: { es: "Jo March", en: "Jo March" }, character_desc: { es: "La escritora independiente.", en: "The independent writer." } }
+    ],
+    keyword_labels: ["Romance", "Drama", "Family"]
+  },
+  {
+    movie_identifier: 128,
+    display_name: "EL DIABLO VISTE DE PRADA",
+    release_year: 2006,
+    average_score: 6.9,
+    category_type: "Romance",
+    synopsis_text: {
+      es: "Una joven graduada consigue un trabajo como asistente de la exigente editora de una revista de alta costura, un trabajo por el que 'un millón de chicas matarían'.",
+      en: "A smart but sensible new graduate lands a job as an assistant to Miranda Priestly, the demanding editor-in-chief of a high fashion magazine."
+    },
+    runtime_minutes: "1h 49m",
+    content_rating: "PG-13",
+    bg_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0a/The_devil_wears_prada_logotipo.jpg",
+    cover_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0a/The_devil_wears_prada_logotipo.jpg",
+    filmmaker: {
+      director_name: "David Frankel",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Anne Hathaway", character_role: { es: "Andy Sachs", en: "Andy Sachs" }, character_desc: { es: "La joven asistente.", en: "The young assistant." } }
+    ],
+    keyword_labels: ["Romance", "Comedy", "Drama"]
+  },
+  {
+    movie_identifier: 129,
+    display_name: "EL DIARIO DE NOA",
+    release_year: 2004,
+    average_score: 7.8,
+    category_type: "Romance",
+    synopsis_text: {
+      es: "Un joven pobre y apasionado se enamora de una joven rica, pero pronto se ven separados por sus diferencias sociales.",
+      en: "A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social differences."
+    },
+    runtime_minutes: "2h 03m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/129bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/129cov/600/900",
+    filmmaker: {
+      director_name: "Nick Cassavetes",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Ryan Gosling", character_role: { es: "Noah Calhoun", en: "Noah Calhoun" }, character_desc: { es: "El joven enamorado.", en: "The young lover." } }
+    ],
+    keyword_labels: ["Romance", "Drama"]
+  },
+  {
+    movie_identifier: 130,
+    display_name: "CRIADAS Y SEÑORAS",
+    release_year: 2011,
+    average_score: 8.1,
+    category_type: "Social",
+    synopsis_text: {
+      es: "En el Misisipi de los años 60, una joven escritora decide entrevistar a las criadas negras que trabajan para las familias blancas y destapar el racismo.",
+      en: "An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African American maids' point of view on the white families for which they work."
+    },
+    runtime_minutes: "2h 26m",
+    content_rating: "PG-13",
+    bg_image_url: "https://picsum.photos/seed/130bg/1200/800",
+    cover_image_url: "https://picsum.photos/seed/130cov/600/900",
+    filmmaker: {
+      director_name: "Tate Taylor",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
+    },
+    actors_list: [
+      { actor_fullname: "Viola Davis", character_role: { es: "Aibileen Clark", en: "Aibileen Clark" }, character_desc: { es: "La criada valiente.", en: "The brave maid." } }
+    ],
+    keyword_labels: ["Social", "Drama"]
   }
 ];
 
@@ -873,7 +3522,7 @@ const AppState = {
   currentTab: 'home', // 'home', 'explore', 'likes', 'mylist', 'profile', 'details'
   activeGenre: 'All', // Filtro de género activo ('All', 'Sci-Fi', 'Drama', 'Action'...)
   likedMovies: JSON.parse(localStorage.getItem('likedMovies')) || [], // IDs de películas recomendadas
-  myListMovies: JSON.parse(localStorage.getItem('myListMovies')) || [], // IDs de películas en mi lista
+  myListMovies: (JSON.parse(localStorage.getItem('myListMovies')) || []).map(Number), // IDs de películas en mi lista
   selectedMovie: null, // Película cargada en la sección Details
   searchQuery: '',
   voiceSearchActive: false,
@@ -1114,6 +3763,9 @@ function saveLikes() {
 
 // Guardar mi lista en localStorage
 function saveMyList() {
+  if (AppState.user && AppState.user.name) {
+    localStorage.setItem(`myListMovies_${AppState.user.name}`, JSON.stringify(AppState.myListMovies));
+  }
   localStorage.setItem('myListMovies', JSON.stringify(AppState.myListMovies));
 }
 
@@ -1159,7 +3811,7 @@ function initUserScopedState() {
   
   // Cargar colecciones personales del usuario
   AppState.likedMovies = JSON.parse(localStorage.getItem(`likedMovies_${name}`)) || JSON.parse(localStorage.getItem('likedMovies')) || [];
-  AppState.myListMovies = JSON.parse(localStorage.getItem(`myListMovies_${name}`)) || JSON.parse(localStorage.getItem('myListMovies')) || [];
+  AppState.myListMovies = (JSON.parse(localStorage.getItem(`myListMovies_${name}`)) || JSON.parse(localStorage.getItem('myListMovies')) || []).map(Number);
   AppState.userRatings = JSON.parse(localStorage.getItem(`userRatings_${name}`)) || JSON.parse(localStorage.getItem('userRatings')) || {};
   AppState.userReviews = JSON.parse(localStorage.getItem(`userReviews_${name}`)) || JSON.parse(localStorage.getItem('userReviews')) || {};
   AppState.playlistOrder = JSON.parse(localStorage.getItem(`playlistOrder_${name}`)) || JSON.parse(localStorage.getItem('playlistOrder')) || [];
@@ -2423,14 +5075,9 @@ function toggleLikeMovie(movieId) {
 
 // Dar/quitar de mi lista
 function toggleMyList(movieId) {
-  // Protegido: requiere autenticación
-  if (!AppState.user) {
-    AppState.postLoginAction = () => toggleMyList(movieId);
-    openRegister();
-    return;
-  }
+  movieId = Number(movieId);
 
-  const index = AppState.myListMovies.indexOf(movieId);
+  const index = AppState.myListMovies.findIndex(id => Number(id) === movieId);
   if (index === -1) {
     AppState.myListMovies.push(movieId);
   } else {
@@ -3037,7 +5684,7 @@ function renderMyListGrid() {
   // (myListMovies guarda los IDs en orden de inserción)
   const watchlisted = [];
   AppState.myListMovies.forEach(id => {
-    const movie = MOVIES_DATA.find(m => m.id === id);
+    const movie = MOVIES_DATA.find(m => Number(m.id) === Number(id));
     if (movie) watchlisted.push(movie);
   });
 
@@ -3054,9 +5701,9 @@ function renderMyListGrid() {
       const item = document.createElement('div');
       item.className = 'playlist-item';
       
-      const thumbUrl = movie.thumbnail_url || (movie.images && movie.images.length > 0 ? movie.images[0] : 'https://via.placeholder.com/48x48?text=No+Image');
-      const year = movie.year || (movie.release_year ? movie.release_year : '2024');
-      const genre = Array.isArray(movie.genres) ? movie.genres[0] : (movie.category_type ? movie.category_type.split(',')[0] : 'Cine');
+      const thumbUrl = movie.backdrop || movie.poster || 'https://via.placeholder.com/48x48?text=No+Image';
+      const year = movie.year || '2024';
+      const genre = movie.genre || 'Cine';
       
       item.innerHTML = `
         <div class="playlist-index">${index + 1}</div>
@@ -3707,7 +6354,15 @@ const GENRE_TRANSLATIONS = {
     "Fantasy": "Fantasía",
     "Action": "Acción",
     "Adventure": "Aventura",
-    "Mystery": "Misterio"
+    "Mystery": "Misterio",
+    "Animation": "Animación",
+    "Romance": "Romance",
+    "Comedy": "Comedia",
+    "Drama": "Drama",
+    "Social": "Social",
+    "Tech": "Tecnología",
+    "Live Action": "Live Action",
+    "Musical": "Musical"
   },
   en: {
     "Sci-Fi/Thriller": "Sci-Fi/Thriller",
@@ -3716,7 +6371,15 @@ const GENRE_TRANSLATIONS = {
     "Fantasy": "Fantasy",
     "Action": "Action",
     "Adventure": "Adventure",
-    "Mystery": "Mystery"
+    "Mystery": "Mystery",
+    "Animation": "Animation",
+    "Romance": "Romance",
+    "Comedy": "Comedy",
+    "Drama": "Drama",
+    "Social": "Social",
+    "Tech": "Tech",
+    "Live Action": "Live Action",
+    "Musical": "Musical"
   }
 };
 
@@ -3926,6 +6589,12 @@ function changeLanguage(lang) {
     genreSelect.options[4].text = lang === 'es' ? 'Acción' : 'Action';
     genreSelect.options[5].text = lang === 'es' ? 'Aventura' : 'Adventure';
     genreSelect.options[6].text = lang === 'es' ? 'Misterio' : 'Mystery';
+    genreSelect.options[7].text = lang === 'es' ? 'Animación' : 'Animation';
+    genreSelect.options[8].text = lang === 'es' ? 'Romance' : 'Romance';
+    genreSelect.options[9].text = lang === 'es' ? 'Comedia' : 'Comedy';
+    genreSelect.options[10].text = lang === 'es' ? 'Social' : 'Social';
+    genreSelect.options[11].text = lang === 'es' ? 'Tecnología' : 'Tech';
+    genreSelect.options[12].text = 'Live Action';
   }
 
   // Opciones de Puntuación select
@@ -4335,6 +7004,42 @@ function setupWelcomeAuthListeners() {
     });
   }
 }
+
+function changeWelcomeLanguage(lang) {
+  AppState.language = lang;
+  
+  // Update button visual states
+  document.querySelectorAll('.welcome-lang-btn').forEach(btn => btn.classList.remove('active'));
+  const activeBtn = document.getElementById(`welcome-lang-${lang}`);
+  if (activeBtn) activeBtn.classList.add('active');
+  
+  // Update texts
+  const titleEl = document.getElementById('welcome-title');
+  const descEl = document.getElementById('welcome-desc');
+  const loginTrigger = document.querySelector('#welcome-login-trigger span');
+  const registerTrigger = document.querySelector('#welcome-register-trigger span');
+  const guestTrigger = document.querySelector('#welcome-enter-btn-guest span');
+  
+  if (lang === 'en') {
+    if (titleEl) titleEl.textContent = 'Welcome to the ultimate cinema experience';
+    if (descEl) descEl.textContent = 'Explore, discover and organize your favorite movies in a premium galactic universe.';
+    if (loginTrigger) loginTrigger.textContent = 'LOG IN';
+    if (registerTrigger) registerTrigger.textContent = 'SIGN UP';
+    if (guestTrigger) guestTrigger.textContent = 'Enter as guest';
+  } else {
+    if (titleEl) titleEl.textContent = 'Bienvenido a la experiencia de cine definitiva';
+    if (descEl) descEl.textContent = 'Explora, descubre y organiza tus películas preferidas en un universo galáctico premium.';
+    if (loginTrigger) loginTrigger.textContent = 'INICIAR SESIÓN';
+    if (registerTrigger) registerTrigger.textContent = 'REGISTRARSE';
+    if (guestTrigger) guestTrigger.textContent = 'Entrar como invitado';
+  }
+  
+  if (typeof updateWelcomeAuthUI === 'function') {
+    updateWelcomeAuthUI();
+  }
+}
+
+window.changeWelcomeLanguage = changeWelcomeLanguage;
 
 function updateWelcomeAuthUI() {
   const isEs = AppState.language === 'es';
@@ -4991,22 +7696,117 @@ function openTrailerModal(movie) {
   document.body.appendChild(modal);
 
   const fallbackBtn = document.getElementById('trailer-fallback-tts-btn');
-  if (fallbackBtn) {
     fallbackBtn.onclick = (e) => {
       e.stopPropagation();
       if (window.speechSynthesis) window.speechSynthesis.cancel();
       const descText = typeof movie.description === 'object' ? movie.description[AppState.language] : movie.description;
       if (!descText) return;
       
-      // Ocultar iframe para que no interfiera
+      // Ocultar iframe para mostrar nuestro "video" narrado
       const iframe = modal.querySelector('iframe');
       if (iframe) iframe.style.display = 'none';
 
+      // Limpiar contenedor previo si existe
+      let oldVideo = document.getElementById('narrator-video-container');
+      if (oldVideo) oldVideo.remove();
+
+      const container = iframe ? iframe.parentNode : modal.querySelector('.trailer-modal-content > div:nth-child(2)');
+      
+      const videoContainer = document.createElement('div');
+      videoContainer.id = 'narrator-video-container';
+      videoContainer.style.position = 'absolute';
+      videoContainer.style.top = '0';
+      videoContainer.style.left = '0';
+      videoContainer.style.width = '100%';
+      videoContainer.style.height = '100%';
+      videoContainer.style.background = `black url('${movie.backdrop || movie.poster}') center/cover no-repeat`;
+      videoContainer.style.display = 'flex';
+      videoContainer.style.flexDirection = 'column';
+      videoContainer.style.justifyContent = 'flex-end';
+      videoContainer.style.alignItems = 'center';
+      videoContainer.style.overflow = 'hidden';
+      videoContainer.style.animation = 'pan-image 20s linear infinite alternate';
+      
+      if (!document.getElementById('narrator-styles')) {
+        const style = document.createElement('style');
+        style.id = 'narrator-styles';
+        style.textContent = `
+          @keyframes pan-image {
+            0% { background-size: 100%; background-position: center; }
+            100% { background-size: 120%; background-position: top; }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+
+      const gradientOverlay = document.createElement('div');
+      gradientOverlay.style.position = 'absolute';
+      gradientOverlay.style.bottom = '0';
+      gradientOverlay.style.left = '0';
+      gradientOverlay.style.width = '100%';
+      gradientOverlay.style.height = '70%';
+      gradientOverlay.style.background = 'linear-gradient(to top, rgba(0,0,0,0.95), transparent)';
+      videoContainer.appendChild(gradientOverlay);
+
+      const subtitleBox = document.createElement('div');
+      subtitleBox.style.position = 'relative';
+      subtitleBox.style.zIndex = '2';
+      subtitleBox.style.color = '#fff';
+      subtitleBox.style.fontSize = 'clamp(16px, 3vw, 24px)';
+      subtitleBox.style.fontWeight = '500';
+      subtitleBox.style.textAlign = 'center';
+      subtitleBox.style.textShadow = '0 2px 6px rgba(0,0,0,0.9)';
+      subtitleBox.style.padding = '20px 40px';
+      subtitleBox.style.marginBottom = '20px';
+      subtitleBox.style.lineHeight = '1.5';
+      subtitleBox.style.maxWidth = '95%';
+      
+      const words = descText.split(' ');
+      subtitleBox.innerHTML = words.map((w,i) => `<span id="narrator-word-${i}" style="transition: color 0.2s, transform 0.1s;">${w}</span>`).join(' ');
+      videoContainer.appendChild(subtitleBox);
+      
+      if (container) container.appendChild(videoContainer);
+
       const utterance = new SpeechSynthesisUtterance(descText);
       utterance.lang = AppState.language === 'es' ? 'es-ES' : 'en-US';
+      utterance.rate = 0.95;
+
+      utterance.onboundary = (event) => {
+        if (event.name === 'word') {
+          const charIndex = event.charIndex;
+          let currentLen = 0;
+          for(let i=0; i<words.length; i++) {
+            if (charIndex >= currentLen && charIndex <= currentLen + words[i].length) {
+              const spans = subtitleBox.querySelectorAll('span');
+              spans.forEach(s => {
+                 s.style.color = 'rgba(255,255,255,0.4)';
+                 s.style.transform = 'scale(1)';
+              });
+              if (spans[i]) {
+                spans[i].style.color = 'var(--accent-purple, #a855f7)';
+                spans[i].style.transform = 'scale(1.1)';
+                spans[i].style.display = 'inline-block';
+              }
+              break;
+            }
+            currentLen += words[i].length + 1;
+          }
+        }
+      };
+
+      utterance.onend = () => {
+        const spans = subtitleBox.querySelectorAll('span');
+        spans.forEach(s => {
+           s.style.color = '#fff';
+           s.style.transform = 'scale(1)';
+        });
+      };
+
       window.speechSynthesis.speak(utterance);
+      
+      // Update button text to indicate it's playing
+      fallbackBtn.innerHTML = `<span style="font-size: 1.2em;">🎬</span> <span>${AppState.language === 'es' ? 'Reproduciendo vídeo narrado...' : 'Playing narrated video...'}</span>`;
     };
-  }
 }
 
 function closeTrailerModal() {
@@ -5935,7 +8735,10 @@ window.renderMyList = function() {
   
   const container = document.getElementById('custom-lists-container');
   const emptyState = document.getElementById('mylist-empty-state');
-  if (!container) return;
+  if (!container) {
+    if (typeof renderMyListGrid === 'function') renderMyListGrid();
+    return;
+  }
   
   window.loadCustomLists();
   container.innerHTML = '';

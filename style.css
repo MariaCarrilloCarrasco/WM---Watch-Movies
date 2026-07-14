@@ -263,10 +263,22 @@ body {
   overflow-x: auto;
   padding-bottom: 12px;
   margin-bottom: 24px;
-  scrollbar-width: none; /* Ocultar scrollbar en Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--panel-border) transparent;
 }
 .filter-container::-webkit-scrollbar {
-  display: none; /* Ocultar scrollbar en Chrome/Safari */
+  height: 6px;
+  display: block;
+}
+.filter-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.filter-container::-webkit-scrollbar-thumb {
+  background: var(--panel-border);
+  border-radius: 10px;
+}
+.filter-container::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
 }
 
 .genre-pill {
