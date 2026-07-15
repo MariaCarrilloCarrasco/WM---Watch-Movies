@@ -109,6 +109,10 @@
         <span>My List</span>
         <div class="mylist-badge" style="display:none; position:absolute; top: 12px; right: 24px; background:var(--accent-purple); color:var(--text-primary); font-size:9px; font-weight:800; border-radius:50%; width:16px; height:16px; align-items:center; justify-content:center; box-shadow:0 0 6px var(--accent-purple-glow); border:1px solid var(--bg-color);">0</div>
       </button>
+      <button class="sidebar-menu-btn nav-btn" data-tab="wom" style="margin-top: 10px; background: linear-gradient(45deg, var(--accent-purple), #ff4757); border-radius: 8px; color: white;">
+        <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="white"/></svg>
+        <span style="font-weight: 800;">WOM!</span>
+      </button>
     </nav>
     
     <!-- Perfil de usuario en el Sidebar usando el Logo como Avatar -->
@@ -157,6 +161,71 @@
         <button id="voice-search-btn" class="voice-search-btn" title="Búsqueda por voz">🎤</button>
       </div>
     </div>
+
+    <!-- 0. VISTA WOM! (EXTRA CATEGORIES) -->
+    <section id="view-wom" class="app-view">
+      <div class="hero-banner" style="background: linear-gradient(135deg, var(--accent-purple), #ff4757); padding: 40px 20px; text-align: center; border-radius: 16px; margin-bottom: 24px;">
+        <h2 class="hero-title" style="font-size: 32px; margin-bottom: 8px;">WOM!</h2>
+        <p class="hero-description" style="font-size: 16px; opacity: 0.9;">Watch Movies And More. Explora más allá del cine.</p>
+      </div>
+      
+      <div class="explore-categories-grid" style="margin-bottom: 32px;">
+        <div class="explore-category-card" onclick="setWomCategory('series')" style="background: linear-gradient(to top right, #2980b9, #8e44ad);">
+          <span class="explore-category-icon">📺</span>
+          <span class="explore-category-title">Series</span>
+        </div>
+        <div class="explore-category-card" onclick="setWomCategory('programas')" style="background: linear-gradient(to top right, #e74c3c, #f39c12);">
+          <span class="explore-category-icon">🎥</span>
+          <span class="explore-category-title">Programas TV</span>
+        </div>
+        <div class="explore-category-card" onclick="setWomCategory('quedadas')" style="background: linear-gradient(to top right, #1abc9c, #16a085);">
+          <span class="explore-category-icon">🤝</span>
+          <span class="explore-category-title">Quedadas</span>
+        </div>
+        <div class="explore-category-card" onclick="setWomCategory('viajes')" style="background: linear-gradient(to top right, #f1c40f, #e67e22);">
+          <span class="explore-category-icon">✈️</span>
+          <span class="explore-category-title">Viajes Pendientes</span>
+        </div>
+        <div class="explore-category-card" onclick="setWomCategory('libros')" style="background: linear-gradient(to top right, #2c3e50, #3498db);">
+          <span class="explore-category-icon">📚</span>
+          <span class="explore-category-title">Libros</span>
+        </div>
+        <div class="explore-category-card" onclick="setWomCategory('teatro')" style="background: linear-gradient(to top right, #8e44ad, #9b59b6);">
+          <span class="explore-category-icon">🎭</span>
+          <span class="explore-category-title">Teatro</span>
+        </div>
+        <div class="explore-category-card" onclick="setWomCategory('monologos')" style="background: linear-gradient(to top right, #e67e22, #f1c40f);">
+          <span class="explore-category-icon">🎤</span>
+          <span class="explore-category-title">Monólogos</span>
+        </div>
+        <div class="explore-category-card" onclick="setWomCategory('conciertos')" style="background: linear-gradient(to top right, #c0392b, #e74c3c);">
+          <span class="explore-category-icon">🎸</span>
+          <span class="explore-category-title">Conciertos</span>
+        </div>
+        <div class="explore-category-card" onclick="setWomCategory('eventos')" style="background: linear-gradient(to top right, #16a085, #2ecc71);">
+          <span class="explore-category-icon">🎉</span>
+          <span class="explore-category-title">Eventos</span>
+        </div>
+        <div class="explore-category-card" onclick="setWomCategory('planes')" style="background: linear-gradient(to top right, #ff4757, #ff6b81);">
+          <span class="explore-category-icon">🎟️</span>
+          <span class="explore-category-title">Planes y Expos</span>
+        </div>
+        <div class="explore-category-card" onclick="setWomCategory('musica')" style="background: linear-gradient(to top right, #e84393, #fd79a8);">
+          <span class="explore-category-icon">🎵</span>
+          <span class="explore-category-title">Música</span>
+        </div>
+      </div>
+
+      <div class="grid-header-section">
+        <h3 class="section-title-mockup" id="wom-section-title">Destacados WOM!</h3>
+        <div class="filter-container" id="wom-filters" style="display: none;">
+          <!-- Filtros dinámicos según la categoría -->
+        </div>
+      </div>
+      <div class="movies-grid" id="wom-grid">
+        <!-- Renderizado dinámicamente -->
+      </div>
+    </section>
 
     <!-- 1. VISTA INICIO (HOME) -->
     <section id="view-home" class="app-view active">
@@ -574,6 +643,10 @@
       <span>Mi Lista</span>
       <div class="mylist-badge" style="display:none; position:absolute; top:-4px; right:18px; background:var(--accent-purple); color:var(--text-primary); font-size:9px; font-weight:800; border-radius:50%; width:16px; height:16px; align-items:center; justify-content:center; box-shadow:0 0 6px var(--accent-purple-glow); border:1px solid var(--bg-color);">0</div>
     </button>
+    <button class="nav-btn" data-tab="wom" aria-label="WOM!" style="color: #ff4757;">
+      <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor"/></svg>
+      <span style="font-weight: 800;">WOM!</span>
+    </button>
     <button class="nav-btn" data-tab="profile" aria-label="Perfil">
       <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       <span>Perfil</span>
@@ -670,6 +743,38 @@
     </div>
   </div>
 
+  <!-- Reproductor de Video (YouTube/Spotify) -->
+  <div id="video-modal" class="modal-overlay" style="display: none; align-items: center; justify-content: center; z-index: 9999;">
+    <div class="modal-content" style="width: 90%; max-width: 800px; background: #1e1e2f; padding: 20px; border-radius: 12px; position: relative;">
+      <button onclick="closeVideoModal()" style="position: absolute; top: -15px; right: -15px; background: var(--accent-purple); color: white; border: none; border-radius: 50%; width: 30px; height: 30px; cursor: pointer; font-weight: bold;">✕</button>
+      <h3 id="video-modal-title" style="margin-top: 0; color: white;">Reproductor</h3>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-top: 15px;">
+        <iframe id="video-iframe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Añadir a Playlist Modal -->
+  <div id="playlist-modal" class="modal-overlay" style="display: none; align-items: center; justify-content: center; z-index: 9999;">
+    <div class="modal-content" style="width: 90%; max-width: 400px; background: #1e1e2f; padding: 20px; border-radius: 12px; position: relative; color: white;">
+      <button onclick="closePlaylistModal()" style="position: absolute; top: 15px; right: 15px; background: transparent; color: white; border: none; font-size: 20px; cursor: pointer;">✕</button>
+      <h3 style="margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px;">Añadir a Mis Listas</h3>
+      
+      <div id="playlist-options" style="margin: 20px 0; max-height: 200px; overflow-y: auto;">
+        <!-- Playlist options injected via JS -->
+      </div>
+      
+      <div style="display: flex; gap: 10px; margin-top: 15px; border-top: 1px solid #333; padding-top: 15px;">
+        <input type="text" id="new-playlist-name" placeholder="Nueva lista..." style="flex: 1; padding: 8px; border-radius: 6px; border: 1px solid #444; background: #2a2a3c; color: white;">
+        <button onclick="createNewPlaylistAndAdd()" style="background: var(--accent-purple); color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">Crear</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/datos.js"></script>
+  <script src="js/wom.js"></script>
+  <script src="js/buscador.js"></script>
+  <script src="js/botones.js"></script>
   <script src="app.js?v=3.15"></script>
 </body>
 </html>
