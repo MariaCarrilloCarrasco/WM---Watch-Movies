@@ -15,12 +15,25 @@ function setupMovieClicks() {
       else if (AppState.currentTab === 'explore') renderExplore();
       else if (AppState.currentTab === 'likes') renderLikes();
     } else {
-      // Cargar los detalles de la película
-      const movie = MOVIES_DATA.find(m => m.id === movieId);
+      // Cargar los detalles de la película, serie o música
+      let movie = MOVIES_DATA.find(m => m.id === movieId);
+      if (!movie && typeof SERIES_DATA !== 'undefined') {
+        movie = SERIES_DATA.find(m => m.id === movieId);
+      }
+      
       if (movie) {
         showMovieDetails(movie);
         if (typeof window.closePersonModal === 'function') {
           window.closePersonModal(false);
+        }
+      } else {
+        // Comprobar si es música (se abre en WOM)
+        let music = null;
+        if (typeof MUSIC_DATA !== 'undefined') {
+          music = MUSIC_DATA.find(m => (m.movie_identifier || m.id) === movieId);
+        }
+        if (music && typeof window.openWomDetailsModal === 'function') {
+          window.openWomDetailsModal(movieId);
         }
       }
     }

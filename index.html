@@ -170,6 +170,14 @@
       </div>
       
       <div class="explore-categories-grid" style="margin-bottom: 32px;">
+        <div class="explore-category-card" onclick="setWomCategory('todo')" style="background: linear-gradient(to top right, #ff9f43, #ff6b6b);">
+          <span class="explore-category-icon">🌟</span>
+          <span class="explore-category-title">Ver Todo</span>
+        </div>
+        <div class="explore-category-card" onclick="setWomCategory('listas')" style="background: linear-gradient(to top right, #34495e, #2c3e50);">
+          <span class="explore-category-icon">📋</span>
+          <span class="explore-category-title">Mis Listas</span>
+        </div>
         <div class="explore-category-card" onclick="setWomCategory('series')" style="background: linear-gradient(to top right, #2980b9, #8e44ad);">
           <span class="explore-category-icon">📺</span>
           <span class="explore-category-title">Series</span>
@@ -633,6 +641,10 @@
       <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       <span>Explore</span>
     </button>
+    <button class="nav-btn" data-tab="mylist" aria-label="Listas">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+      <span>Listas</span>
+    </button>
     <button class="nav-btn" data-tab="likes" aria-label="Likes">
       <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
       <span>Likes</span>
@@ -771,10 +783,111 @@
     </div>
   </div>
 
-  <script src="js/datos.js"></script>
-  <script src="js/wom.js"></script>
-  <script src="js/buscador.js"></script>
-  <script src="js/botones.js"></script>
-  <script src="app.js?v=3.15"></script>
+  <!-- Comentarios Modal -->
+  <div id="comments-modal" class="modal-overlay" style="display: none; align-items: center; justify-content: center; z-index: 10005;">
+    <div class="modal-content" style="width: 90%; max-width: 500px; background: #1e1e2f; padding: 20px; border-radius: 12px; position: relative; color: white; display: flex; flex-direction: column; max-height: 80vh;">
+      <button onclick="closeCommentsModal()" style="position: absolute; top: 15px; right: 15px; background: transparent; color: white; border: none; font-size: 20px; cursor: pointer;">✕</button>
+      <h3 id="comments-modal-title" style="margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px;">Comentarios</h3>
+      
+      <div id="comments-list" style="flex: 1; overflow-y: auto; margin: 15px 0; padding-right: 5px; display: flex; flex-direction: column; gap: 10px;">
+        <!-- Comments injected via JS -->
+      </div>
+      
+      <div style="border-top: 1px solid #333; padding-top: 15px;">
+        <div style="margin-bottom: 10px;">
+          <span>Tu valoración: </span>
+          <div id="star-rating-input" style="display: inline-flex; gap: 5px; cursor: pointer; color: #555; font-size: 20px;">
+            <span onclick="setRating(1)" data-val="1">★</span>
+            <span onclick="setRating(2)" data-val="2">★</span>
+            <span onclick="setRating(3)" data-val="3">★</span>
+            <span onclick="setRating(4)" data-val="4">★</span>
+            <span onclick="setRating(5)" data-val="5">★</span>
+          </div>
+        </div>
+        <textarea id="new-comment-text" placeholder="Escribe algo positivo..." style="width: 100%; height: 60px; padding: 10px; border-radius: 6px; border: 1px solid #444; background: #2a2a3c; color: white; resize: none;"></textarea>
+        <button onclick="submitComment()" style="background: var(--accent-purple); color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 10px;">Publicar Comentario</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Add Button -->
+  <button onclick="openAddContentModal()" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; border-radius: 50%; background: var(--accent-purple); color: white; border: none; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); cursor: pointer; z-index: 9998; display: flex; align-items: center; justify-content: center;">+</button>
+
+  <!-- Add Content Modal -->
+  <div id="add-content-modal" class="modal-overlay" style="display: none; align-items: center; justify-content: center; z-index: 9999;">
+    <div class="modal-content" style="width: 90%; max-width: 500px; background: #1e1e2f; padding: 20px; border-radius: 12px; position: relative; color: white;">
+      <button onclick="closeAddContentModal()" style="position: absolute; top: 15px; right: 15px; background: transparent; color: white; border: none; font-size: 20px; cursor: pointer;">✕</button>
+      <h3 style="margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px;">Añadir Nuevo Contenido</h3>
+      
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px;">
+        <select id="add-category" style="padding: 10px; border-radius: 6px; border: 1px solid #444; background: #2a2a3c; color: white;">
+          <option value="peliculas">Película</option>
+          <option value="series">Serie</option>
+          <option value="programas">Programa de TV</option>
+          <option value="musica">Música</option>
+          <option value="libros">Libro</option>
+          <option value="teatro">Teatro</option>
+          <option value="monologos">Monólogo</option>
+          <option value="conciertos">Concierto</option>
+          <option value="eventos">Evento</option>
+          <option value="planes">Plan</option>
+          <option value="quedadas">Quedada</option>
+          <option value="exposiciones">Exposición</option>
+          <option value="viajes">Viaje</option>
+        </select>
+        
+        <input type="text" id="add-title" placeholder="Título *" style="padding: 10px; border-radius: 6px; border: 1px solid #444; background: #2a2a3c; color: white;" required>
+        <input type="text" id="add-creator" placeholder="Artista / Director / Autor" style="padding: 10px; border-radius: 6px; border: 1px solid #444; background: #2a2a3c; color: white;">
+        <input type="text" id="add-genres" placeholder="Géneros (separados por comas, ej: Acción, Comedia) *" style="padding: 10px; border-radius: 6px; border: 1px solid #444; background: #2a2a3c; color: white;" required>
+        <textarea id="add-synopsis" placeholder="Descripción breve" style="padding: 10px; border-radius: 6px; border: 1px solid #444; background: #2a2a3c; color: white; resize: none; height: 60px;"></textarea>
+        
+        <button onclick="submitNewContent()" style="background: var(--accent-purple); color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 10px;">Añadir a WOM!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WOM Details Modal -->
+  <div id="wom-details-modal" class="modal-overlay" style="display: none; align-items: center; justify-content: center; z-index: 9999; padding: 20px;">
+    <div class="modal-content" style="width: 100%; max-width: 700px; background: #1e1e2f; padding: 0; border-radius: 12px; position: relative; color: white; overflow: hidden; max-height: 90vh; overflow-y: auto;">
+      <button onclick="closeWomDetailsModal()" style="position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.5); color: white; border: none; font-size: 20px; cursor: pointer; border-radius: 50%; width: 40px; height: 40px; z-index: 10; display: flex; align-items: center; justify-content: center;">✕</button>
+      
+      <div id="wom-details-video-container" style="width: 100%; aspect-ratio: 16/9; display: none; background: #000;">
+        <iframe id="wom-details-video-iframe" src="" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+      </div>
+
+      <div id="wom-details-banner" style="width: 100%; height: 250px; background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, #1e1e2f, transparent); height: 100px;"></div>
+      </div>
+      <div id="wom-details-content-wrapper" style="padding: 25px; margin-top: -60px; position: relative; z-index: 2;">
+        <div style="display: flex; gap: 20px; align-items: flex-end; margin-bottom: 20px;">
+          <img id="wom-details-poster" src="" alt="Poster" style="width: 120px; height: 180px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+          <div style="flex: 1;">
+            <h2 id="wom-details-title" style="margin: 0 0 10px 0; font-size: 28px; text-shadow: 1px 1px 5px rgba(0,0,0,0.8);">Título</h2>
+            <div id="wom-details-meta" style="color: #bbb; font-size: 14px; margin-bottom: 10px;"></div>
+            <div id="wom-details-actions" style="display: flex; gap: 10px; flex-wrap: wrap;"></div>
+          </div>
+        </div>
+        
+        <h3 style="border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 15px;">Información</h3>
+        <p id="wom-details-synopsis" style="line-height: 1.6; color: #ccc; margin-bottom: 20px;"></p>
+        
+        <div id="wom-details-author-section" style="margin-bottom: 20px; display: none;">
+          <h3 style="border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 15px;" id="wom-details-author-title">Autor / Director</h3>
+          <p id="wom-details-author-name" style="color: #ccc;"></p>
+        </div>
+
+        <div id="wom-details-cast-section" style="margin-bottom: 20px; display: none;">
+          <h3 style="border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 15px;">Personajes / Reparto</h3>
+          <div id="wom-details-cast-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/datos.js?v=1.1"></script>
+  <script src="js/wom.js?v=1.12"></script>
+  <script src="js/buscador.js?v=1.1"></script>
+  <script src="js/botones.js?v=1.1"></script>
+  <script src="app.js?v=3.23"></script>
 </body>
 </html>

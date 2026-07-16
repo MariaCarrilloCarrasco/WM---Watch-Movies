@@ -296,6 +296,10 @@ function initUserScopedState() {
   AppState.userReviews = JSON.parse(localStorage.getItem(`userReviews_${name}`)) || JSON.parse(localStorage.getItem('userReviews')) || {};
   AppState.playlistOrder = JSON.parse(localStorage.getItem(`playlistOrder_${name}`)) || JSON.parse(localStorage.getItem('playlistOrder')) || [];
   AppState.playlistSchedule = JSON.parse(localStorage.getItem(`playlistSchedule_${name}`)) || JSON.parse(localStorage.getItem('playlistSchedule')) || {};
+  
+  if (typeof window.loadWomLists === 'function') {
+    window.loadWomLists();
+  }
 }
 window.initUserScopedState = initUserScopedState;
 
@@ -762,7 +766,9 @@ const PROTECTED_TABS = ['likes', 'mylist', 'profile'];
 const FavoritesService = {
   add(movieId) {
     try {
-      const movie = MOVIES_DATA.find(m => m.id === movieId);
+      let movie = MOVIES_DATA.find(m => m.id === movieId);
+      if (!movie && typeof SERIES_DATA !== 'undefined') movie = SERIES_DATA.find(m => m.id === movieId);
+      if (!movie && typeof MUSIC_DATA !== 'undefined') movie = MUSIC_DATA.find(m => (m.movie_identifier || m.id) === movieId);
       if (!movie) {
         throw new Error(AppState.language === 'es' ? "ID de película inválido." : "Invalid movie ID.");
       }
@@ -816,7 +822,9 @@ const FavoritesService = {
   
   setRating(movieId, score) {
     try {
-      const movie = MOVIES_DATA.find(m => m.id === movieId);
+      let movie = MOVIES_DATA.find(m => m.id === movieId);
+      if (!movie && typeof SERIES_DATA !== 'undefined') movie = SERIES_DATA.find(m => m.id === movieId);
+      if (!movie && typeof MUSIC_DATA !== 'undefined') movie = MUSIC_DATA.find(m => (m.movie_identifier || m.id) === movieId);
       if (!movie) {
         throw new Error(AppState.language === 'es' ? "ID de película inválido." : "Invalid movie ID.");
       }
@@ -1478,32 +1486,115 @@ function renderLikes() {
   }, 400);
 }
 
+window.isItemLiked = function(id) {
+  if (!AppState.likedMovies) return false;
+  return AppState.likedMovies.findIndex(l => Number(l) === Number(id)) !== -1;
+};
+
 function renderLikesGrid() {
-  const grid = document.getElementById('likes-movies-grid');
+  const container = document.getElementById('likes-movies-grid');
   const emptyState = document.getElementById('likes-empty-state');
-  if (!grid) return;
+  if (!container) return;
 
-  grid.innerHTML = '';
+  container.innerHTML = '';
 
-  // Filtrar películas marcadas con favoritos
-  const liked = MOVIES_DATA.filter(movie => {
-    const isLiked = AppState.likedMovies.includes(movie.id);
-    if (!isLiked) return false;
-    if (AppState.activeGenre === 'All') return true;
-    return movie.genre === AppState.activeGenre;
+  if (!AppState.likedMovies || AppState.likedMovies.length === 0) {
+    container.style.display = 'none';
+    if (emptyState) emptyState.style.display = 'block';
+    return;
+  }
+  
+  // Agrupar por categorías
+  const categories = {};
+  
+  AppState.likedMovies.forEach(id => {
+    let item = typeof window.findGlobalItemById === 'function' ? window.findGlobalItemById(id) : null;
+    if (!item && typeof MOVIES_DATA !== 'undefined') item = MOVIES_DATA.find(m => m.id === id);
+    if (!item && typeof SERIES_DATA !== 'undefined') item = SERIES_DATA.find(m => m.id === id);
+    
+    if (item) {
+      if (item.genre && AppState.activeGenre !== 'All' && item.genre !== AppState.activeGenre && !item.category_type) return;
+      
+      const cat = item.category_type || (item.genre ? 'Películas' : 'Otros');
+      if (!categories[cat]) categories[cat] = [];
+      categories[cat].push(item);
+    }
   });
 
-  if (liked.length === 0) {
-    grid.style.display = 'none';
+  const cats = Object.keys(categories);
+  if (cats.length === 0) {
+    container.style.display = 'none';
     if (emptyState) emptyState.style.display = 'block';
-  } else {
-    grid.style.display = 'grid';
-    if (emptyState) emptyState.style.display = 'none';
-
-    liked.forEach(movie => {
-      grid.appendChild(createMovieCardElement(movie));
-    });
+    return;
   }
+  
+  container.style.display = 'block'; // Block to stack categories
+  if (emptyState) emptyState.style.display = 'none';
+  
+  cats.forEach(cat => {
+    const section = document.createElement('div');
+    section.style.marginBottom = '30px';
+    
+    const title = document.createElement('h3');
+    title.textContent = cat;
+    title.style.color = 'white';
+    title.style.borderBottom = '1px solid #444';
+    title.style.paddingBottom = '10px';
+    title.style.marginBottom = '15px';
+    title.style.textTransform = 'capitalize';
+    section.appendChild(title);
+    
+    const grid = document.createElement('div');
+    grid.className = 'movies-grid';
+    
+    categories[cat].forEach(item => {
+      // Usar lógica universal para renderizar tarjetas estilo WOM
+      const card = document.createElement('div');
+      card.className = 'movie-card';
+      card.style.cursor = 'pointer';
+      card.onclick = () => window.openWomDetailsModal ? window.openWomDetailsModal('${item.movie_identifier || item.id}') : null;
+      card.setAttribute('data-id', item.movie_identifier || item.id);
+      
+      let fallbackText = item.display_name || item.title || '';
+      let fallbackSub1 = item.release_year || item.date || item.runtime_minutes || '';
+      let fallbackSub2 = (item.filmmaker && item.filmmaker.director_name) ? item.filmmaker.director_name : (item.location || '');
+      let finalFallbackText = fallbackText;
+      if (fallbackSub1 && fallbackSub1 !== 'Por confirmar' && fallbackSub1 !== 'Por definir') finalFallbackText += '\n' + fallbackSub1;
+      if (fallbackSub2) finalFallbackText += '\n' + fallbackSub2;
+      
+      let fallbackImg = `https://placehold.co/600x900/1e1e2f/ffffff?text=${encodeURIComponent(finalFallbackText)}`;
+      let imgUrl = item.cover_image_url || item.image || fallbackImg;
+
+      // Botón remover de likes
+      let currentId = item.movie_identifier || item.id;
+      let isLiked = window.isItemLiked(currentId);
+
+      card.innerHTML = `
+        <div class="card-image-wrapper">
+          <img src="${imgUrl}" alt="${item.display_name || item.title}" loading="lazy" class="card-img" onerror="this.onerror=null; this.src='${fallbackImg}'">
+          <div class="card-overlay">
+            <button class="card-like-btn" title="Me gusta" onclick="if(typeof toggleWomLike==='function'){toggleWomLike('${item.movie_identifier || item.id}', this);} event.stopPropagation(); window.renderLikesGrid();" style="background: rgba(0,0,0,0.6); border-radius: 50%; padding: 8px;">
+              <svg viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444" stroke-width="2" style="width: 20px; height: 20px;">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">${item.display_name || item.title}</h3>
+          <div class="card-info">
+            <span>${item.release_year || item.year || ''}</span>
+            <span>${item.category_type || item.genre || ''}</span>
+          </div>
+          <button onclick="if(typeof window.openWomPlaylistModal==='function') window.openWomPlaylistModal('${item.movie_identifier || item.id}'); event.stopPropagation();" style="background: var(--accent-purple); color: white; border: none; border-radius: 4px; padding: 4px 8px; cursor: pointer; font-size: 12px; margin-top: 5px; width: 100%;">+ Añadir a mi lista</button>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+    
+    section.appendChild(grid);
+    container.appendChild(section);
+  });
 }
 
 // 3.5. Renderizar la pantalla de lista de seguimiento (My List)
@@ -4496,6 +4587,48 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ======== CUSTOM LISTS ========
+window.loadWomLists = function() {
+  if (AppState.user) {
+    const saved = localStorage.getItem('womLists_' + AppState.user.email);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed)) {
+        AppState.womLists = parsed;
+      } else {
+        // Migrate old object format
+        AppState.womLists = [
+          { id: 'wom_songs', name: 'Lista de Canciones', items: parsed.canciones || [] },
+          { id: 'wom_series', name: 'Lista de Series', items: parsed.series || [] },
+          { id: 'wom_books', name: 'Lista de Libros', items: parsed.libros || [] },
+          { id: 'wom_plans', name: 'Mis Planes', items: parsed.eventos || [] }
+        ];
+      }
+    } else {
+      AppState.womLists = [
+        { id: 'wom_songs', name: 'Lista de Canciones', items: [] },
+        { id: 'wom_series', name: 'Lista de Series', items: [] },
+        { id: 'wom_books', name: 'Lista de Libros', items: [] },
+        { id: 'wom_plans', name: 'Mis Planes', items: [] }
+      ];
+    }
+  } else {
+    AppState.womLists = [
+      { id: 'wom_songs', name: 'Lista de Canciones', items: [] },
+      { id: 'wom_series', name: 'Lista de Series', items: [] },
+      { id: 'wom_books', name: 'Lista de Libros', items: [] },
+      { id: 'wom_plans', name: 'Mis Planes', items: [] }
+    ];
+  }
+};
+
+window.saveWomLists = function() {
+  if (AppState.user) {
+    localStorage.setItem('womLists_' + AppState.user.email, JSON.stringify(AppState.womLists));
+  } else {
+    localStorage.setItem('womLists_guest', JSON.stringify(AppState.womLists));
+  }
+};
+
 window.loadCustomLists = function() {
   if (AppState.user) {
     const saved = localStorage.getItem('customLists_' + AppState.user.email);
@@ -4506,6 +4639,29 @@ window.loadCustomLists = function() {
     }
   } else {
     AppState.customLists = [{ id: 'default', name: AppState.language === 'es' ? 'Mi Lista' : 'My List', movies: AppState.myListMovies || [] }];
+  }
+  
+  // Migrar listas antiguas de WOM a customLists
+  const oldWomLists = localStorage.getItem('wom_lists');
+  if (oldWomLists) {
+    try {
+      const womData = JSON.parse(oldWomLists);
+      if (Array.isArray(womData)) {
+        womData.forEach(wList => {
+          if (!AppState.customLists.find(c => c.id === wList.id)) {
+            AppState.customLists.push({
+              id: wList.id,
+              name: wList.name,
+              movies: wList.items || [] // Convertimos de items a movies
+            });
+          }
+        });
+      }
+      localStorage.removeItem('wom_lists'); // Borrar para evitar doble migración
+      window.saveCustomLists();
+    } catch(e) {
+      console.error("Error migrating wom_lists", e);
+    }
   }
 };
 
@@ -4624,21 +4780,101 @@ window.renderMyList = function() {
     
     listSection.appendChild(listHeader);
     
-    const moviesGrid = document.createElement('div');
-    moviesGrid.className = 'movies-grid';
-    
     if (list.movies.length === 0) {
+      const moviesGrid = document.createElement('div');
+      moviesGrid.className = 'movies-grid';
       moviesGrid.innerHTML = `<p style="color: #94a3b8; font-size: 14px; grid-column: 1 / -1;">${AppState.language === 'es' ? 'Esta lista está vacía.' : 'This list is empty.'}</p>`;
+      listSection.appendChild(moviesGrid);
     } else {
-      const movies = MOVIES_DATA.filter(m => list.movies.includes(m.id));
-      movies.forEach(movie => {
-        if (typeof createMovieCardElement === 'function') {
-          moviesGrid.appendChild(createMovieCardElement(movie));
+      // Agrupar los elementos por categoría
+      const categories = {};
+      list.movies.forEach(movieId => {
+        let item = typeof window.findGlobalItemById === 'function' ? window.findGlobalItemById(movieId) : null;
+        if (!item && typeof MOVIES_DATA !== 'undefined') item = MOVIES_DATA.find(m => m.id === movieId);
+        if (!item && typeof SERIES_DATA !== 'undefined') item = SERIES_DATA.find(m => m.id === movieId);
+        
+        if (item) {
+          const cat = item.category_type || (item.genre ? 'Películas' : 'Otros');
+          if (!categories[cat]) categories[cat] = [];
+          categories[cat].push(item);
         }
       });
-    }
+      
+      const cats = Object.keys(categories);
+      cats.forEach(cat => {
+        const catSection = document.createElement('div');
+        catSection.style.marginBottom = '20px';
+        
+        const catTitle = document.createElement('h4');
+        catTitle.textContent = cat;
+        catTitle.style.color = '#ccc';
+        catTitle.style.fontSize = '16px';
+        catTitle.style.marginBottom = '10px';
+        catTitle.style.textTransform = 'capitalize';
+        catTitle.style.borderBottom = '1px solid #333';
+        catTitle.style.paddingBottom = '5px';
+        catSection.appendChild(catTitle);
+        
+        const catGrid = document.createElement('div');
+        catGrid.className = 'movies-grid';
+        
+        categories[cat].forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'movie-card';
+          card.style.cursor = 'pointer';
+          card.onclick = () => window.openWomDetailsModal ? window.openWomDetailsModal(item.movie_identifier || item.id) : null;
+          card.setAttribute('data-id', item.movie_identifier || item.id);
+          
+          let fallbackText = item.display_name || item.title || '';
+          let fallbackSub1 = item.release_year || item.date || item.runtime_minutes || '';
+          let fallbackSub2 = (item.filmmaker && item.filmmaker.director_name) ? item.filmmaker.director_name : (item.location || '');
+          let finalFallbackText = fallbackText;
+          if (fallbackSub1 && fallbackSub1 !== 'Por confirmar' && fallbackSub1 !== 'Por definir') finalFallbackText += '\n' + fallbackSub1;
+          if (fallbackSub2) finalFallbackText += '\n' + fallbackSub2;
+          
+          let fallbackImg = `https://placehold.co/600x900/1e1e2f/ffffff?text=${encodeURIComponent(finalFallbackText)}`;
+          let imgUrl = item.cover_image_url || item.image || fallbackImg;
     
-    listSection.appendChild(moviesGrid);
+          let isLiked = window.isItemLiked(item.movie_identifier || item.id);
+          let heartFill = isLiked ? '#ef4444' : 'none';
+          let heartStroke = isLiked ? '#ef4444' : 'white';
+          
+          card.innerHTML = `
+            <div class="card-image-wrapper">
+              <img src="${imgUrl}" alt="${item.display_name || item.title}" loading="lazy" class="card-img" onerror="this.onerror=null; this.src='${fallbackImg}'">
+              <div class="card-overlay">
+                <button class="card-like-btn" title="Me gusta" onclick="if(typeof toggleWomLike==='function'){toggleWomLike('${item.movie_identifier || item.id}', this);} event.stopPropagation(); if(typeof window.renderMyList==='function'){window.renderMyList();}" style="background: rgba(0,0,0,0.6); border-radius: 50%; padding: 8px;">
+                  <svg viewBox="0 0 24 24" fill="${heartFill}" stroke="${heartStroke}" stroke-width="2" style="width: 20px; height: 20px;">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">${item.display_name || item.title}</h3>
+              <div class="card-info">
+                <span>${item.release_year || item.year || ''}</span>
+                <span>${item.category_type || item.genre || ''}</span>
+              </div>
+              <button onclick="if(typeof window.openWomPlaylistModal==='function') window.openWomPlaylistModal('${item.movie_identifier || item.id}'); event.stopPropagation();" style="background: var(--accent-purple); color: white; border: none; border-radius: 4px; padding: 4px 8px; cursor: pointer; font-size: 12px; margin-top: 5px; width: 100%;">+ Añadir a mi lista</button>
+              <button onclick="
+                const currentList = AppState.customLists.find(l => l.id === '${list.id}');
+                if (currentList) {
+                  currentList.movies = currentList.movies.filter(id => Number(id) !== Number('${item.movie_identifier || item.id}'));
+                  window.saveCustomLists();
+                  window.renderMyList();
+                }
+                event.stopPropagation();
+              " style="background: #e74c3c; color: white; border: none; border-radius: 4px; padding: 4px 8px; cursor: pointer; font-size: 12px; margin-top: 5px; width: 100%;">${AppState.language === 'es' ? 'Eliminar de esta lista' : 'Remove'}</button>
+            </div>
+          `;
+          catGrid.appendChild(card);
+        });
+        
+        catSection.appendChild(catGrid);
+        listSection.appendChild(catSection);
+      });
+    }
     container.appendChild(listSection);
   });
 };
@@ -4662,3 +4898,185 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 });
+
+function findGlobalItemById(id) {
+  const allArrays = [
+    typeof MOVIES_DATA !== 'undefined' ? MOVIES_DATA : [],
+    typeof SERIES_DATA !== 'undefined' ? SERIES_DATA : [],
+    typeof MUSIC_DATA !== 'undefined' ? MUSIC_DATA : [],
+    typeof THEATER_DATA !== 'undefined' ? THEATER_DATA : [],
+    typeof BOOKS_DATA !== 'undefined' ? BOOKS_DATA : [],
+    typeof EVENTS_DATA !== 'undefined' ? EVENTS_DATA : [],
+    typeof EXTERNAL_PLANS_DATA !== 'undefined' ? EXTERNAL_PLANS_DATA : [],
+    typeof QUEDADAS_DATA !== 'undefined' ? QUEDADAS_DATA : [],
+    typeof CONCERTS_DATA !== 'undefined' ? CONCERTS_DATA : [],
+    typeof MONOLOGUES_DATA !== 'undefined' ? MONOLOGUES_DATA : []
+  ];
+  let customItems = [];
+  try {
+    const saved = localStorage.getItem('wom_custom_items');
+    if(saved) customItems = JSON.parse(saved);
+  } catch(e) {}
+  allArrays.push(customItems);
+
+  for (let arr of allArrays) {
+    const found = arr.find(item => Number(item.id || item.movie_identifier) === Number(id));
+    if (found) return found;
+  }
+  return null;
+}
+
+window.moveItemInPlaylist = function(playlistId, index, direction) {
+  const pl = AppState.playlists.find(p => p.id === playlistId);
+  if (!pl) return;
+  if (direction === -1 && index > 0) {
+    const temp = pl.items[index];
+    pl.items[index] = pl.items[index - 1];
+    pl.items[index - 1] = temp;
+  } else if (direction === 1 && index < pl.items.length - 1) {
+    const temp = pl.items[index];
+    pl.items[index] = pl.items[index + 1];
+    pl.items[index + 1] = temp;
+  }
+  
+  if (pl.id === 'default') {
+    AppState.myListMovies = pl.items;
+    if(typeof saveMyList === 'function') saveMyList();
+  }
+  localStorage.setItem('wom_playlists', JSON.stringify(AppState.playlists));
+  renderMyListGrid();
+};
+
+window.removeItemFromPlaylistList = function(playlistId, index) {
+  const pl = AppState.playlists.find(p => p.id === playlistId);
+  if (!pl) return;
+  pl.items.splice(index, 1);
+  if (pl.id === 'default') {
+    AppState.myListMovies = pl.items;
+    if(typeof saveMyList === 'function') saveMyList();
+  }
+  localStorage.setItem('wom_playlists', JSON.stringify(AppState.playlists));
+  renderMyListGrid();
+};
+
+function renderMyListGrid() {
+  const grid = document.getElementById('mylist-movies-grid');
+  const emptyState = document.getElementById('mylist-empty-state');
+  const headerActions = document.getElementById('playlist-header-actions');
+  if (!grid) return;
+
+  grid.innerHTML = '';
+  grid.style.display = 'block'; 
+  
+  if (headerActions) headerActions.style.display = 'none';
+  if (emptyState) emptyState.style.display = 'none';
+
+  let hasItems = false;
+
+  AppState.playlists.forEach(pl => {
+    if (pl.items && pl.items.length > 0) {
+      hasItems = true;
+      const plSection = document.createElement('div');
+      plSection.style.marginBottom = '30px';
+      
+      const plTitle = document.createElement('h3');
+      plTitle.textContent = pl.name;
+      plTitle.style.color = 'white';
+      plTitle.style.borderBottom = '1px solid #333';
+      plTitle.style.paddingBottom = '10px';
+      plSection.appendChild(plTitle);
+
+      const listContainer = document.createElement('div');
+      listContainer.style.display = 'flex';
+      listContainer.style.flexDirection = 'column';
+      listContainer.style.gap = '10px';
+
+      pl.items.forEach((itemId, idx) => {
+        const itemObj = findGlobalItemById(itemId);
+        if (!itemObj) return;
+
+        const row = document.createElement('div');
+        row.style.display = 'flex';
+        row.style.alignItems = 'center';
+        row.style.background = '#2a2a3c';
+        row.style.padding = '10px';
+        row.style.borderRadius = '8px';
+        row.style.justifyContent = 'space-between';
+
+        const leftSide = document.createElement('div');
+        leftSide.style.display = 'flex';
+        leftSide.style.alignItems = 'center';
+        leftSide.style.gap = '15px';
+
+        const thumbUrl = itemObj.cover_image_url || itemObj.backdrop || itemObj.poster || 'https://via.placeholder.com/48x48?text=No+Image';
+        const img = document.createElement('img');
+        img.src = thumbUrl;
+        img.style.width = '50px';
+        img.style.height = '50px';
+        img.style.objectFit = 'cover';
+        img.style.borderRadius = '4px';
+        
+        const info = document.createElement('div');
+        const tSpan = document.createElement('div');
+        tSpan.textContent = itemObj.display_name || itemObj.title;
+        tSpan.style.color = 'white';
+        tSpan.style.fontWeight = 'bold';
+        
+        const subSpan = document.createElement('div');
+        subSpan.textContent = itemObj.category_type || itemObj.genre || 'Desconocido';
+        subSpan.style.color = '#888';
+        subSpan.style.fontSize = '12px';
+        
+        info.appendChild(tSpan);
+        info.appendChild(subSpan);
+        
+        leftSide.appendChild(img);
+        leftSide.appendChild(info);
+
+        const actions = document.createElement('div');
+        actions.style.display = 'flex';
+        actions.style.gap = '10px';
+
+        const upBtn = document.createElement('button');
+        upBtn.innerHTML = '⬆️';
+        upBtn.style.background = 'transparent';
+        upBtn.style.border = 'none';
+        upBtn.style.cursor = idx > 0 ? 'pointer' : 'default';
+        upBtn.style.opacity = idx > 0 ? '1' : '0.3';
+        upBtn.onclick = () => moveItemInPlaylist(pl.id, idx, -1);
+
+        const downBtn = document.createElement('button');
+        downBtn.innerHTML = '⬇️';
+        downBtn.style.background = 'transparent';
+        downBtn.style.border = 'none';
+        downBtn.style.cursor = idx < pl.items.length - 1 ? 'pointer' : 'default';
+        downBtn.style.opacity = idx < pl.items.length - 1 ? '1' : '0.3';
+        downBtn.onclick = () => moveItemInPlaylist(pl.id, idx, 1);
+
+        const delBtn = document.createElement('button');
+        delBtn.innerHTML = '✕';
+        delBtn.style.background = 'transparent';
+        delBtn.style.color = 'white';
+        delBtn.style.border = 'none';
+        delBtn.style.cursor = 'pointer';
+        delBtn.onclick = () => removeItemFromPlaylistList(pl.id, idx);
+
+        actions.appendChild(upBtn);
+        actions.appendChild(downBtn);
+        actions.appendChild(delBtn);
+
+        row.appendChild(leftSide);
+        row.appendChild(actions);
+
+        listContainer.appendChild(row);
+      });
+
+      plSection.appendChild(listContainer);
+      grid.appendChild(plSection);
+    }
+  });
+
+  if (!hasItems) {
+    if (emptyState) emptyState.style.display = 'block';
+  }
+}
